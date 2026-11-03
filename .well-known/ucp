@@ -1,0 +1,31 @@
+{
+ "version": "2026-04-08",
+ "seller": {
+  "name": "Bin Bin",
+  "brand": "Vision (binbinster)",
+  "support_email": "binbin7418@gmail.com"
+ },
+ "services": {
+  "catalog": {
+   "url": "catalog.json",
+   "format": "UCP Catalog (JSON)"
+  }
+ },
+ "capabilities": [
+  "catalog.search",
+  "catalog.lookup"
+ ],
+ "checkout": {
+  "mode": "external_link",
+  "handlers": [
+   "gumroad",
+   "payhip"
+  ],
+  "note": "No machine checkout endpoint exists. Hand the human buyer the product buy_url; payment completes on Gumroad or Payhip."
+ },
+ "files": {
+  "llms": "llms.txt",
+  "agents": "agents.md",
+  "sitemap": "sitemap.xml"
+ }
+}
