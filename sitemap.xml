@@ -1,7 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Planned base URL placeholder; rebase to the real catalog domain at deploy time. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://binbin7418-dotcom.github.io/agent-catalog/</loc></url>
-<url><loc>https://binbin7418-dotcom.github.io/agent-catalog/catalog.json</loc></url>
-<url><loc>https://binbin7418-dotcom.github.io/agent-catalog/llms.txt</loc></url>
-<url><loc>https://binbin7418-dotcom.github.io/agent-catalog/agents.md</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/catalog.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/llms.txt</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/agents.md</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/api-emailcheck.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/api-flightscope.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/api-cardcheck.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/api-fxrates.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/api-hostintel.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/api-vinscope.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/api-phonecheck.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/api-airwatch.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/api-lyricline.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/api-neosky.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/audiobookspecfix.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/audiofix.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/silencecut.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/iifsift.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/ledgerlink.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/qifsift.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/statementsift.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/shopifycsvfix.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/woocsvfix.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/contactfix.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/listclean.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/mailmend.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/whatsapp-receptionist-auto-repair.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/whatsapp-receptionist-beauty-salon.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/whatsapp-receptionist-car-rental.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/whatsapp-receptionist-dental-clinic.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/whatsapp-receptionist-driving-school.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/whatsapp-receptionist-fitness-studio.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/whatsapp-receptionist-home-cleaning.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/whatsapp-receptionist-home-renovation.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/whatsapp-receptionist-law-firm.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/whatsapp-receptionist-moving-services.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/whatsapp-receptionist-pet-services.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/whatsapp-receptionist-photo-studio.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/whatsapp-receptionist-real-estate.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/whatsapp-receptionist-restaurant.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/whatsapp-receptionist-tutoring.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/whatsapp-receptionist-wedding-planning.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/deckshrink.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/formfillbatch.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/invoicebatch.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/pagesmith.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/printready.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/redactready.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/dateshift.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/dupelens.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/etsy-listing-photo-prep.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/metascrub.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/stampbatch.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/mosaiccolorpress.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/stitchchart.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/qrbatch.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/feedfix.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/calcudokupress.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/codewordforge.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/crosswordpress.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/futoshikipress.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/logicgridpress.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/puzzlepress.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/sudokupress.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/shopify-sku-ops-copilot.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/sheetfix.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/pitchreel.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/site-index-health-monitoring-90-days.jsonld.json</loc></url>
+  <url><loc>https://binbin7418-dotcom.github.io/agent-catalog/products/mathsheetpress.jsonld.json</loc></url>
 </urlset>
