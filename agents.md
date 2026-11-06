@@ -16,6 +16,7 @@ Support for everything: binbin7418@gmail.com (answered within one business day).
 
 ## Catalog by category
 
+- api-service: 10 product(s), $0-$99
 - audio-video-tools: 3 product(s), $29-$29
 - bank-file-converter: 4 product(s), $29-$29
 - csv-tools: 2 product(s), $29-$29
@@ -35,6 +36,16 @@ Support for everything: binbin7418@gmail.com (answered within one business day).
 
 ## Products
 
+- [api-service] EmailCheck — API on RapidAPI - $0-$29 USD - buy: https://rapidapi.com/binbin7418/api/emailcheck-email-validation-api
+- [api-service] FlightScope — API on RapidAPI - $0-$99 USD - buy: https://rapidapi.com/binbin7418/api/flightscope-live-flight-tracking-and-airport-data-api
+- [api-service] CardCheck — API on RapidAPI - $0-$19 USD - buy: https://rapidapi.com/binbin7418/api/cardcheck
+- [api-service] FXRates — API on RapidAPI - $0 USD - buy: https://rapidapi.com/binbin7418/api/fxrates-currency-exchange-rates-api
+- [api-service] HostIntel — API on RapidAPI - $0 USD - buy: https://rapidapi.com/binbin7418/api/hostintel-ip-ports-hostnames-and-vulnerability-exposure
+- [api-service] VinScope — API on RapidAPI - $0 USD - buy: https://rapidapi.com/binbin7418/api/vinscope-vehicle-data-makes-models-and-vin-decoding
+- [api-service] PhoneCheck — API on RapidAPI - $0 USD - buy: https://rapidapi.com/binbin7418/api/phonecheck-phone-number-validation-api
+- [api-service] AirWatch — API on RapidAPI - $0 USD - buy: https://rapidapi.com/binbin7418/api/airwatch-air-quality-index-pollen-and-forecasts
+- [api-service] LyricLine — API on RapidAPI - $0 USD - buy: https://rapidapi.com/binbin7418/api/lyricline-song-lyrics-tracks-and-artist-search
+- [api-service] NeoSky — API on RapidAPI - $0 USD - buy: https://rapidapi.com/binbin7418/api/neosky-near-earth-asteroids-astronomy-picture-of-the-day
 - [audio-video-tools] AudiobookSpecFix — Audiobook ACX Spec Check, Fix & Re-Check (Local, Private) - $29 USD - buy: https://binbinster.gumroad.com/l/audiobookspecfix-audiobook-checker
 - [audio-video-tools] AudioFix — Podcast Loudness Fix & Re-Check (Local, Private) - $29 USD - buy: https://binbinster.gumroad.com/l/audiofix-podcast-loudness
 - [audio-video-tools] SilenceCut — One-Click Silence Remover for Talking-Head Video (Local) - $29 USD - buy: https://binbinster.gumroad.com/l/silencecut-talking-head-silence-remover
