@@ -1,6 +1,6 @@
 {
  "ucp_version": "2026-04-08",
- "generated_at": "2026-11-03",
+ "generated_at": "2026-11-06",
  "seller": {
   "name": "Bin Bin",
   "brand": "Vision (binbinster)",
@@ -15,6 +15,624 @@
  },
  "catalog": {
   "products": [
+   {
+    "id": "api-emailcheck",
+    "title": "EmailCheck — API on RapidAPI",
+    "description": "Email validation API: deliverability verdict, quality score, typo suggestions and disposable-domain detection, for single addresses or batches of up to 100.",
+    "description_full": "Clean email lists before they cost you bounces: EmailCheck returns a deliverability verdict for every address — single or in batches of up to 100 — so signup flows, CRM imports and outbound campaigns only keep addresses that are safe to mail.\n\nWhat you get:\n- A clear verdict per address (deliverable / risky / undeliverable) backed by a quality score, not just a true/false flag\n- The full signal set behind the verdict: syntax, MX and domain checks, catch-all risk signal, and domain age from registration records\n- Typo detection with a correction suggestion (e.g. gamil.com → gmail.com), so fixable addresses are recovered instead of dropped\n- Batch results in the same per-address format, ready to feed back into your list-cleaning pipeline\n\nKey endpoints:\n- GET /validate — validate a single email address\n- POST /validate — validate a single email address (JSON body)\n- POST /validate/batch — validate up to 100 addresses in one call\n\nBatch / built for workflows:\nList cleaning is the primary use case, not an afterthought: /validate/batch accepts up to 100 addresses per request and returns one structured result per address, so scheduled hygiene jobs, import pipelines and pre-send checks can run unattended. Single-address validation uses the same response format, so your parsing code is identical either way.\n\nPlans: Free includes 100 validations per month. PRO is $9/month for 10,000 requests. ULTRA is $29/month for higher-volume workloads.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+    "price_range": {
+     "min": {
+      "amount": 0,
+      "currency": "USD"
+     },
+     "max": {
+      "amount": 2900,
+      "currency": "USD"
+     }
+    },
+    "variants": [
+     {
+      "id": "basic",
+      "title": "BASIC — free",
+      "description": "Free plan: 100 calls per month.",
+      "price": {
+       "amount": 0,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/emailcheck-email-validation-api"
+     },
+     {
+      "id": "pro",
+      "title": "PRO — $9/month",
+      "description": "10,000 calls per month.",
+      "price": {
+       "amount": 900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/emailcheck-email-validation-api"
+     },
+     {
+      "id": "ultra",
+      "title": "ULTRA — $29/month",
+      "description": "50,000 calls per month.",
+      "price": {
+       "amount": 2900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/emailcheck-email-validation-api"
+     }
+    ],
+    "availability": "InStock",
+    "category": "api-service",
+    "sku": "",
+    "image": "",
+    "delivery": "Instant API access after subscribing on RapidAPI; no file delivery.",
+    "file_format": "JSON responses over HTTPS (REST).",
+    "requirements": "A RapidAPI account and API key; any HTTPS client.",
+    "whats_inside": [
+     "Per-address verdict with quality score",
+     "Typo / did-you-mean domain suggestions",
+     "Disposable-domain and role-account detection",
+     "Batch endpoint: up to 100 addresses per call"
+    ],
+    "return_policy": {
+     "merchant_return_days": 30,
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+    },
+    "seller": {
+     "name": "Bin Bin",
+     "brand": "Vision (binbinster)",
+     "support_email": "binbin7418@gmail.com"
+    },
+    "buy_urls": {
+     "rapidapi": "https://rapidapi.com/binbin7418/api/emailcheck-email-validation-api"
+    },
+    "landing_url": "https://rapidapi.com/binbin7418/api/emailcheck-email-validation-api"
+   },
+   {
+    "id": "api-flightscope",
+    "title": "FlightScope — API on RapidAPI",
+    "description": "Live flight tracking API: real-time position profile for any airborne flight, batch lookups and a searchable global airport database.",
+    "description_full": "See where a flight actually is right now: FlightScope returns a live position profile for any airborne flight — plus batch lookups and a searchable global airport database — from community ADS-B data (adsb.lol) and the OurAirports dataset.\n\nWhat you get:\n- A live flight profile by flight number: position, altitude, ground speed, heading, vertical rate, aircraft registration and type, with the data age stated in every response\n- Batch lookup: check up to 100 flight numbers in one call, with a summary of how many are live, not live or invalid\n- A full airport profile by IATA or ICAO code — name, city, country, coordinates, elevation and reference links — plus free-text airport search\n- Area lookup: every aircraft currently broadcasting within a radius of a point, for maps and situational displays\n\nKey endpoints:\n- GET /flight — live profile for one flight number (IATA or ICAO format)\n- POST /flights/batch — live profiles for up to 100 flight numbers in one call\n- GET /airport/{code} — airport profile by IATA or ICAO code\n- GET /airports/search — search airports by name, city or code\n- GET /flights/near — aircraft currently live near a location\n- GET /aircraft/{icao24} — live profile for one aircraft by ICAO24 address\n\nBatch / built for workflows:\nFlightScope is honest about its source: it reports what aircraft are broadcasting now (including a derived ground/airborne phase), not airline schedule data — it does not publish planned times, delays, terminals or gates. For tracking boards, logistics visibility and aviation apps, the batch endpoint counts as a single API call per request, which keeps polling workflows economical.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+    "price_range": {
+     "min": {
+      "amount": 0,
+      "currency": "USD"
+     },
+     "max": {
+      "amount": 9900,
+      "currency": "USD"
+     }
+    },
+    "variants": [
+     {
+      "id": "basic",
+      "title": "BASIC — free",
+      "description": "Free plan: 150 calls per month.",
+      "price": {
+       "amount": 0,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/flightscope-live-flight-tracking-and-airport-data-api"
+     },
+     {
+      "id": "pro",
+      "title": "PRO — $9/month",
+      "description": "10,000 calls per month.",
+      "price": {
+       "amount": 900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/flightscope-live-flight-tracking-and-airport-data-api"
+     },
+     {
+      "id": "ultra",
+      "title": "ULTRA — $29/month",
+      "description": "50,000 calls per month.",
+      "price": {
+       "amount": 2900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/flightscope-live-flight-tracking-and-airport-data-api"
+     },
+     {
+      "id": "mega",
+      "title": "MEGA — $99/month",
+      "description": "250,000 calls per month.",
+      "price": {
+       "amount": 9900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/flightscope-live-flight-tracking-and-airport-data-api"
+     }
+    ],
+    "availability": "InStock",
+    "category": "api-service",
+    "sku": "",
+    "image": "",
+    "delivery": "Instant API access after subscribing on RapidAPI; no file delivery.",
+    "file_format": "JSON responses over HTTPS (REST).",
+    "requirements": "A RapidAPI account and API key; any HTTPS client.",
+    "whats_inside": [
+     "Live position profile by flight number (community ADS-B data)",
+     "Batch flight lookups",
+     "Searchable global airport database (OurAirports). Flight schedules, delays and gates are not included"
+    ],
+    "return_policy": {
+     "merchant_return_days": 30,
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+    },
+    "seller": {
+     "name": "Bin Bin",
+     "brand": "Vision (binbinster)",
+     "support_email": "binbin7418@gmail.com"
+    },
+    "buy_urls": {
+     "rapidapi": "https://rapidapi.com/binbin7418/api/flightscope-live-flight-tracking-and-airport-data-api"
+    },
+    "landing_url": "https://rapidapi.com/binbin7418/api/flightscope-live-flight-tracking-and-airport-data-api"
+   },
+   {
+    "id": "api-cardcheck",
+    "title": "CardCheck — API on RapidAPI",
+    "description": "Card number validation API: Luhn checksum, issuer rules and network identification, one at a time or in batches of up to 100.",
+    "description_full": "Catch mistyped card numbers before they fail at the gateway: CardCheck validates card numbers locally (Luhn checksum plus issuer rules) and identifies the card network — one at a time, or in batches of up to 100 — with a definitive verdict and the individual checks shown.\n\nWhat you get:\n- A valid / invalid verdict per number, computed locally — no card data leaves the validation logic\n- The individual checks behind the verdict (length, Luhn checksum, IIN/BIN range), so your UI can explain what is wrong\n- Card network identification (e.g. Visa, Mastercard, Amex) for form formatting, icon display and routing decisions\n- Batch results in the same per-number format, ready to feed screening and import pipelines\n- A networks reference endpoint listing the supported networks and their number patterns\n\nKey endpoints:\n- GET /validate — validate one card number and identify its network\n- POST /validate/batch — validate up to 100 card numbers in one call\n- GET /networks — supported card networks and their patterns\n\nBatch / built for workflows:\nCardCheck sits at the front of checkout and signup flows as a pre-validation gate — one fast local-computation call per number before anything reaches your payment gateway — and the batch endpoint extends the same checks to list screening, onboarding imports and data-quality jobs: up to 100 numbers per call, one structured result per number. It validates number structure only: it does not check funds, card status or fraud risk, and it is not a substitute for your payment processor's checks.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+    "price_range": {
+     "min": {
+      "amount": 0,
+      "currency": "USD"
+     },
+     "max": {
+      "amount": 1900,
+      "currency": "USD"
+     }
+    },
+    "variants": [
+     {
+      "id": "basic",
+      "title": "BASIC — free",
+      "description": "Free plan: 500 calls per month.",
+      "price": {
+       "amount": 0,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/cardcheck"
+     },
+     {
+      "id": "pro",
+      "title": "PRO — $5/month",
+      "description": "10,000 calls per month.",
+      "price": {
+       "amount": 500,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/cardcheck"
+     },
+     {
+      "id": "ultra",
+      "title": "ULTRA — $19/month",
+      "description": "50,000 calls per month.",
+      "price": {
+       "amount": 1900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/cardcheck"
+     }
+    ],
+    "availability": "InStock",
+    "category": "api-service",
+    "sku": "",
+    "image": "",
+    "delivery": "Instant API access after subscribing on RapidAPI; no file delivery.",
+    "file_format": "JSON responses over HTTPS (REST).",
+    "requirements": "A RapidAPI account and API key; any HTTPS client.",
+    "whats_inside": [
+     "Valid / invalid verdict with individual checks shown",
+     "Card network identification",
+     "Batch endpoint: up to 100 numbers per call",
+     "Networks reference endpoint"
+    ],
+    "return_policy": {
+     "merchant_return_days": 30,
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+    },
+    "seller": {
+     "name": "Bin Bin",
+     "brand": "Vision (binbinster)",
+     "support_email": "binbin7418@gmail.com"
+    },
+    "buy_urls": {
+     "rapidapi": "https://rapidapi.com/binbin7418/api/cardcheck"
+    },
+    "landing_url": "https://rapidapi.com/binbin7418/api/cardcheck"
+   },
+   {
+    "id": "api-fxrates",
+    "title": "FXRates — API on RapidAPI",
+    "description": "Currency exchange rates API: live rates for all supported currencies in one call, conversion and historical rates.",
+    "description_full": "Get exchange rates your product can quote immediately: FXRates returns current and historical reference rates for major world currencies — one pair, or the full rate table in a single call.\n\nWhat you get:\n- The complete latest rate table against your chosen base currency in one response — no per-pair call fan-out\n- Direct conversion results for any amount and pair, ready to display or store\n- Historical rates for a specific date, for invoicing, reconciliation and back-filling reports\n- A symbols endpoint listing every supported currency, so your UI and validation stay in sync with the API\n\nKey endpoints:\n- GET /latest — latest rates for all supported currencies against a base\n- GET /convert — convert an amount between two currencies\n- GET /historical — rates for a specific past date\n- GET /symbols — list of supported currency codes\n\nBatch / built for workflows:\nFXRates is list-shaped by design: /latest returns the full currency table at once, which makes it a natural fit for scheduled rate snapshots, price-list localization jobs and finance dashboards that refresh on a timer. Rates are European Central Bank reference rates (via Frankfurter), updated on business days — the right source for accounting and display use cases.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+    "price_range": {
+     "min": {
+      "amount": 0,
+      "currency": "USD"
+     },
+     "max": {
+      "amount": 0,
+      "currency": "USD"
+     }
+    },
+    "variants": [
+     {
+      "id": "plans",
+      "title": "Free tier + paid plans on RapidAPI",
+      "description": "A free tier is available. Current paid plans and pricing are listed on the RapidAPI product page.",
+      "price": {
+       "amount": 0,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/fxrates-currency-exchange-rates-api"
+     }
+    ],
+    "availability": "InStock",
+    "category": "api-service",
+    "sku": "",
+    "image": "",
+    "delivery": "Instant API access after subscribing on RapidAPI; no file delivery.",
+    "file_format": "JSON responses over HTTPS (REST).",
+    "requirements": "A RapidAPI account and API key; any HTTPS client.",
+    "whats_inside": [
+     "Live rates, all currencies in one call",
+     "Pair conversion endpoint",
+     "Historical rates by date",
+     "Supported symbols list"
+    ],
+    "return_policy": {
+     "merchant_return_days": 30,
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+    },
+    "seller": {
+     "name": "Bin Bin",
+     "brand": "Vision (binbinster)",
+     "support_email": "binbin7418@gmail.com"
+    },
+    "buy_urls": {
+     "rapidapi": "https://rapidapi.com/binbin7418/api/fxrates-currency-exchange-rates-api"
+    },
+    "landing_url": "https://rapidapi.com/binbin7418/api/fxrates-currency-exchange-rates-api"
+   },
+   {
+    "id": "api-hostintel",
+    "title": "HostIntel — API on RapidAPI",
+    "description": "Host and IP security profile API: open ports, hostnames, services and known vulnerability exposure in one lookup.",
+    "description_full": "Know what a host exposes before you trust it: HostIntel takes an IP address and returns a security profile — open ports, hostnames and known vulnerabilities — in a single structured response.\n\nWhat you get:\n- Open ports and the services observed on the host, from the Shodan InternetDB dataset\n- Hostnames and tags associated with the IP, for asset inventory and triage\n- Known vulnerability identifiers (CVEs) reported for the host's exposed services\n- A single-call profile format designed for screening: vendor IPs, customer servers, webhook sources, sign-in origins\n\nKey endpoints:\n- GET /lookup — full host intelligence profile for an IP address\n- GET /ports — open ports observed for an IP address\n\nBatch / built for workflows:\nHostIntel is a screening step inside larger workflows: run it at vendor onboarding, when a new server or endpoint appears in your logs, or as a periodic re-check of infrastructure you depend on. Each lookup is one self-contained call with one structured profile out, so it drops cleanly into automation platforms (n8n, Make, Zapier) and internal scripts without custom parsing per data source.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+    "price_range": {
+     "min": {
+      "amount": 0,
+      "currency": "USD"
+     },
+     "max": {
+      "amount": 0,
+      "currency": "USD"
+     }
+    },
+    "variants": [
+     {
+      "id": "plans",
+      "title": "Free tier + paid plans on RapidAPI",
+      "description": "A free tier is available. Current paid plans and pricing are listed on the RapidAPI product page.",
+      "price": {
+       "amount": 0,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/hostintel-ip-ports-hostnames-and-vulnerability-exposure"
+     }
+    ],
+    "availability": "InStock",
+    "category": "api-service",
+    "sku": "",
+    "image": "",
+    "delivery": "Instant API access after subscribing on RapidAPI; no file delivery.",
+    "file_format": "JSON responses over HTTPS (REST).",
+    "requirements": "A RapidAPI account and API key; any HTTPS client.",
+    "whats_inside": [
+     "Host profile: ports, hostnames, services",
+     "Known vulnerability (CVE) exposure",
+     "Single lookup endpoint plus port detail endpoint"
+    ],
+    "return_policy": {
+     "merchant_return_days": 30,
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+    },
+    "seller": {
+     "name": "Bin Bin",
+     "brand": "Vision (binbinster)",
+     "support_email": "binbin7418@gmail.com"
+    },
+    "buy_urls": {
+     "rapidapi": "https://rapidapi.com/binbin7418/api/hostintel-ip-ports-hostnames-and-vulnerability-exposure"
+    },
+    "landing_url": "https://rapidapi.com/binbin7418/api/hostintel-ip-ports-hostnames-and-vulnerability-exposure"
+   },
+   {
+    "id": "api-vinscope",
+    "title": "VinScope — API on RapidAPI",
+    "description": "VIN decoding API that returns a complete vehicle profile (make, model, year, specs) in one request, with batch decoding.",
+    "description_full": "Turn a VIN into a complete vehicle profile: VinScope decodes any 17-character VIN into manufacturer, model, year, body, engine and plant details — one request in, a structured vehicle record out.\n\nWhat you get:\n- A decoded vehicle profile from the NHTSA vPIC database: make, model, model year, body class, vehicle type and manufacturing plant\n- Engine and drivetrain attributes as reported by the manufacturer filing, in named fields rather than raw codes\n- Lookup endpoints for makes and models, so forms and filters can be built from the same data source\n- Clean handling of partial data: attributes the source does not carry are returned as empty, never filled with guesses\n\nKey endpoints:\n- GET /decode — decode a VIN into a full vehicle profile\n- GET /makes — list manufacturers\n- GET /models — list models for a manufacturer\n\nBatch / built for workflows:\nVinScope fits anywhere a vehicle enters a system: used-car listings, fleet and insurance intake, parts compatibility checks, marketplace moderation. The makes/models lists let you pre-validate user input before decoding, and the single-profile response drops directly into listing templates and appraisal workflows without further lookups.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+    "price_range": {
+     "min": {
+      "amount": 0,
+      "currency": "USD"
+     },
+     "max": {
+      "amount": 0,
+      "currency": "USD"
+     }
+    },
+    "variants": [
+     {
+      "id": "plans",
+      "title": "Free tier + paid plans on RapidAPI",
+      "description": "A free tier is available. Current paid plans and pricing are listed on the RapidAPI product page.",
+      "price": {
+       "amount": 0,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/vinscope-vehicle-data-makes-models-and-vin-decoding"
+     }
+    ],
+    "availability": "InStock",
+    "category": "api-service",
+    "sku": "",
+    "image": "",
+    "delivery": "Instant API access after subscribing on RapidAPI; no file delivery.",
+    "file_format": "JSON responses over HTTPS (REST).",
+    "requirements": "A RapidAPI account and API key; any HTTPS client.",
+    "whats_inside": [
+     "Full vehicle profile from one VIN",
+     "Makes and models reference data",
+     "Batch VIN decoding"
+    ],
+    "return_policy": {
+     "merchant_return_days": 30,
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+    },
+    "seller": {
+     "name": "Bin Bin",
+     "brand": "Vision (binbinster)",
+     "support_email": "binbin7418@gmail.com"
+    },
+    "buy_urls": {
+     "rapidapi": "https://rapidapi.com/binbin7418/api/vinscope-vehicle-data-makes-models-and-vin-decoding"
+    },
+    "landing_url": "https://rapidapi.com/binbin7418/api/vinscope-vehicle-data-makes-models-and-vin-decoding"
+   },
+   {
+    "id": "api-phonecheck",
+    "title": "PhoneCheck — API on RapidAPI",
+    "description": "Phone number validation and carrier lookup API with line-type detection and a batch health-report endpoint.",
+    "description_full": "Verify phone numbers before they enter your system: PhoneCheck returns a validity verdict, line type and carrier context for numbers worldwide — one at a time, or as a batch health report for a whole list.\n\nWhat you get:\n- A validity verdict per number, parsed and checked locally with the libphonenumber rule set — no third-party lookup latency\n- Country, line type (mobile / landline / VoIP and more) and both international and national formats, plus a ready-to-use tel: link\n- Batch health reports: send up to 100 numbers and get per-number results plus a summary of how clean the list is\n- Consistent single and batch response formats, so one parser serves both paths\n\nKey endpoints:\n- GET /validate — validate a single phone number\n- POST /validate — validate a single phone number (JSON body)\n- POST /validate/batch — validate up to 100 numbers in one call, with a list-level summary\n\nBatch / built for workflows:\nBuilt for list hygiene and onboarding pipelines: the batch endpoint is the same one used in production list-cleaning workflows — one call in, a structured health report out. Single-number checks fit form validation, OTP enrollment screening and CRM data entry, all with zero upstream dependency: parsing runs locally, so responses stay fast and predictable.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+    "price_range": {
+     "min": {
+      "amount": 0,
+      "currency": "USD"
+     },
+     "max": {
+      "amount": 0,
+      "currency": "USD"
+     }
+    },
+    "variants": [
+     {
+      "id": "plans",
+      "title": "Free tier + paid plans on RapidAPI",
+      "description": "A free tier is available. Current paid plans and pricing are listed on the RapidAPI product page.",
+      "price": {
+       "amount": 0,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/phonecheck-phone-number-validation-api"
+     }
+    ],
+    "availability": "InStock",
+    "category": "api-service",
+    "sku": "",
+    "image": "",
+    "delivery": "Instant API access after subscribing on RapidAPI; no file delivery.",
+    "file_format": "JSON responses over HTTPS (REST).",
+    "requirements": "A RapidAPI account and API key; any HTTPS client.",
+    "whats_inside": [
+     "Validity and line-type verdict per number",
+     "Carrier lookup",
+     "Batch health-report endpoint"
+    ],
+    "return_policy": {
+     "merchant_return_days": 30,
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+    },
+    "seller": {
+     "name": "Bin Bin",
+     "brand": "Vision (binbinster)",
+     "support_email": "binbin7418@gmail.com"
+    },
+    "buy_urls": {
+     "rapidapi": "https://rapidapi.com/binbin7418/api/phonecheck-phone-number-validation-api"
+    },
+    "landing_url": "https://rapidapi.com/binbin7418/api/phonecheck-phone-number-validation-api"
+   },
+   {
+    "id": "api-airwatch",
+    "title": "AirWatch — API on RapidAPI",
+    "description": "Air quality API: current AQI with a plain-language severity level, multi-day forecasts and pollen data for any location.",
+    "description_full": "Air quality answers your users can act on: AirWatch returns the current air quality index with a plain-language severity level, multi-day forecasts and pollen data for any location.\n\nWhat you get:\n- Current AQI as a number plus a severity level in words, so widgets and alerts need no interpretation tables\n- Pollutant-level detail behind the index, for health and outdoor-activity products\n- Multi-day air quality forecasts in one response, for planning views and proactive notifications\n- Pollen data alongside air quality, for allergy-aware apps and seasonal content\n\nKey endpoints:\n- GET /current — current air quality for a location\n- GET /forecast — multi-day air quality forecast in one call\n- GET /pollen — current pollen levels for a location\n\nBatch / built for workflows:\nAirWatch is forecast-shaped: one /forecast call returns the days ahead as a set, which suits scheduled notification jobs (\"tomorrow's air will be poor\"), travel and relocation content, and location dashboards that refresh on a timer. Data comes from the Open-Meteo air quality service (CAMS), and every response pairs raw values with the derived severity judgement.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+    "price_range": {
+     "min": {
+      "amount": 0,
+      "currency": "USD"
+     },
+     "max": {
+      "amount": 0,
+      "currency": "USD"
+     }
+    },
+    "variants": [
+     {
+      "id": "plans",
+      "title": "Free tier + paid plans on RapidAPI",
+      "description": "A free tier is available. Current paid plans and pricing are listed on the RapidAPI product page.",
+      "price": {
+       "amount": 0,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/airwatch-air-quality-index-pollen-and-forecasts"
+     }
+    ],
+    "availability": "InStock",
+    "category": "api-service",
+    "sku": "",
+    "image": "",
+    "delivery": "Instant API access after subscribing on RapidAPI; no file delivery.",
+    "file_format": "JSON responses over HTTPS (REST).",
+    "requirements": "A RapidAPI account and API key; any HTTPS client.",
+    "whats_inside": [
+     "Current AQI with severity level in plain language",
+     "Multi-day air quality forecast",
+     "Pollen data"
+    ],
+    "return_policy": {
+     "merchant_return_days": 30,
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+    },
+    "seller": {
+     "name": "Bin Bin",
+     "brand": "Vision (binbinster)",
+     "support_email": "binbin7418@gmail.com"
+    },
+    "buy_urls": {
+     "rapidapi": "https://rapidapi.com/binbin7418/api/airwatch-air-quality-index-pollen-and-forecasts"
+    },
+    "landing_url": "https://rapidapi.com/binbin7418/api/airwatch-air-quality-index-pollen-and-forecasts"
+   },
+   {
+    "id": "api-lyricline",
+    "title": "LyricLine — API on RapidAPI",
+    "description": "Song lyrics API: full lyrics with track and artist details in one response, plus a suggestion endpoint.",
+    "description_full": "Full lyrics with the track context attached: LyricLine returns complete song lyrics together with track and artist details in one response, and a suggestion endpoint that helps users find the right song before they query.\n\nWhat you get:\n- Full song lyrics for a track, returned as display-ready text\n- Track details (title, artist, album context) in the same response — no second lookup to label what you display\n- Artist information for building artist pages and related-content links\n- A suggest endpoint that resolves partial or misspelled titles into candidate tracks, so a \"not found\" becomes a choice instead of a dead end\n\nKey endpoints:\n- GET /lyrics — full lyrics for a song\n- GET /track — track details\n- GET /artist — artist information\n- GET /suggest — candidate tracks for a partial or uncertain query\n\nBatch / built for workflows:\nLyricLine is designed for music content flows: search-suggest first, then one call per song returns lyrics plus the metadata set needed to render a complete page. Responses are edge-cached, so repeat lookups of popular tracks stay fast, and the suggest fallback keeps catalogue-import and playlist-enrichment jobs moving when a title does not match exactly.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+    "price_range": {
+     "min": {
+      "amount": 0,
+      "currency": "USD"
+     },
+     "max": {
+      "amount": 0,
+      "currency": "USD"
+     }
+    },
+    "variants": [
+     {
+      "id": "plans",
+      "title": "Free tier + paid plans on RapidAPI",
+      "description": "A free tier is available. Current paid plans and pricing are listed on the RapidAPI product page.",
+      "price": {
+       "amount": 0,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/lyricline-song-lyrics-tracks-and-artist-search"
+     }
+    ],
+    "availability": "InStock",
+    "category": "api-service",
+    "sku": "",
+    "image": "",
+    "delivery": "Instant API access after subscribing on RapidAPI; no file delivery.",
+    "file_format": "JSON responses over HTTPS (REST).",
+    "requirements": "A RapidAPI account and API key; any HTTPS client.",
+    "whats_inside": [
+     "Full lyrics with track and artist context",
+     "Song suggestion endpoint"
+    ],
+    "return_policy": {
+     "merchant_return_days": 30,
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+    },
+    "seller": {
+     "name": "Bin Bin",
+     "brand": "Vision (binbinster)",
+     "support_email": "binbin7418@gmail.com"
+    },
+    "buy_urls": {
+     "rapidapi": "https://rapidapi.com/binbin7418/api/lyricline-song-lyrics-tracks-and-artist-search"
+    },
+    "landing_url": "https://rapidapi.com/binbin7418/api/lyricline-song-lyrics-tracks-and-artist-search"
+   },
+   {
+    "id": "api-neosky",
+    "title": "NeoSky — API on RapidAPI",
+    "description": "NASA space data API: Astronomy Picture of the Day and near-Earth object data in ready-to-render responses. Note: the APOD endpoint depends on NASA upstream availability.",
+    "description_full": "NASA space data in ready-to-render responses: NeoSky serves the Astronomy Picture of the Day and near-Earth object data — browsable lists and date-range feeds — for science apps, widgets and content products.\n\nWhat you get:\n- The Astronomy Picture of the Day with its title, explanation and media URLs, formatted for direct display\n- Near-Earth object browsing: paged lists of asteroids tracked by NASA, with size, velocity and approach data\n- A date-range NEO feed for building calendars, alerts and \"what is passing Earth this week\" features\n- Honest error behaviour: if NASA's upstream feed has no valid entry for a date, the API returns a clear error instead of placeholder content\n\nKey endpoints:\n- GET /apod — Astronomy Picture of the Day (today or a specific date)\n- GET /neo/browse — browse near-Earth objects as a paged list\n- GET /neo/feed — near-Earth objects approaching within a date range\n\nBatch / built for workflows:\nThe NEO endpoints are list-shaped by design: /neo/browse pages through the full catalogue and /neo/feed returns a whole date window in one call, so scheduled content jobs, daily widgets and alert pipelines can pull a complete set per run. Please note that APOD availability depends on NASA's upstream service; when that feed is unavailable, /apod responds with an explicit error rather than substitute data.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+    "price_range": {
+     "min": {
+      "amount": 0,
+      "currency": "USD"
+     },
+     "max": {
+      "amount": 0,
+      "currency": "USD"
+     }
+    },
+    "variants": [
+     {
+      "id": "plans",
+      "title": "Free tier + paid plans on RapidAPI",
+      "description": "A free tier is available. Current paid plans and pricing are listed on the RapidAPI product page.",
+      "price": {
+       "amount": 0,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/neosky-near-earth-asteroids-astronomy-picture-of-the-day"
+     }
+    ],
+    "availability": "InStock",
+    "category": "api-service",
+    "sku": "",
+    "image": "",
+    "delivery": "Instant API access after subscribing on RapidAPI; no file delivery.",
+    "file_format": "JSON responses over HTTPS (REST).",
+    "requirements": "A RapidAPI account and API key; any HTTPS client.",
+    "whats_inside": [
+     "Astronomy Picture of the Day",
+     "Near-Earth object browse and date-range feeds"
+    ],
+    "return_policy": {
+     "merchant_return_days": 30,
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+    },
+    "seller": {
+     "name": "Bin Bin",
+     "brand": "Vision (binbinster)",
+     "support_email": "binbin7418@gmail.com"
+    },
+    "buy_urls": {
+     "rapidapi": "https://rapidapi.com/binbin7418/api/neosky-near-earth-asteroids-astronomy-picture-of-the-day"
+    },
+    "landing_url": "https://rapidapi.com/binbin7418/api/neosky-near-earth-asteroids-astronomy-picture-of-the-day"
+   },
    {
     "id": "audiobookspecfix",
     "title": "AudiobookSpecFix — Audiobook ACX Spec Check, Fix & Re-Check (Local, Private)",
