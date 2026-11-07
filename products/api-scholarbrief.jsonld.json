@@ -1,0 +1,45 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "ScholarBrief — API on RapidAPI",
+ "description": "Build a citation brief for a batch of papers in one call: ScholarBrief takes DOIs and returns each work's Crossref citation footprint plus its Wikipedia pageview slice, so literature reviews and research dashboards get consistent numbers without gluing two APIs together.\n\nWhat you get:\n- Crossref record per DOI: citation count, authors (first 8), venue, year and references count\n- Wikipedia pageview totals for the matched article over your window — a public-attention slice, not an altmetric score\n- Confident-match rules: a brief is only returned when the Crossref match is solid; otherwise you get the best rejected candidate and its score, never a silent wrong match\n- Batch briefs in one response with a summary\n\nKey endpoints:\n- POST /brief/batch — brief up to 25 DOIs in one call\n- POST /brief/single — brief one DOI\n- GET /health — service status\n\nPlans: BASIC is free with 200 calls per month. PRO is $9/month for 10,000 calls. ULTRA is $29/month for 50,000 calls plus $0.001 per additional call.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+ "sku": "api-scholarbrief",
+ "category": "api-service",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "AggregateOffer",
+  "lowPrice": 0.0,
+  "highPrice": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://rapidapi.com/binbin7418/api/scholarbrief",
+  "offerCount": 3
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant API access after subscribing on RapidAPI; no file delivery."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "JSON responses over HTTPS (REST)."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "A RapidAPI account and API key; any HTTPS client."
+  }
+ ]
+}
