@@ -1,0 +1,45 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "GlobalOps Calendar — API on RapidAPI",
+ "description": "Plan working days across countries in one call: GlobalOps Calendar computes real workdays from the public-holiday set for a batch of country windows and attaches World Bank context indicators — always with their data year — so global scheduling and market planning stop guessing.\n\nWhat you get:\n- Workday counts per country and window, computed only from public holidays (observance and school days never counted as days off)\n- The holiday list behind every count, so results are auditable\n- Economic context indicators with the year attached to every value — no undated 'current' figures\n- Honest coverage: countries outside the dataset return a clean NOT_COVERED instead of a guess; China's set covers anchor public-holiday dates without adjusted weekends or merged leave\n\nKey endpoints:\n- POST /plan/batch — plan multiple country windows in one call\n- POST /plan/single — plan one country window\n- GET /health — service status\n\nPlans: BASIC is free with 200 calls per month. PRO is $9/month for 10,000 calls. ULTRA is $29/month for 50,000 calls plus $0.001 per additional call.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+ "sku": "api-globalops-calendar",
+ "category": "api-service",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "AggregateOffer",
+  "lowPrice": 0.0,
+  "highPrice": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://rapidapi.com/binbin7418/api/globalops-calendar",
+  "offerCount": 3
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant API access after subscribing on RapidAPI; no file delivery."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "JSON responses over HTTPS (REST)."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "A RapidAPI account and API key; any HTTPS client."
+  }
+ ]
+}
