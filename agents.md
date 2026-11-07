@@ -16,7 +16,7 @@ Support for everything: binbin7418@gmail.com (answered within one business day).
 
 ## Catalog by category
 
-- api-service: 10 product(s), $0-$99
+- api-service: 18 product(s), $0-$99
 - audio-video-tools: 3 product(s), $29-$29
 - bank-file-converter: 4 product(s), $29-$29
 - csv-tools: 2 product(s), $29-$29
@@ -101,3 +101,11 @@ Support for everything: binbin7418@gmail.com (answered within one business day).
 - [video-service] PitchReel — Resume Video Introduction (Explainer & Presenter, Short / Standard / Full) - $19-$89 USD - buy: https://binbinster.gumroad.com/l/pitchreel-explainer-standard
 - [website-monitoring-service] Site Index & Health Monitoring — 90 Days - $29 USD - buy: https://binbinster.gumroad.com/l/site-index-health-monitoring-90-days
 - [worksheet-generator] MathSheetPress — Math Worksheet Generator with Proven Answer Keys: 14 Topic Generators, Zero Duplicates, Print-Ready PDF (Local) - $29 USD - buy: https://binbinster.gumroad.com/l/mathsheetpress-math-worksheet-generator
+- [api-service] ListCheck — API on RapidAPI - $0-$29 USD - buy: https://rapidapi.com/binbin7418/api/listcheck
+- [api-service] DomainTrust Audit — API on RapidAPI - $0-$29 USD - buy: https://rapidapi.com/binbin7418/api/domaintrust-audit
+- [api-service] SupplyChain Scan — API on RapidAPI - $0-$29 USD - buy: https://rapidapi.com/binbin7418/api/supplychain-scan
+- [api-service] SEOScore — API on RapidAPI - $0-$29 USD - buy: https://rapidapi.com/binbin7418/api/seoscore
+- [api-service] ScholarBrief — API on RapidAPI - $0-$29 USD - buy: https://rapidapi.com/binbin7418/api/scholarbrief
+- [api-service] FleetSheet — API on RapidAPI - $0-$29 USD - buy: https://rapidapi.com/binbin7418/api/fleetsheet
+- [api-service] CompoundBrief — API on RapidAPI - $0-$29 USD - buy: https://rapidapi.com/binbin7418/api/compoundbrief
+- [api-service] GlobalOps Calendar — API on RapidAPI - $0-$29 USD - buy: https://rapidapi.com/binbin7418/api/globalops-calendar
