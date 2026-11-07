@@ -1,0 +1,45 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "CompoundBrief — API on RapidAPI",
+ "description": "Build a compound brief for a batch of drug names in one call: CompoundBrief returns the ChEMBL molecule record, bioactivity footprint and Crossref literature footprint together, so early research triage starts from one consistent brief instead of three tabs.\n\nWhat you get:\n- ChEMBL molecule record per compound: identifiers, structure metadata and activity counts\n- Bioactivity record counts and a literature footprint from Crossref\n- Name matching against ChEMBL preferred names — if a name does not resolve, the brief says so and suggests the preferred form (for example, search acetaminophen, not paracetamol)\n- Batch briefs in one response with a summary\n\nKey endpoints:\n- POST /brief/batch — brief up to 25 compounds in one call\n- POST /brief/single — brief one compound\n- GET /health — service status\n\nPlans: BASIC is free with 200 calls per month. PRO is $9/month for 10,000 calls. ULTRA is $29/month for 50,000 calls plus $0.001 per additional call.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+ "sku": "api-compoundbrief",
+ "category": "api-service",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "AggregateOffer",
+  "lowPrice": 0.0,
+  "highPrice": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://rapidapi.com/binbin7418/api/compoundbrief",
+  "offerCount": 3
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant API access after subscribing on RapidAPI; no file delivery."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "JSON responses over HTTPS (REST)."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "A RapidAPI account and API key; any HTTPS client."
+  }
+ ]
+}
