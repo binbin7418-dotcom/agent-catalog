@@ -422,8 +422,8 @@
    {
     "id": "api-phonecheck",
     "title": "PhoneCheck — API on RapidAPI",
-    "description": "Phone number validation and carrier lookup API with line-type detection and a batch health-report endpoint.",
-    "description_full": "Verify phone numbers before they enter your system: PhoneCheck returns a validity verdict, line type and carrier context for numbers worldwide — one at a time, or as a batch health report for a whole list.\n\nWhat you get:\n- A validity verdict per number, parsed and checked locally with the libphonenumber rule set — no third-party lookup latency\n- Country, line type (mobile / landline / VoIP and more) and both international and national formats, plus a ready-to-use tel: link\n- Batch health reports: send up to 100 numbers and get per-number results plus a summary of how clean the list is\n- Consistent single and batch response formats, so one parser serves both paths\n\nKey endpoints:\n- GET /validate — validate a single phone number\n- POST /validate — validate a single phone number (JSON body)\n- POST /validate/batch — validate up to 100 numbers in one call, with a list-level summary\n\nBatch / built for workflows:\nBuilt for list hygiene and onboarding pipelines: the batch endpoint is the same one used in production list-cleaning workflows — one call in, a structured health report out. Single-number checks fit form validation, OTP enrollment screening and CRM data entry, all with zero upstream dependency: parsing runs locally, so responses stay fast and predictable.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+    "description": "Phone number validation API with line-type detection and a batch health-report endpoint.",
+    "description_full": "Verify phone numbers before they enter your system: PhoneCheck returns a validity verdict and line type for numbers worldwide — one at a time, or as a batch health report for a whole list.\n\nWhat you get:\n- A validity verdict per number, parsed and checked locally with the libphonenumber rule set — no third-party lookup latency\n- Country, line type (mobile / landline / VoIP and more) and both international and national formats, plus a ready-to-use tel: link\n- Batch health reports: send up to 100 numbers and get per-number results plus a summary of how clean the list is\n- Consistent single and batch response formats, so one parser serves both paths\n\nKey endpoints:\n- GET /validate — validate a single phone number\n- POST /validate — validate a single phone number (JSON body)\n- POST /validate/batch — validate up to 100 numbers in one call, with a list-level summary\n\nBatch / built for workflows:\nBuilt for list hygiene and onboarding pipelines: the batch endpoint is the same one used in production list-cleaning workflows — one call in, a structured health report out. Single-number checks fit form validation, OTP enrollment screening and CRM data entry, all with zero upstream dependency: parsing runs locally, so responses stay fast and predictable.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
     "price_range": {
      "min": {
       "amount": 0,
@@ -456,7 +456,7 @@
     "requirements": "A RapidAPI account and API key; any HTTPS client.",
     "whats_inside": [
      "Validity and line-type verdict per number",
-     "Carrier lookup",
+     "Country, E.164 and display formats per number",
      "Batch health-report endpoint"
     ],
     "return_policy": {
@@ -3913,6 +3913,622 @@
      "gumroad": "https://binbinster.gumroad.com/l/mathsheetpress-math-worksheet-generator"
     },
     "landing_url": "https://binbin7418-dotcom.github.io/mathsheetpress/"
+   },
+   {
+    "id": "api-listcheck",
+    "title": "ListCheck — API on RapidAPI",
+    "description": "Batch list screening API: emails, phone numbers and card numbers checked in one call with a per-item verdict and batch summary.",
+    "description_full": "Screen a whole contact list in one call: ListCheck checks emails, phone numbers and card numbers together and returns a per-item verdict for every row, so CRM imports, signup exports and lead lists can be cleaned before they reach your systems.\n\nWhat you get:\n- One batch call for mixed lists: email syntax and domain-level validation, phone numbering-plan validation with country and E.164 format, card format and Luhn checks\n- A structured verdict per item plus a batch summary, ready to feed back into your import pipeline\n- Honest scope: email checks are domain-level (syntax, MX, disposable domains) and do not probe individual mailboxes; phone checks validate the numbering plan, not live reachability\n\nKey endpoints:\n- POST /screen/batch — screen up to 100 items per leg in one call\n- POST /screen/single — screen one item\n\nPlans: BASIC is free with 200 calls per month. PRO is $9/month for 10,000 calls. ULTRA is $29/month for 50,000 calls plus $0.001 per additional call.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+    "price_range": {
+     "min": {
+      "amount": 0,
+      "currency": "USD"
+     },
+     "max": {
+      "amount": 2900,
+      "currency": "USD"
+     }
+    },
+    "variants": [
+     {
+      "id": "basic",
+      "title": "BASIC — free",
+      "description": "Free plan: 200 calls per month.",
+      "price": {
+       "amount": 0,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/listcheck"
+     },
+     {
+      "id": "pro",
+      "title": "PRO — $9/month",
+      "description": "10,000 calls per month.",
+      "price": {
+       "amount": 900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/listcheck"
+     },
+     {
+      "id": "ultra",
+      "title": "ULTRA — $29/month",
+      "description": "50,000 calls per month, then $0.001 per additional call.",
+      "price": {
+       "amount": 2900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/listcheck"
+     }
+    ],
+    "availability": "InStock",
+    "category": "api-service",
+    "sku": "",
+    "image": "",
+    "delivery": "Instant API access after subscribing on RapidAPI; no file delivery.",
+    "file_format": "JSON responses over HTTPS (REST).",
+    "requirements": "A RapidAPI account and API key; any HTTPS client.",
+    "whats_inside": [
+     "Email domain-level validation (syntax, MX, disposable domains)",
+     "Phone numbering-plan validation with country and E.164",
+     "Card format and Luhn checks",
+     "Batch endpoint: up to 100 items per leg per call"
+    ],
+    "return_policy": {
+     "merchant_return_days": 30,
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+    },
+    "seller": {
+     "name": "Bin Bin",
+     "brand": "Vision (binbinster)",
+     "support_email": "binbin7418@gmail.com"
+    },
+    "buy_urls": {
+     "rapidapi": "https://rapidapi.com/binbin7418/api/listcheck"
+    },
+    "landing_url": "https://rapidapi.com/binbin7418/api/listcheck"
+   },
+   {
+    "id": "api-domaintrust-audit",
+    "title": "DomainTrust Audit — API on RapidAPI",
+    "description": "Domain trust audit API: SPF/DMARC/DKIM checks with a score, plus batch address screening grouped by verdict.",
+    "description_full": "Audit a domain's email trust setup and screen its addresses in one call: DomainTrust Audit checks SPF, DMARC and DKIM configuration and groups the domain's email addresses by validation outcome, so deliverability problems surface before a campaign does.\n\nWhat you get:\n- A mail-authentication audit with a score and per-check findings (SPF, DMARC, DKIM via common selector probing)\n- Batch screening of the domain's addresses, grouped by verdict — counts and groups, never invented causes\n- A single structured report per domain, built for vendor checks, onboarding reviews and outbound warm-up\n\nKey endpoints:\n- POST /audit — audit one domain and screen its addresses\n- GET /health — service status\n\nPlans: BASIC is free with 200 calls per month. PRO is $9/month for 10,000 calls. ULTRA is $29/month for 50,000 calls plus $0.001 per additional call.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+    "price_range": {
+     "min": {
+      "amount": 0,
+      "currency": "USD"
+     },
+     "max": {
+      "amount": 2900,
+      "currency": "USD"
+     }
+    },
+    "variants": [
+     {
+      "id": "basic",
+      "title": "BASIC — free",
+      "description": "Free plan: 200 calls per month.",
+      "price": {
+       "amount": 0,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/domaintrust-audit"
+     },
+     {
+      "id": "pro",
+      "title": "PRO — $9/month",
+      "description": "10,000 calls per month.",
+      "price": {
+       "amount": 900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/domaintrust-audit"
+     },
+     {
+      "id": "ultra",
+      "title": "ULTRA — $29/month",
+      "description": "50,000 calls per month, then $0.001 per additional call.",
+      "price": {
+       "amount": 2900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/domaintrust-audit"
+     }
+    ],
+    "availability": "InStock",
+    "category": "api-service",
+    "sku": "",
+    "image": "",
+    "delivery": "Instant API access after subscribing on RapidAPI; no file delivery.",
+    "file_format": "JSON responses over HTTPS (REST).",
+    "requirements": "A RapidAPI account and API key; any HTTPS client.",
+    "whats_inside": [
+     "SPF, DMARC and DKIM (selector-probe) audit with score",
+     "Per-check findings with fix guidance",
+     "Address screening grouped by verdict",
+     "One structured report per domain"
+    ],
+    "return_policy": {
+     "merchant_return_days": 30,
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+    },
+    "seller": {
+     "name": "Bin Bin",
+     "brand": "Vision (binbinster)",
+     "support_email": "binbin7418@gmail.com"
+    },
+    "buy_urls": {
+     "rapidapi": "https://rapidapi.com/binbin7418/api/domaintrust-audit"
+    },
+    "landing_url": "https://rapidapi.com/binbin7418/api/domaintrust-audit"
+   },
+   {
+    "id": "api-supplychain-scan",
+    "title": "SupplyChain Scan — API on RapidAPI",
+    "description": "npm dependency vulnerability scan API: batch OSV vulnerability matching plus package health, returned as a severity-ranked fix list.",
+    "description_full": "Scan a list of npm dependencies for known vulnerabilities in one call: SupplyChain Scan checks every package against the OSV database and npm registry data and returns a severity-ranked fix list, so dependency audits stop being a manual one-by-one chore.\n\nWhat you get:\n- Per-package vulnerability findings matched against OSV records, with severity ratings\n- Package health context from npm (latest version, deprecation status)\n- A ranked remediation list for the whole batch, plus a summary you can attach to a security review\n- Honest scope: a clean result means OSV currently has no record for that package and version — it is not a guarantee of safety\n\nKey endpoints:\n- POST /scan — scan up to 100 dependencies in one call\n- GET /health — service status\n\nPlans: BASIC is free with 200 calls per month. PRO is $9/month for 10,000 calls. ULTRA is $29/month for 50,000 calls plus $0.001 per additional call.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+    "price_range": {
+     "min": {
+      "amount": 0,
+      "currency": "USD"
+     },
+     "max": {
+      "amount": 2900,
+      "currency": "USD"
+     }
+    },
+    "variants": [
+     {
+      "id": "basic",
+      "title": "BASIC — free",
+      "description": "Free plan: 200 calls per month.",
+      "price": {
+       "amount": 0,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/supplychain-scan"
+     },
+     {
+      "id": "pro",
+      "title": "PRO — $9/month",
+      "description": "10,000 calls per month.",
+      "price": {
+       "amount": 900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/supplychain-scan"
+     },
+     {
+      "id": "ultra",
+      "title": "ULTRA — $29/month",
+      "description": "50,000 calls per month, then $0.001 per additional call.",
+      "price": {
+       "amount": 2900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/supplychain-scan"
+     }
+    ],
+    "availability": "InStock",
+    "category": "api-service",
+    "sku": "",
+    "image": "",
+    "delivery": "Instant API access after subscribing on RapidAPI; no file delivery.",
+    "file_format": "JSON responses over HTTPS (REST).",
+    "requirements": "A RapidAPI account and API key; any HTTPS client.",
+    "whats_inside": [
+     "OSV vulnerability matching per package and version",
+     "Severity-ranked remediation list",
+     "npm package health and deprecation context",
+     "Batch endpoint: up to 100 dependencies per call"
+    ],
+    "return_policy": {
+     "merchant_return_days": 30,
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+    },
+    "seller": {
+     "name": "Bin Bin",
+     "brand": "Vision (binbinster)",
+     "support_email": "binbin7418@gmail.com"
+    },
+    "buy_urls": {
+     "rapidapi": "https://rapidapi.com/binbin7418/api/supplychain-scan"
+    },
+    "landing_url": "https://rapidapi.com/binbin7418/api/supplychain-scan"
+   },
+   {
+    "id": "api-seoscore",
+    "title": "SEOScore — API on RapidAPI",
+    "description": "SEO and GEO audit API: per-page scores with per-check fix guidance, single URL or batches of up to 25.",
+    "description_full": "Audit any web page for SEO and AI-search (GEO) readiness in one call: SEOScore returns an SEO score, a GEO score and per-check findings with fix guidance, for a single URL or a batch of up to 25.\n\nWhat you get:\n- SEO score covering titles, meta, headings, links, images and technical basics\n- GEO score for AI-answer visibility: structured data, answer-ready content signals and machine-readable files such as llms.txt\n- Every failing check returned with concrete fix guidance, not just a number\n- Batch audits in the same format, for agency sweeps and pre-publish gates\n\nKey endpoints:\n- POST /audit — audit one URL\n- POST /audit/batch — audit up to 25 URLs in one call\n- GET /audit?url= — audit one URL via query string\n\nPlans: BASIC is free with 200 calls per month. PRO is $9/month for 10,000 calls. ULTRA is $29/month for 50,000 calls plus $0.001 per additional call.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+    "price_range": {
+     "min": {
+      "amount": 0,
+      "currency": "USD"
+     },
+     "max": {
+      "amount": 2900,
+      "currency": "USD"
+     }
+    },
+    "variants": [
+     {
+      "id": "basic",
+      "title": "BASIC — free",
+      "description": "Free plan: 200 calls per month.",
+      "price": {
+       "amount": 0,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/seoscore"
+     },
+     {
+      "id": "pro",
+      "title": "PRO — $9/month",
+      "description": "10,000 calls per month.",
+      "price": {
+       "amount": 900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/seoscore"
+     },
+     {
+      "id": "ultra",
+      "title": "ULTRA — $29/month",
+      "description": "50,000 calls per month, then $0.001 per additional call.",
+      "price": {
+       "amount": 2900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/seoscore"
+     }
+    ],
+    "availability": "InStock",
+    "category": "api-service",
+    "sku": "",
+    "image": "",
+    "delivery": "Instant API access after subscribing on RapidAPI; no file delivery.",
+    "file_format": "JSON responses over HTTPS (REST).",
+    "requirements": "A RapidAPI account and API key; any HTTPS client.",
+    "whats_inside": [
+     "SEO score with per-check findings and fixes",
+     "GEO (AI-search readiness) score",
+     "llms.txt and structured-data checks",
+     "Batch endpoint: up to 25 URLs per call"
+    ],
+    "return_policy": {
+     "merchant_return_days": 30,
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+    },
+    "seller": {
+     "name": "Bin Bin",
+     "brand": "Vision (binbinster)",
+     "support_email": "binbin7418@gmail.com"
+    },
+    "buy_urls": {
+     "rapidapi": "https://rapidapi.com/binbin7418/api/seoscore"
+    },
+    "landing_url": "https://rapidapi.com/binbin7418/api/seoscore"
+   },
+   {
+    "id": "api-scholarbrief",
+    "title": "ScholarBrief — API on RapidAPI",
+    "description": "Research brief API: Crossref citation footprint plus Wikipedia pageview slice for batches of up to 25 DOIs, with confident-match guarantees.",
+    "description_full": "Build a citation brief for a batch of papers in one call: ScholarBrief takes DOIs and returns each work's Crossref citation footprint plus its Wikipedia pageview slice, so literature reviews and research dashboards get consistent numbers without gluing two APIs together.\n\nWhat you get:\n- Crossref record per DOI: citation count, authors (first 8), venue, year and references count\n- Wikipedia pageview totals for the matched article over your window — a public-attention slice, not an altmetric score\n- Confident-match rules: a brief is only returned when the Crossref match is solid; otherwise you get the best rejected candidate and its score, never a silent wrong match\n- Batch briefs in one response with a summary\n\nKey endpoints:\n- POST /brief/batch — brief up to 25 DOIs in one call\n- POST /brief/single — brief one DOI\n- GET /health — service status\n\nPlans: BASIC is free with 200 calls per month. PRO is $9/month for 10,000 calls. ULTRA is $29/month for 50,000 calls plus $0.001 per additional call.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+    "price_range": {
+     "min": {
+      "amount": 0,
+      "currency": "USD"
+     },
+     "max": {
+      "amount": 2900,
+      "currency": "USD"
+     }
+    },
+    "variants": [
+     {
+      "id": "basic",
+      "title": "BASIC — free",
+      "description": "Free plan: 200 calls per month.",
+      "price": {
+       "amount": 0,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/scholarbrief"
+     },
+     {
+      "id": "pro",
+      "title": "PRO — $9/month",
+      "description": "10,000 calls per month.",
+      "price": {
+       "amount": 900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/scholarbrief"
+     },
+     {
+      "id": "ultra",
+      "title": "ULTRA — $29/month",
+      "description": "50,000 calls per month, then $0.001 per additional call.",
+      "price": {
+       "amount": 2900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/scholarbrief"
+     }
+    ],
+    "availability": "InStock",
+    "category": "api-service",
+    "sku": "",
+    "image": "",
+    "delivery": "Instant API access after subscribing on RapidAPI; no file delivery.",
+    "file_format": "JSON responses over HTTPS (REST).",
+    "requirements": "A RapidAPI account and API key; any HTTPS client.",
+    "whats_inside": [
+     "Crossref citation count and bibliographic record",
+     "Wikipedia pageview slice per work",
+     "Confident-match scoring with rejected-candidate transparency",
+     "Batch endpoint: up to 25 DOIs per call"
+    ],
+    "return_policy": {
+     "merchant_return_days": 30,
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+    },
+    "seller": {
+     "name": "Bin Bin",
+     "brand": "Vision (binbinster)",
+     "support_email": "binbin7418@gmail.com"
+    },
+    "buy_urls": {
+     "rapidapi": "https://rapidapi.com/binbin7418/api/scholarbrief"
+    },
+    "landing_url": "https://rapidapi.com/binbin7418/api/scholarbrief"
+   },
+   {
+    "id": "api-fleetsheet",
+    "title": "FleetSheet — API on RapidAPI",
+    "description": "Batch VIN decode API: full NHTSA vPIC decodes for up to 25 VINs per call with per-VIN outcomes and a fleet coverage summary.",
+    "description_full": "Decode a whole fleet list in one call: FleetSheet takes up to 25 VINs and returns the full NHTSA vPIC decode for each — make, model, body, fuel, plant and more — plus a fleet summary with field-coverage and make/body/fuel breakdowns.\n\nWhat you get:\n- The complete vPIC field set per VIN (396 fields tracked), identical to decoding one by one\n- Honest per-VIN outcomes: decoded, sparse (partial data) or failed, with checksum-suspect VINs flagged separately\n- A summary with denominators: coverage percentages and breakdowns by make, body class and fuel type\n- Built for intake pipelines: auctions, fleet onboarding, insurance and parts catalogs\n\nKey endpoints:\n- POST /decode/batch — decode up to 25 VINs in one call\n- GET /decode — decode one VIN\n- GET /health — service status\n\nPlans: BASIC is free with 200 calls per month. PRO is $9/month for 10,000 calls. ULTRA is $29/month for 50,000 calls plus $0.001 per additional call.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+    "price_range": {
+     "min": {
+      "amount": 0,
+      "currency": "USD"
+     },
+     "max": {
+      "amount": 2900,
+      "currency": "USD"
+     }
+    },
+    "variants": [
+     {
+      "id": "basic",
+      "title": "BASIC — free",
+      "description": "Free plan: 200 calls per month.",
+      "price": {
+       "amount": 0,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/fleetsheet"
+     },
+     {
+      "id": "pro",
+      "title": "PRO — $9/month",
+      "description": "10,000 calls per month.",
+      "price": {
+       "amount": 900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/fleetsheet"
+     },
+     {
+      "id": "ultra",
+      "title": "ULTRA — $29/month",
+      "description": "50,000 calls per month, then $0.001 per additional call.",
+      "price": {
+       "amount": 2900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/fleetsheet"
+     }
+    ],
+    "availability": "InStock",
+    "category": "api-service",
+    "sku": "",
+    "image": "",
+    "delivery": "Instant API access after subscribing on RapidAPI; no file delivery.",
+    "file_format": "JSON responses over HTTPS (REST).",
+    "requirements": "A RapidAPI account and API key; any HTTPS client.",
+    "whats_inside": [
+     "Full vPIC decode per VIN (396 fields tracked)",
+     "Decoded / sparse / failed outcome per VIN",
+     "Checksum-suspect flagging",
+     "Fleet summary with field coverage and breakdowns"
+    ],
+    "return_policy": {
+     "merchant_return_days": 30,
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+    },
+    "seller": {
+     "name": "Bin Bin",
+     "brand": "Vision (binbinster)",
+     "support_email": "binbin7418@gmail.com"
+    },
+    "buy_urls": {
+     "rapidapi": "https://rapidapi.com/binbin7418/api/fleetsheet"
+    },
+    "landing_url": "https://rapidapi.com/binbin7418/api/fleetsheet"
+   },
+   {
+    "id": "api-compoundbrief",
+    "title": "CompoundBrief — API on RapidAPI",
+    "description": "Compound research brief API: ChEMBL molecule record, bioactivity counts and Crossref literature footprint for batches of up to 25 compounds.",
+    "description_full": "Build a compound brief for a batch of drug names in one call: CompoundBrief returns the ChEMBL molecule record, bioactivity footprint and Crossref literature footprint together, so early research triage starts from one consistent brief instead of three tabs.\n\nWhat you get:\n- ChEMBL molecule record per compound: identifiers, structure metadata and activity counts\n- Bioactivity record counts and a literature footprint from Crossref\n- Name matching against ChEMBL preferred names — if a name does not resolve, the brief says so and suggests the preferred form (for example, search acetaminophen, not paracetamol)\n- Batch briefs in one response with a summary\n\nKey endpoints:\n- POST /brief/batch — brief up to 25 compounds in one call\n- POST /brief/single — brief one compound\n- GET /health — service status\n\nPlans: BASIC is free with 200 calls per month. PRO is $9/month for 10,000 calls. ULTRA is $29/month for 50,000 calls plus $0.001 per additional call.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+    "price_range": {
+     "min": {
+      "amount": 0,
+      "currency": "USD"
+     },
+     "max": {
+      "amount": 2900,
+      "currency": "USD"
+     }
+    },
+    "variants": [
+     {
+      "id": "basic",
+      "title": "BASIC — free",
+      "description": "Free plan: 200 calls per month.",
+      "price": {
+       "amount": 0,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/compoundbrief"
+     },
+     {
+      "id": "pro",
+      "title": "PRO — $9/month",
+      "description": "10,000 calls per month.",
+      "price": {
+       "amount": 900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/compoundbrief"
+     },
+     {
+      "id": "ultra",
+      "title": "ULTRA — $29/month",
+      "description": "50,000 calls per month, then $0.001 per additional call.",
+      "price": {
+       "amount": 2900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/compoundbrief"
+     }
+    ],
+    "availability": "InStock",
+    "category": "api-service",
+    "sku": "",
+    "image": "",
+    "delivery": "Instant API access after subscribing on RapidAPI; no file delivery.",
+    "file_format": "JSON responses over HTTPS (REST).",
+    "requirements": "A RapidAPI account and API key; any HTTPS client.",
+    "whats_inside": [
+     "ChEMBL molecule record and identifiers",
+     "Bioactivity record counts",
+     "Crossref literature footprint",
+     "Batch endpoint: up to 25 compounds per call"
+    ],
+    "return_policy": {
+     "merchant_return_days": 30,
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+    },
+    "seller": {
+     "name": "Bin Bin",
+     "brand": "Vision (binbinster)",
+     "support_email": "binbin7418@gmail.com"
+    },
+    "buy_urls": {
+     "rapidapi": "https://rapidapi.com/binbin7418/api/compoundbrief"
+    },
+    "landing_url": "https://rapidapi.com/binbin7418/api/compoundbrief"
+   },
+   {
+    "id": "api-globalops-calendar",
+    "title": "GlobalOps Calendar — API on RapidAPI",
+    "description": "Cross-country workday planning API: public-holiday-based workday counts for batch country windows, plus year-stamped World Bank context.",
+    "description_full": "Plan working days across countries in one call: GlobalOps Calendar computes real workdays from the public-holiday set for a batch of country windows and attaches World Bank context indicators — always with their data year — so global scheduling and market planning stop guessing.\n\nWhat you get:\n- Workday counts per country and window, computed only from public holidays (observance and school days never counted as days off)\n- The holiday list behind every count, so results are auditable\n- Economic context indicators with the year attached to every value — no undated 'current' figures\n- Honest coverage: countries outside the dataset return a clean NOT_COVERED instead of a guess; China's set covers anchor public-holiday dates without adjusted weekends or merged leave\n\nKey endpoints:\n- POST /plan/batch — plan multiple country windows in one call\n- POST /plan/single — plan one country window\n- GET /health — service status\n\nPlans: BASIC is free with 200 calls per month. PRO is $9/month for 10,000 calls. ULTRA is $29/month for 50,000 calls plus $0.001 per additional call.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+    "price_range": {
+     "min": {
+      "amount": 0,
+      "currency": "USD"
+     },
+     "max": {
+      "amount": 2900,
+      "currency": "USD"
+     }
+    },
+    "variants": [
+     {
+      "id": "basic",
+      "title": "BASIC — free",
+      "description": "Free plan: 200 calls per month.",
+      "price": {
+       "amount": 0,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/globalops-calendar"
+     },
+     {
+      "id": "pro",
+      "title": "PRO — $9/month",
+      "description": "10,000 calls per month.",
+      "price": {
+       "amount": 900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/globalops-calendar"
+     },
+     {
+      "id": "ultra",
+      "title": "ULTRA — $29/month",
+      "description": "50,000 calls per month, then $0.001 per additional call.",
+      "price": {
+       "amount": 2900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/globalops-calendar"
+     }
+    ],
+    "availability": "InStock",
+    "category": "api-service",
+    "sku": "",
+    "image": "",
+    "delivery": "Instant API access after subscribing on RapidAPI; no file delivery.",
+    "file_format": "JSON responses over HTTPS (REST).",
+    "requirements": "A RapidAPI account and API key; any HTTPS client.",
+    "whats_inside": [
+     "Workday counts computed from the public-holiday set only",
+     "Auditable holiday list per count",
+     "World Bank indicators with data year on every value",
+     "Clean NOT_COVERED for unsupported countries"
+    ],
+    "return_policy": {
+     "merchant_return_days": 30,
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+    },
+    "seller": {
+     "name": "Bin Bin",
+     "brand": "Vision (binbinster)",
+     "support_email": "binbin7418@gmail.com"
+    },
+    "buy_urls": {
+     "rapidapi": "https://rapidapi.com/binbin7418/api/globalops-calendar"
+    },
+    "landing_url": "https://rapidapi.com/binbin7418/api/globalops-calendar"
    }
   ]
  }
