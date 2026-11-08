@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Citywalk — Your photo, walking a paper city</title>
+<meta name="description" content="Citywalk turns one photo into a personalized fashion paper-cutout film: you, striding down a zebra crossing in a hand-built paper city — Fashion, Tokyo, a Shanghai café, the Off Duty collage, a London duo or a Hong Kong market. $12.99. Vertical MP4 with a pop groove, delivered within 48 hours.">
+<script>document.documentElement.classList.add("js");</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --board:#eee4cb; --paper:#fffdf4; --paper2:#fffefa;
+    --ink:#26211a; --ink70:rgba(38,33,26,.7); --ink55:rgba(38,33,26,.55); --ink40:rgba(38,33,26,.4);
+    --line:rgba(38,33,26,.16);
+    --rust:#b3442c; --crimson:#bc2333; --crimson-deep:#8e1b29;
+    --slate:#7e94a9; --fluoro:#f7e600; --asphalt:#33383f;
+    --pine:#1f6f4a; --gold:#c9922e;
+    --ease:cubic-bezier(.22,1,.36,1); --spring:cubic-bezier(.34,1.56,.64,1);
+    --shadow-paper:0 2px 3px rgba(38,30,15,.18), 0 22px 38px rgba(38,30,15,.2);
+    --shadow-panel:0 16px 34px rgba(59,45,20,.15);
+  }
+  html,body{ background:var(--board); }
+  *{ box-sizing:border-box; }
+  body{ margin:0; font-family:"Archivo",-apple-system,"Segoe UI",sans-serif; color:var(--ink);
+        -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; overflow-x:clip; }
+  ::selection{ background:var(--fluoro); color:var(--ink); }
+  .serif{ font-family:"Instrument Serif",Georgia,serif; font-style:italic; font-weight:400; }
+  .mono{ font-family:"Space Mono",monospace; }
+  .grain{ position:fixed; inset:0; z-index:80; pointer-events:none; opacity:.06; mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E"); }
+  .hidden{ display:none !important; }
+  .fine{ color:var(--ink55); font-size:13.5px; line-height:1.65; }
+
+  .board{ max-width:1180px; margin:0 auto; padding:0 20px; position:relative; z-index:2; }
+  @media (min-width:768px){ .board{ padding:0 36px; } }
+  @media (min-width:1200px){ .board{ padding:0 48px; } }
+
+  /* ---------- info strips (poster zone 1) ---------- */
+  .strip{ display:flex; justify-content:space-between; align-items:baseline; gap:16px;
+    font-family:"Space Mono",monospace; font-size:10.5px; letter-spacing:.2em; text-transform:uppercase;
+    color:var(--ink55); padding:13px 0 10px; border-bottom:2px solid var(--ink); }
+  .strip .r{ text-align:right; }
+  @media (max-width:560px){ .strip{ font-size:9px; letter-spacing:.14em; } }
+  .strip.in{ border-bottom:1.5px dashed rgba(38,33,26,.3); padding-top:0; }
+  .chip{ display:inline-block; background:var(--rust); color:#fff6e6; font-family:"Space Mono",monospace;
+    font-size:10px; letter-spacing:.14em; text-transform:uppercase; padding:5px 9px 4px; border-radius:2px;
+    transform:rotate(-1.2deg); box-shadow:2px 2px 0 rgba(38,33,26,.55); margin-right:10px; vertical-align:2px; }
+  .chip.crimson{ background:var(--crimson); } .chip.green{ background:#2e5d43; }
+  .chip.ink{ background:var(--ink); } .chip.pink{ background:#e2709c; }
+
+  /* ---------- letter tiles ---------- */
+  .tiles{ display:inline-flex; flex-wrap:wrap; gap:.34em .5em; vertical-align:baseline; }
+  .tiles .word{ display:inline-flex; gap:.085em; }
+  .tl{ font-style:normal; font-weight:900; line-height:1; display:inline-flex; align-items:center; justify-content:center;
+    padding:.09em .15em .12em; border-radius:.09em; box-shadow:0 2px 0 rgba(38,33,26,.35), inset 0 0 0 1px rgba(38,33,26,.14);
+    transform:rotate(var(--r,0deg)) translateY(var(--ty,0)); }
+  .tl.k{ background:#292420; color:#f6f0dc; } .tl.w{ background:#f6f0dc; color:var(--ink); }
+  .tl.r{ background:#b3442c; color:#fdf3da; } .tl.b{ background:#7e94a9; color:#26211a; }
+  .tl.y{ background:var(--fluoro); color:var(--ink); } .tl.pk{ background:#f2a7c3; color:#26211a; }
+  .tl.cy{ background:#93d5cf; color:#26211a; } .tl.or{ background:#f0a35e; color:#26211a; }
+  .tl.br{ background:#6f4a2f; color:#fdf3da; } .tl.gn{ background:#2e5d43; color:#fdf3da; }
+  .tl.rd{ background:#c8102e; color:#fdf3da; }
+  .word .tl:nth-child(1){ --r:-2deg; } .word .tl:nth-child(2){ --r:1.6deg; --ty:2px; }
+  .word .tl:nth-child(3){ --r:-1deg; } .word .tl:nth-child(4){ --r:2.2deg; --ty:-1px; }
+  .word .tl:nth-child(5){ --r:-1.8deg; --ty:1px; } .word .tl:nth-child(6){ --r:1.2deg; }
+  .word .tl:nth-child(7){ --r:-2.4deg; --ty:2px; } .word .tl:nth-child(8){ --r:1.8deg; }
+  .word .tl:nth-child(9){ --r:-1.4deg; --ty:-1px; } .word .tl:nth-child(10){ --r:2deg; --ty:1px; }
+  .tiles.big{ font-size:clamp(46px,8.6vw,102px); letter-spacing:0; }
+  .tiles.city{ font-size:clamp(30px,4.6vw,54px); }
+  .tiles.head{ font-size:clamp(25px,3.8vw,42px); }
+
+  /* ---------- tape, pins, stickers ---------- */
+  .tape{ position:absolute; width:100px; height:28px; z-index:5; pointer-events:none;
+    background:linear-gradient(rgba(243,231,190,.9), rgba(238,222,170,.78));
+    box-shadow:0 2px 5px rgba(38,30,15,.14); }
+  .tape.tl{ top:-13px; left:26px; transform:rotate(-4deg); }
+  .tape.tr{ top:-13px; right:26px; transform:rotate(5deg); }
+  .pin{ position:absolute; top:-9px; left:50%; margin-left:-9px; width:18px; height:18px; border-radius:50%; z-index:6;
+    background:radial-gradient(circle at 35% 30%, #ff9a86, #c8352c 58%, #8e1b29);
+    box-shadow:0 3px 4px rgba(38,30,15,.35); }
+  .fluoro{ display:inline-block; background:var(--fluoro); color:var(--ink); font-weight:800; font-size:13.5px;
+    letter-spacing:.05em; text-transform:uppercase; padding:11px 18px; border-radius:2px;
+    transform:rotate(-1.6deg); box-shadow:4px 4px 0 var(--ink); }
+  .idxcard{ flex:none; background:#fffdf6; border:1.5px solid var(--ink); border-radius:3px; text-align:center;
+    padding:8px 12px 7px; transform:rotate(3deg); box-shadow:3px 3px 0 rgba(38,33,26,.3); }
+  .idxcard .n{ font-weight:900; font-size:21px; line-height:1; }
+  .idxcard .s{ font-family:"Space Mono",monospace; font-size:8.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink55); }
+
+  /* ---------- polaroid ---------- */
+  .polaroid{ position:relative; background:#fffdf6; padding:13px 13px 68px; border-radius:3px;
+    box-shadow:var(--shadow-paper); margin:0; }
+  .polaroid video{ width:100%; aspect-ratio:9/16; object-fit:cover; display:block; border-radius:2px; background:#171310; }
+  .polaroid figcaption{ position:absolute; left:13px; right:13px; bottom:14px; text-align:center;
+    font-family:"Instrument Serif",Georgia,serif; font-style:italic; font-size:16.5px; line-height:1.3; color:var(--ink70); }
+  .polaroid .sticker{ position:absolute; z-index:4; left:-14px; top:34px; transform:rotate(-5deg);
+    background:var(--fluoro); color:var(--ink); font-family:"Space Mono",monospace; font-size:10px; font-weight:700;
+    letter-spacing:.12em; text-transform:uppercase; padding:7px 10px; border-radius:2px; box-shadow:3px 3px 0 rgba(38,33,26,.8); }
+  .rot-l{ transform:rotate(-1.3deg); } .rot-r{ transform:rotate(1deg); }
+  @media (max-width:639px){ .rot-l,.rot-r{ transform:rotate(-.6deg); } }
+
+  /* ---------- nav ---------- */
+  nav{ margin-top:20px; position:relative; z-index:20; animation:drop .8s var(--ease) both; }
+  .navstrip{ position:relative; display:flex; align-items:center; gap:18px; background:var(--paper);
+    border:1.5px solid var(--ink); border-radius:4px; padding:11px 12px 11px 18px;
+    box-shadow:5px 5px 0 rgba(38,33,26,.22); transform:rotate(-.3deg); }
+  .wordmark{ display:inline-flex; align-items:baseline; gap:9px; text-decoration:none; color:var(--ink); white-space:nowrap; }
+  .wordmark .wm-tiles{ font-size:16.5px; }
+  .wordmark .wm-sub{ font-family:"Space Mono",monospace; font-size:9px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink55); }
+  @media (max-width:760px){ .wordmark .wm-sub{ display:none; } }
+  .navlinks{ display:flex; gap:2px; margin-left:auto; }
+  .navlinks a{ color:var(--ink70); text-decoration:none; font-family:"Space Mono",monospace; font-size:11px;
+    letter-spacing:.12em; text-transform:uppercase; padding:8px 11px; border-radius:3px; transition:background .2s, color .2s; }
+  .navlinks a:hover{ color:var(--ink); background:rgba(38,33,26,.07); }
+  @media (max-width:900px){ .navlinks{ display:none; } }
+  .navcta{ background:var(--ink); color:#fdf6e3 !important; }
+  @keyframes drop{ from{ opacity:0; transform:translateY(-16px);} to{ opacity:1; transform:none;} }
+
+  /* ---------- buttons ---------- */
+  .btn{ display:inline-flex; align-items:center; gap:10px; border:0; cursor:pointer; text-decoration:none;
+    font-family:inherit; font-size:14.5px; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+    padding:15px 24px; border-radius:4px; transition:transform .18s var(--ease), box-shadow .18s var(--ease), background .2s; }
+  .btn .arr{ display:inline-block; font-size:15px; transition:transform .2s var(--ease); }
+  .btn:hover .arr{ transform:translateX(3px); }
+  .btn.solid{ background:var(--fluoro); color:var(--ink); box-shadow:4px 4px 0 var(--ink); }
+  .btn.solid:hover{ transform:translate(-1px,-1px); box-shadow:5px 5px 0 var(--ink); }
+  .btn.solid:active{ transform:translate(3px,3px); box-shadow:1px 1px 0 var(--ink); }
+  .btn.ink{ background:var(--ink); color:#fdf6e3; box-shadow:4px 4px 0 rgba(38,33,26,.28); }
+  .btn.ink:hover{ transform:translate(-1px,-1px); box-shadow:5px 5px 0 rgba(38,33,26,.28); }
+  .btn.ink:active{ transform:translate(3px,3px); box-shadow:1px 1px 0 rgba(38,33,26,.28); }
+  .btn.ghost{ background:transparent; color:var(--ink); border:1.5px solid var(--ink); }
+  .btn.ghost:hover{ background:var(--paper); }
+  .btn:disabled{ opacity:.45; cursor:not-allowed; transform:none; }
+  .row{ display:flex; gap:12px; margin-top:16px; flex-wrap:wrap; }
+  .row .btn{ flex:1; justify-content:center; }
+
+  /* ---------- hero ---------- */
+  .hero{ padding:46px 0 10px; display:grid; grid-template-columns:1.02fr .98fr; gap:56px; align-items:center; }
+  @media (max-width:959px){ .hero{ grid-template-columns:1fr; padding:34px 0 4px; gap:40px; } }
+  .eyebrow{ display:inline-flex; align-items:center; gap:9px; font-family:"Space Mono",monospace; font-size:11px;
+    letter-spacing:.2em; text-transform:uppercase; color:var(--ink55); animation:fadeUp .8s var(--ease) .1s both; }
+  .eyebrow .dot{ width:8px; height:8px; background:var(--crimson); border-radius:1px; transform:rotate(45deg); flex:none; }
+  h1{ margin:22px 0 0; font-weight:900; line-height:1.02; }
+  h1 .h-serif{ display:block; font-family:"Instrument Serif",Georgia,serif; font-style:italic; font-weight:400;
+    font-size:clamp(31px,4.4vw,52px); letter-spacing:-.01em; color:var(--crimson); margin-bottom:14px;
+    animation:fadeUp .8s var(--ease) .3s both; }
+  h1 .tiles{ display:flex; margin-top:10px; }
+  .hero .tl{ animation:pop .55s var(--spring) both; animation-delay:calc(.15s + var(--i,0)*.045s); }
+  @keyframes pop{ from{ opacity:0; transform:scale(.5) rotate(-9deg);} to{ opacity:1; transform:rotate(var(--r,0deg)) translateY(var(--ty,0)); } }
+  .sub{ color:var(--ink70); font-size:16.5px; line-height:1.6; max-width:31rem; margin:26px 0 0; animation:fadeUp .9s var(--ease) .55s both; }
+  .ctas{ display:flex; gap:14px; margin-top:32px; flex-wrap:wrap; align-items:center; animation:fadeUp .9s var(--ease) .7s both; }
+  .proof{ margin-top:30px; font-family:"Space Mono",monospace; font-size:10.5px; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink40); animation:fadeUp .9s var(--ease) .85s both; }
+  .proof b{ color:var(--crimson); font-weight:700; }
+  @keyframes fadeUp{ from{ opacity:0; transform:translateY(22px);} to{ opacity:1; transform:none;} }
+  .stage{ position:relative; animation:fadeUp 1s var(--ease) .35s both; }
+  .stage .polaroid{ max-width:430px; margin:0 auto; }
+  .hero-note{ text-align:center; margin-top:20px; }
+
+  /* ---------- section heads ---------- */
+  .p-head{ margin-top:88px; }
+  @media (max-width:640px){ .p-head{ margin-top:64px; } }
+  .p-head h2{ font-size:clamp(34px,5.4vw,58px); font-weight:900; letter-spacing:-.02em; line-height:1.04; margin:20px 0 0; }
+  .p-head h2 .h-serif{ font-family:"Instrument Serif",Georgia,serif; font-style:italic; font-weight:400; color:var(--crimson); }
+  .p-head .p-sub{ color:var(--ink70); font-size:15.5px; line-height:1.6; max-width:36rem; margin:12px 0 0; }
+
+  /* ---------- the film ---------- */
+  .filmgrid{ display:grid; grid-template-columns:.88fr 1.12fr; gap:44px; align-items:center; margin-top:30px; }
+  @media (max-width:820px){ .filmgrid{ grid-template-columns:1fr; } }
+  .filmgrid .polaroid{ max-width:360px; margin:0 auto; width:100%; }
+  .mini{ display:flex; gap:16px; padding:17px 2px; border-top:1.5px dashed rgba(38,33,26,.3); align-items:baseline; }
+  .mini:last-of-type{ border-bottom:1.5px dashed rgba(38,33,26,.3); }
+  .mini .n{ font-family:"Instrument Serif",Georgia,serif; font-style:italic; font-size:27px; color:var(--crimson); flex:none; width:30px; }
+  .mini .t{ font-weight:700; font-size:16.5px; letter-spacing:-.01em; }
+  .mini .d{ color:var(--ink70); font-size:14px; line-height:1.55; margin-top:2px; }
+
+  /* ---------- poster panels / gallery ---------- */
+  .poster{ position:relative; border-radius:6px; box-shadow:var(--shadow-panel); padding:26px 30px 32px; margin-top:26px; }
+  @media (max-width:640px){ .poster{ padding:20px 18px 24px; } }
+  @media (min-width:1024px){ .poster.tilt-l{ transform:rotate(-.35deg); } .poster.tilt-r{ transform:rotate(.35deg); } }
+  .poster-grid{ display:grid; grid-template-columns:340px 1fr; gap:40px; align-items:center; margin-top:22px; }
+  @media (max-width:899px){ .poster-grid{ grid-template-columns:1fr; gap:26px; } .poster-grid .polaroid{ max-width:340px; margin:0 auto; width:100%; } }
+  .poster.flip .poster-grid{ direction:rtl; } .poster.flip .poster-grid > *{ direction:ltr; }
+  .poster-copy h3{ margin:0; line-height:1.06; font-weight:900; }
+  .poster-copy h3 .tiles{ display:flex; margin-top:8px; }
+  .poster-copy .d{ color:var(--ink70); font-size:15px; line-height:1.6; max-width:30rem; margin:16px 0 0; }
+  .poster-copy .row{ margin-top:22px; } .poster-copy .row .btn{ flex:none; }
+  .copy-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:14px; }
+  .reg-fashion{ background:#f9e9e1; } .reg-fashion .chip{ background:var(--crimson); }
+  .reg-tokyo{ background:#fdeef3; } .reg-tokyo .chip{ background:#e2709c; }
+  .reg-cafe{ background:#f3ecdd; } .reg-cafe .chip{ background:#2e5d43; }
+  .reg-crossing{ background:#f6f1de; } .reg-crossing .chip{ background:var(--ink); }
+  .reg-journal{ background:#ece4cf; } .reg-journal .chip{ background:var(--rust); }
+  .awning-mini{ height:14px; border-radius:3px; margin-top:16px;
+    background:repeating-linear-gradient(90deg,#2e5d43 0 24px,#fdf3da 24px 48px); }
+  .asphalt-mini{ height:14px; border-radius:3px; margin-top:16px; background:#33383f;
+    background-image:repeating-linear-gradient(96deg, rgba(253,250,238,.9) 0 30px, transparent 30px 60px); }
+
+  /* ---------- what you get (magazine grid) ---------- */
+  .gets{ display:grid; grid-template-columns:1.1fr .9fr; gap:18px; margin-top:30px;
+    grid-template-areas:"a b" "a c" "d d"; }
+  @media (max-width:820px){ .gets{ grid-template-columns:1fr; grid-template-areas:"a" "b" "c" "d"; } }
+  .gcard{ position:relative; background:var(--paper); border:1.5px solid var(--ink); border-radius:5px; padding:24px;
+    box-shadow:5px 5px 0 rgba(38,33,26,.14); display:flex; flex-direction:column; }
+  .spec{ margin-top:auto; padding-top:18px; }
+  .spec .srow{ display:flex; justify-content:space-between; gap:12px; border-top:1px dashed rgba(38,33,26,.3);
+    padding:7px 0 6px; font-family:"Space Mono",monospace; font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; }
+  .spec .srow span:first-child{ color:var(--ink55); } .spec .srow span:last-child{ font-weight:700; }
+  .p-foot{ display:flex; justify-content:space-between; gap:14px; margin-top:26px; padding-top:12px;
+    border-top:1.5px dashed rgba(38,33,26,.3); font-family:"Space Mono",monospace; font-size:9.5px;
+    letter-spacing:.18em; text-transform:uppercase; color:var(--ink55); }
+  .gcard.a{ grid-area:a; } .gcard.b{ grid-area:b; } .gcard.c{ grid-area:c; } .gcard.d{ grid-area:d; }
+  .gcard .tag{ font-family:"Space Mono",monospace; font-size:9.5px; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--ink55); display:flex; justify-content:space-between; border-bottom:1.5px solid var(--ink); padding-bottom:9px; margin-bottom:15px; }
+  .gcard .tag b{ color:var(--crimson); }
+  .gicon{ width:46px; height:46px; border:1.5px solid var(--ink); border-radius:4px; display:flex; align-items:center;
+    justify-content:center; background:#fdf3da; margin-bottom:14px; }
+  .gicon svg{ width:22px; height:22px; }
+  .gcard .t{ font-weight:800; font-size:18px; letter-spacing:-.01em; }
+  .gcard .d{ color:var(--ink70); font-size:14px; line-height:1.6; margin-top:5px; max-width:34rem; }
+  .gcard.hl{ box-shadow:5px 5px 0 var(--fluoro), 5px 5px 0 1.5px var(--ink); }
+
+  /* ---------- zebra divider ---------- */
+  .zebra{ position:relative; height:48px; margin-top:88px; background:var(--asphalt);
+    background-image:repeating-linear-gradient(96deg, rgba(253,250,238,.94) 0 44px, transparent 44px 88px);
+    transform:rotate(-.4deg) scale(1.01); box-shadow:0 10px 24px rgba(38,30,15,.18); }
+  @media (max-width:640px){ .zebra{ margin-top:64px; } }
+  .zebra .fluoro{ position:absolute; left:50%; top:50%; transform:translate(-50%,-50%) rotate(-1.6deg); white-space:nowrap; }
+
+  /* ---------- steps ---------- */
+  .steps{ display:grid; grid-template-columns:1fr 1fr; gap:0 44px; margin-top:8px; }
+  @media (max-width:820px){ .steps{ grid-template-columns:1fr; } }
+  .step{ display:flex; gap:18px; padding:20px 2px; border-top:1.5px dashed rgba(38,33,26,.3); align-items:baseline; }
+  .step .n{ font-family:"Instrument Serif",Georgia,serif; font-style:italic; font-size:36px; color:var(--crimson); flex:none; width:40px; }
+  .step .t{ font-weight:700; font-size:16.5px; }
+  .step .d{ color:var(--ink70); font-size:14px; line-height:1.55; margin-top:2px; }
+
+  /* ---------- tips ---------- */
+  .tips{ display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:30px; }
+  @media (max-width:820px){ .tips{ grid-template-columns:1fr; } }
+  .tipcard{ position:relative; background:var(--paper); border-radius:5px; box-shadow:var(--shadow-panel); padding:28px 26px 24px; }
+  .tipcard h3{ margin:0 0 14px; }
+  .tipcard ul{ margin:0; padding-left:18px; color:var(--ink70); font-size:14px; line-height:1.75; }
+  .tipcard li::marker{ color:var(--crimson); }
+
+  /* ---------- order desk ---------- */
+  .awning{ height:20px; margin:-26px -30px 22px; border-radius:6px 6px 0 0;
+    background:repeating-linear-gradient(90deg,#c8352c 0 28px,#fdf3da 28px 56px);
+    clip-path:polygon(0 0,100% 0,100% 55%,97% 100%,94% 55%,91% 100%,88% 55%,85% 100%,82% 55%,79% 100%,76% 55%,73% 100%,70% 55%,67% 100%,64% 55%,61% 100%,58% 55%,55% 100%,52% 55%,49% 100%,46% 55%,43% 100%,40% 55%,37% 100%,34% 55%,31% 100%,28% 55%,25% 100%,22% 55%,19% 100%,16% 55%,13% 100%,10% 55%,7% 100%,4% 55%,0 100%); }
+  @media (max-width:640px){ .awning{ margin:-20px -18px 18px; } }
+  .reg-market{ background:#fdf6e3; }
+  .reg-ink{ background:#f0ead6; }
+  .opanel{ padding:4px 2px 8px; }
+  .opanel + .opanel{ border-top:1.5px dashed rgba(38,33,26,.3); margin-top:14px; padding-top:20px; }
+  .opanel h3{ font-weight:900; font-size:23px; letter-spacing:-.015em; margin:0 0 6px; }
+  .opanel h3::before{ content:""; display:inline-block; width:10px; height:10px; background:var(--crimson); margin-right:11px; transform:rotate(45deg); }
+  .olabel{ display:block; font-family:"Space Mono",monospace; font-size:11px; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink55); margin:18px 0 8px; }
+  .olabel:first-of-type{ margin-top:8px; }
+  input[type=text], input[type=email], select{ width:100%; padding:13px 15px; border:1.5px solid rgba(38,33,26,.85);
+    border-radius:5px; font-size:15.5px; font-family:inherit; background:var(--paper2); color:var(--ink); }
+  input:focus, select:focus{ outline:none; border-color:var(--ink); box-shadow:0 0 0 3px var(--fluoro); }
+  #licenseKey{ font-family:"Space Mono",monospace; letter-spacing:.05em; text-transform:uppercase; }
+  .fgrid{ display:grid; grid-template-columns:1fr 1fr; gap:0 16px; }
+  @media (max-width:640px){ .fgrid{ grid-template-columns:1fr; } }
+  .vgrid{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:8px; }
+  @media (max-width:640px){ .vgrid{ grid-template-columns:1fr; } }
+  .vcard{ position:relative; border:1.5px solid rgba(38,33,26,.5); border-radius:6px; padding:13px 15px; cursor:pointer;
+    background:var(--paper2); display:flex; gap:14px; align-items:flex-start;
+    transition:border-color .2s, box-shadow .2s, transform .2s var(--ease); }
+  .vcard:hover{ transform:translateY(-2px); }
+  .vcard.sel{ border:2px solid var(--ink); box-shadow:5px 5px 0 var(--acc,var(--fluoro)); }
+  .vcard.sel::after{ content:"PICKED"; position:absolute; top:-9px; right:12px; background:var(--ink); color:#fdf6e3;
+    font-family:"Space Mono",monospace; font-size:8.5px; letter-spacing:.16em; padding:3px 7px; border-radius:2px; }
+  .vcard img.thumb{ width:52px; height:92px; object-fit:cover; border-radius:3px; border:1px solid var(--line); flex:none; }
+  .vcard .t{ font-weight:700; font-size:16px; }
+  .vcard .p{ font-family:"Space Mono",monospace; font-size:11px; letter-spacing:.08em; color:var(--crimson); margin-top:3px; }
+  .vcard .d{ color:var(--ink70); font-size:12.5px; line-height:1.5; margin-top:4px; }
+  .up{ border:1.5px dashed rgba(38,33,26,.45); border-radius:6px; padding:20px; text-align:center; cursor:pointer;
+    min-height:150px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;
+    transition:border-color .2s, background .2s; background:var(--paper2); margin-top:8px; }
+  .up:hover{ border-color:var(--ink); background:#fdf3da; }
+  .up img{ max-height:190px; max-width:100%; border-radius:4px; }
+  .up .hint{ color:var(--ink55); font-size:14px; }
+  .up .hint b{ color:var(--ink); font-weight:700; }
+  .status{ margin-top:14px; color:var(--ink70); font-size:14.5px; min-height:22px; line-height:1.55; }
+  .okbox{ margin-top:18px; background:#eef4e2; border:1.5px solid var(--ink); border-radius:5px; padding:18px 20px; box-shadow:4px 4px 0 rgba(38,33,26,.16); }
+  .warnbox{ margin-top:18px; background:#fbe9df; border:1.5px solid var(--ink); border-radius:5px; padding:18px 20px; box-shadow:4px 4px 0 rgba(38,33,26,.16); }
+  .okbox .t, .warnbox .t{ font-weight:800; font-size:15.5px; }
+  .okbox p, .warnbox p{ margin:6px 0 0; font-size:14px; line-height:1.6; color:var(--ink70); }
+  .okbox .mono, .warnbox .mono{ font-family:"Space Mono",monospace; font-size:13px; }
+  .spill{ display:inline-flex; align-items:center; gap:8px; padding:7px 14px; border-radius:999px; font-size:13px;
+    font-weight:700; border:1.5px solid currentColor; background:var(--paper); font-family:"Space Mono",monospace; }
+  .spill .dot{ width:7px; height:7px; border-radius:50%; background:currentColor; }
+  .spill.received{ color:#8a5f14; } .spill.paid{ color:var(--pine); } .spill.delivered{ color:var(--crimson-deep); }
+
+  /* ---------- footer ---------- */
+  footer{ margin-top:96px; background:#262a30; color:#f1e9d2; position:relative; }
+  footer::before{ content:""; display:block; height:16px; background:#33383f;
+    background-image:repeating-linear-gradient(96deg, rgba(253,250,238,.9) 0 30px, transparent 30px 60px); }
+  .foot-in{ max-width:1180px; margin:0 auto; padding:38px 20px 60px; display:grid; grid-template-columns:repeat(4,1fr); gap:26px; }
+  @media (min-width:768px){ .foot-in{ padding-left:36px; padding-right:36px; } }
+  @media (min-width:1200px){ .foot-in{ padding-left:48px; padding-right:48px; } }
+  @media (max-width:820px){ .foot-in{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:520px){ .foot-in{ grid-template-columns:1fr; } }
+  footer h3{ font-family:"Space Mono",monospace; font-size:11px; font-weight:700; letter-spacing:.18em;
+    text-transform:uppercase; color:var(--fluoro); margin:0 0 10px; }
+  footer p{ color:rgba(241,233,210,.66); font-size:13.5px; line-height:1.65; margin:0; }
+
+  .js .reveal{ opacity:0; transform:translateY(26px); transition:opacity .8s var(--ease), transform .8s var(--ease); }
+  .js .reveal.in{ opacity:1; transform:none; }
+  .js .poster.reveal{ transform:rotate(0deg) translateY(26px); }
+  .js .poster.tilt-l.reveal.in{ transform:rotate(-.35deg); }
+  .js .poster.tilt-r.reveal.in{ transform:rotate(.35deg); }
+  @media (max-width:1023px){ .js .poster.tilt-l.reveal.in, .js .poster.tilt-r.reveal.in{ transform:none; } }
+  @media (prefers-reduced-motion: reduce){
+    *,*::before,*::after{ animation:none !important; transition:none !important; }
+    .reveal{ opacity:1 !important; transform:none !important; }
+    .hero .tl{ opacity:1 !important; }
+  }
+</style>
+<link rel="canonical" href="https://walk.newkwlab.com/walk/">
+<meta property="og:type" content="product">
+<meta property="og:title" content="Citywalk — Your photo, walking a paper city">
+<meta property="og:description" content="Citywalk turns one photo into a personalized fashion paper-cutout film: you, striding down a zebra crossing in a hand-built paper city — Fashion, Tokyo, a Shanghai café, the Off Duty collage, a London duo or a Hong Kong market. $12.99. Vertical MP4 with a pop groove, delivered within 48 hours.">
+<meta property="og:url" content="https://walk.newkwlab.com/walk/">
+<meta property="og:image" content="https://walk.newkwlab.com/walk/media/fashion-citywalk-poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Citywalk — Your photo, walking a paper city">
+<meta name="twitter:description" content="Citywalk turns one photo into a personalized fashion paper-cutout film: you, striding down a zebra crossing in a hand-built paper city — Fashion, Tokyo, a Shanghai café, the Off Duty collage, a London duo or a Hong Kong market. $12.99. Vertical MP4 with a pop groove, delivered within 48 hours.">
+<meta name="twitter:image" content="https://walk.newkwlab.com/walk/media/fashion-citywalk-poster.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Citywalk — Fashion Paper-Cutout Animation",
+  "description": "Citywalk turns one photo into a personalized fashion paper-cutout film: you, striding down a zebra crossing in a hand-built paper city — Fashion, Tokyo, a Shanghai café, the Off Duty collage, a London duo or a Hong Kong market. $12.99. Vertical MP4 with a pop groove, delivered within 48 hours.",
+  "url": "https://walk.newkwlab.com/walk/",
+  "offers": {
+    "@type": "Offer",
+    "price": "12.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://walk.newkwlab.com/walk/"
+  }
+}
+</script>
+</head>
+<body>
+<div class="grain"></div>
+<div class="board">
+
+  <div class="strip"><span>Citywalk — The Walk Issue</span><span class="r">Vol. 01 · Six Cities · Est. 2026</span></div>
+
+  <nav>
+    <span class="tape tl"></span>
+    <div class="navstrip">
+      <a class="wordmark" href="#top" aria-label="Citywalk — home">
+        <span class="tiles wm-tiles" aria-hidden="true"><span class="word"><i class="tl k">C</i><i class="tl w">i</i><i class="tl r">t</i><i class="tl b">y</i><i class="tl k">w</i><i class="tl w">a</i><i class="tl r">l</i><i class="tl b">k</i></span></span>
+        <span class="wm-sub">Paper-cutout films</span>
+      </a>
+      <div class="navlinks">
+        <a href="#film">The film</a><a href="#cities">Cities</a><a href="#how">How it works</a><a href="#status">Order status</a>
+        <a class="navcta" href="#order">Order — $12.99</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="top">
+    <div>
+      <span class="eyebrow"><span class="dot"></span> Personalized fashion paper-cutout film · One photo · Six looks</span>
+      <h1 aria-label="Step onto a paper runway.">
+        <span class="h-serif" aria-hidden="true">Step onto a</span>
+        <span class="tiles big" aria-hidden="true"><span class="word"><i class="tl k" style="--i:0">P</i><i class="tl w" style="--i:1">A</i><i class="tl r" style="--i:2">P</i><i class="tl b" style="--i:3">E</i><i class="tl y" style="--i:4">R</i></span></span>
+        <span class="tiles big" aria-hidden="true"><span class="word"><i class="tl r" style="--i:5">R</i><i class="tl w" style="--i:6">U</i><i class="tl k" style="--i:7">N</i><i class="tl b" style="--i:8">W</i><i class="tl y" style="--i:9">A</i><i class="tl r" style="--i:10">Y</i><i class="tl k" style="--i:11">.</i></span></span>
+      </h1>
+      <p class="sub">Send us one photo and watch yourself stride down a zebra crossing in a hand-built paper city — a real walk cycle cut from your picture, the buildings popping in around you, cut-letter titles overhead and a pop groove keeping time. Ten seconds, made for Instagram and TikTok.</p>
+      <div class="ctas">
+        <a class="btn solid" href="#order">Make my film — $12.99 <span class="arr">→</span></a>
+        <a class="btn ghost" href="#cities">See the cities</a>
+      </div>
+      <div class="proof"><b>$12.99</b> · One photo · MP4 1080×1920 · In your inbox within 48 hours</div>
+    </div>
+    <div class="stage">
+      <figure class="polaroid rot-l">
+        <span class="tape tl"></span><span class="tape tr"></span>
+        <span class="sticker">From one photo</span>
+        <video autoplay muted loop playsinline poster="/walk/media/fashion-citywalk-poster.jpg" src="/walk/media/fashion-citywalk.mp4" aria-label="Sample film: 01 Fashion Citywalk — a woman in a crimson sweater walking down a paper zebra crossing toward the camera"></video>
+        <figcaption>01 · Fashion Citywalk — the sample</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="p-head reveal" id="film">
+    <div class="strip in"><span><span class="chip crimson">Sec 01</span>The film</span><span class="r">One photo · Ten seconds</span></div>
+    <h2 aria-label="The film"><span aria-hidden="true"><span class="h-serif">The</span> <span class="tiles head"><span class="word"><i class="tl k">F</i><i class="tl w">I</i><i class="tl r">L</i><i class="tl b">M</i></span></span></span></h2>
+    <p class="p-sub">Every Citywalk is built the same way, by hand — this is the house template, up close.</p>
+  </div>
+  <div class="filmgrid reveal">
+    <figure class="polaroid rot-r">
+      <span class="tape tl"></span><span class="tape tr"></span>
+      <video controls preload="metadata" poster="/walk/media/fashion-citywalk-poster.jpg" src="/walk/media/fashion-citywalk.mp4" aria-label="Sample film with sound: 01 Fashion Citywalk"></video>
+      <figcaption>01 Fashion Citywalk — sound on for the pop groove.</figcaption>
+    </figure>
+    <div>
+      <div class="mini"><div class="n">a</div><div><div class="t">Cut from your photo</div><div class="d">We cut one clean master portrait from your picture — your face, your outfit — and keep it identical in every frame.</div></div></div>
+      <div class="mini"><div class="n">b</div><div><div class="t">Two walks in one film</div><div class="d">First you walk straight at the camera, down the crossing, growing closer with every step. Then the film cuts to your side stride — a real pose-by-pose walk cycle, left leg, passing, right leg — never a slide.</div></div></div>
+      <div class="mini"><div class="n">c</div><div><div class="t">A city that assembles around you</div><div class="d">Photographic paper stickers pop in one by one, a detail polaroid flashes your shoe on the stripes, and cut-letter tiles spell your city overhead.</div></div></div>
+      <p class="fine" style="margin-top:14px;">Honest note: the samples on this page were made from generated model photos so you can see the whole craft. Your film starts from your real photo, and the likeness is checked by a person before delivery.</p>
+    </div>
+  </div>
+
+  <div class="p-head reveal" id="cities">
+    <div class="strip in"><span><span class="chip ink">Sec 02</span>The line-up</span><span class="r">Six posters · Six moods</span></div>
+    <h2 aria-label="Cities"><span aria-hidden="true"><span class="h-serif">Six</span> <span class="tiles head"><span class="word"><i class="tl k">C</i><i class="tl w">I</i><i class="tl r">T</i><i class="tl b">I</i><i class="tl y">E</i><i class="tl k">S</i></span></span></span></h2>
+    <p class="p-sub">Six templates, six moods — one walk each. Press play, pick your favourite, then walk in it.</p>
+  </div>
+
+  <article class="poster reg-fashion tilt-l reveal">
+    <span class="pin"></span>
+    <div class="strip in"><span>Template 01 / Street</span><span class="r">10 sec · Vertical MP4</span></div>
+    <div class="awning-mini" style="background:repeating-linear-gradient(90deg,#bc2333 0 24px,#fdf3da 24px 48px);"></div>
+    <div class="poster-grid">
+      <figure class="polaroid rot-l">
+        <span class="tape tl"></span><span class="tape tr"></span>
+        <video controls preload="none" poster="/walk/media/fashion-citywalk-poster.jpg" src="/walk/media/fashion-citywalk.mp4" aria-label="Template 01 Fashion Citywalk sample film"></video>
+        <figcaption>01 · Fashion Citywalk</figcaption>
+      </figure>
+      <div class="poster-copy">
+        <div class="copy-top">
+          <h3 aria-label="Fashion Citywalk"><span aria-hidden="true">
+            <span class="tiles city"><span class="word"><i class="tl k">F</i><i class="tl w">a</i><i class="tl r">s</i><i class="tl b">h</i><i class="tl k">i</i><i class="tl y">o</i><i class="tl r">n</i></span></span>
+            <span class="tiles city"><span class="word"><i class="tl k">C</i><i class="tl w">i</i><i class="tl r">t</i><i class="tl b">y</i><i class="tl k">w</i><i class="tl w">a</i><i class="tl r">l</i><i class="tl b">k</i></span></span>
+          </span></h3>
+          <span class="idxcard"><span class="n">01</span><br><span class="s">Street</span></span>
+        </div>
+        <p class="d">The house style: a curved corner building, a plane tree, and a crimson-sweater stride straight down the crossing.</p>
+        <span class="fluoro" style="font-size:11px; padding:8px 13px; margin-top:18px;">The house style</span>
+        <div class="row"><button class="btn ink" type="button" data-tpl="fashion">Walk in this city <span class="arr">→</span></button></div>
+      </div>
+    </div>
+  
+    <div class="p-foot"><span>Made to order · Checked by a person</span><span>Citywalk Studio</span></div>
+  </article>
+
+  
+
+  
+
+  <article class="poster reg-tokyo tilt-r reveal">
+    <span class="pin"></span>
+    <div class="strip in"><span>Template 02 / Scramble</span><span class="r">10 sec · Vertical MP4</span></div>
+    <div class="awning-mini" style="background:repeating-linear-gradient(90deg,#f2a7c3 0 24px,#93d5cf 24px 48px);"></div>
+    <div class="poster-grid">
+      <figure class="polaroid rot-r">
+        <span class="tape tl"></span><span class="tape tr"></span>
+        <video controls preload="none" poster="/walk/media/tokyo-citywalk-poster.jpg" src="/walk/media/tokyo-citywalk.mp4" aria-label="Template 02 Tokyo Citywalk sample film"></video>
+        <figcaption>02 · Tokyo Citywalk</figcaption>
+      </figure>
+      <div class="poster-copy">
+        <div class="copy-top">
+          <h3 aria-label="Tokyo Citywalk"><span aria-hidden="true">
+            <span class="tiles city"><span class="word"><i class="tl pk">T</i><i class="tl cy">o</i><i class="tl or">k</i><i class="tl pk">y</i><i class="tl k">o</i></span></span>
+            <span class="tiles city"><span class="word"><i class="tl cy">C</i><i class="tl k">i</i><i class="tl pk">t</i><i class="tl or">y</i><i class="tl cy">w</i><i class="tl k">a</i><i class="tl pk">l</i><i class="tl or">k</i></span></span>
+          </span></h3>
+          <span class="idxcard"><span class="n">02</span><br><span class="s">Scramble</span></span>
+        </div>
+        <p class="d">The scramble crossing under pastel signboards — oversized hoodie, pleated skirt, street-style ease.</p>
+        <span class="fluoro" style="font-size:11px; padding:8px 13px; margin-top:18px;">Scramble.</span>
+        <div class="row"><button class="btn ink" type="button" data-tpl="tokyo">Walk in this city <span class="arr">→</span></button></div>
+      </div>
+    </div>
+  
+    <div class="p-foot"><span>Made to order · Checked by a person</span><span>Citywalk Studio</span></div>
+  </article>
+
+  <article class="poster reg-cafe tilt-l reveal">
+    <span class="pin"></span>
+    <div class="strip in"><span>Template 03 / Café</span><span class="r">10 sec · Vertical MP4</span></div>
+    <div class="awning-mini"></div>
+    <div class="poster-grid">
+      <figure class="polaroid rot-l">
+        <span class="tape tl"></span><span class="tape tr"></span>
+        <video controls preload="none" poster="/walk/media/cafe-citywalk-poster.jpg" src="/walk/media/cafe-citywalk.mp4" aria-label="Template 03 Shanghai Citywalk Café sample film"></video>
+        <figcaption>03 · Shanghai Citywalk</figcaption>
+      </figure>
+      <div class="poster-copy">
+        <div class="copy-top">
+          <h3 aria-label="Shanghai Citywalk"><span aria-hidden="true">
+            <span class="tiles city"><span class="word"><i class="tl k">S</i><i class="tl w">h</i><i class="tl r">a</i><i class="tl b">n</i><i class="tl y">g</i><i class="tl k">h</i><i class="tl w">a</i><i class="tl r">i</i></span></span>
+            <span class="tiles city"><span class="word"><i class="tl gn">C</i><i class="tl w">i</i><i class="tl br">t</i><i class="tl k">y</i><i class="tl gn">w</i><i class="tl w">a</i><i class="tl br">l</i><i class="tl k">k</i></span></span>
+          </span></h3>
+          <span class="idxcard"><span class="n">03</span><br><span class="s">Café</span></span>
+        </div>
+        <p class="d">The café front is the set — green-striped awning, a plane tree, pavement tables. You walk at the camera in a crimson knit, stride past the window in profile, and stop to lift a coffee.</p>
+        <span class="fluoro" style="font-size:11px; padding:8px 13px; margin-top:18px;">Coffee o'clock.</span>
+        <div class="row"><button class="btn ink" type="button" data-tpl="cafe">Walk in this city <span class="arr">→</span></button></div>
+      </div>
+    </div>
+    <div class="p-foot"><span>Made to order · Checked by a person</span><span>Citywalk Studio</span></div>
+  </article>
+
+  <article class="poster reg-journal tilt-r flip reveal">
+    <span class="pin"></span>
+    <div class="strip in"><span>Template 04 / Street Edit</span><span class="r">10 sec · Vertical MP4</span></div>
+    <div class="awning-mini" style="background:repeating-linear-gradient(90deg,#26211a 0 24px,#f6f0dc 24px 48px);"></div>
+    <div class="poster-grid">
+      <figure class="polaroid rot-r">
+        <span class="tape tl"></span><span class="tape tr"></span>
+        <video controls preload="none" poster="/walk/media/offduty-collage-poster.jpg" src="/walk/media/offduty-collage.mp4" aria-label="Template 04 Off Duty Collage sample film"></video>
+        <figcaption>04 · Off Duty Collage</figcaption>
+      </figure>
+      <div class="poster-copy">
+        <div class="copy-top">
+          <h3 aria-label="Off Duty"><span aria-hidden="true">
+            <span class="tiles city"><span class="word"><i class="tl k">O</i><i class="tl w">F</i><i class="tl r">F</i></span></span>
+            <span class="tiles city"><span class="word"><i class="tl y">D</i><i class="tl k">U</i><i class="tl w">T</i><i class="tl r">Y</i></span></span>
+          </span></h3>
+          <span class="idxcard"><span class="n">04</span><br><span class="s">Street Edit</span></span>
+        </div>
+        <p class="d">Not a street — a magazine page. A half-body portrait of you takes the cover, face and shoe polaroids pin to the side, and a small full-body you loops along the zebra strip at the foot of the page.</p>
+        <span class="fluoro" style="font-size:11px; padding:8px 13px; margin-top:18px;">Off duty.</span>
+        <div class="row"><button class="btn ink" type="button" data-tpl="collage">Walk in this city <span class="arr">→</span></button></div>
+      </div>
+    </div>
+    <div class="p-foot"><span>Made to order · Checked by a person</span><span>Citywalk Studio</span></div>
+  </article>
+
+  <article class="poster reg-crossing tilt-l reveal">
+    <span class="pin"></span>
+    <div class="strip in"><span>Template 05 / Westminster</span><span class="r">10 sec · Vertical MP4</span></div>
+    <div class="asphalt-mini"></div>
+    <div class="poster-grid">
+      <figure class="polaroid rot-l">
+        <span class="tape tl"></span><span class="tape tr"></span>
+        <video controls preload="none" poster="/walk/media/london-crossing-duo-poster.jpg" src="/walk/media/london-crossing-duo.mp4" aria-label="Template 05 London Citywalk Duo sample film"></video>
+        <figcaption>05 · London Citywalk Duo</figcaption>
+      </figure>
+      <div class="poster-copy">
+        <div class="copy-top">
+          <h3 aria-label="London Citywalk"><span aria-hidden="true">
+            <span class="tiles city"><span class="word"><i class="tl rd">L</i><i class="tl w">o</i><i class="tl k">n</i><i class="tl y">d</i><i class="tl rd">o</i><i class="tl b">n</i></span></span>
+            <span class="tiles city"><span class="word"><i class="tl k">C</i><i class="tl rd">i</i><i class="tl w">t</i><i class="tl y">y</i><i class="tl k">w</i><i class="tl rd">a</i><i class="tl w">l</i><i class="tl k">k</i></span></span>
+          </span></h3>
+          <span class="idxcard"><span class="n">05</span><br><span class="s">Westminster</span></span>
+        </div>
+        <p class="d">One crossing, two of you: a big side-stride past the clock tower while a smaller front-you walks straight down the stripes — and the black cab really drives through.</p>
+        <span class="fluoro" style="font-size:11px; padding:8px 13px; margin-top:18px;">Two ways to cross.</span>
+        <div class="row"><button class="btn ink" type="button" data-tpl="duo">Walk in this city <span class="arr">→</span></button></div>
+      </div>
+    </div>
+    <div class="p-foot"><span>Made to order · Checked by a person</span><span>Citywalk Studio</span></div>
+  </article>
+
+  <article class="poster reg-market tilt-r flip reveal">
+    <span class="pin"></span>
+    <div class="strip in"><span>Template 06 / Market</span><span class="r">10 sec · Vertical MP4</span></div>
+    <div class="awning-mini" style="background:repeating-linear-gradient(90deg,#c8352c 0 24px,#fdf3da 24px 48px);"></div>
+    <div class="poster-grid">
+      <figure class="polaroid rot-r">
+        <span class="tape tl"></span><span class="tape tr"></span>
+        <video controls preload="none" poster="/walk/media/hongkong-market-poster.jpg" src="/walk/media/hongkong-market.mp4" aria-label="Template 06 Hong Kong Citywalk Market sample film"></video>
+        <figcaption>06 · Hong Kong Citywalk</figcaption>
+      </figure>
+      <div class="poster-copy">
+        <div class="copy-top">
+          <h3 aria-label="Hong Kong Citywalk"><span aria-hidden="true">
+            <span class="tiles city"><span class="word"><i class="tl r">H</i><i class="tl y">o</i><i class="tl w">n</i><i class="tl b">g</i></span> <span class="word"><i class="tl rd">K</i><i class="tl w">o</i><i class="tl b">n</i><i class="tl or">g</i></span></span>
+            <span class="tiles city"><span class="word"><i class="tl k">C</i><i class="tl w">i</i><i class="tl r">t</i><i class="tl b">y</i><i class="tl gn">w</i><i class="tl or">a</i><i class="tl rd">l</i><i class="tl w">k</i></span></span>
+          </span></h3>
+          <span class="idxcard"><span class="n">06</span><br><span class="s">Market</span></span>
+        </div>
+        <p class="d">A Hong Kong fruit stall that dwarfs you — red-and-white awning, stacked oranges and apples, a hanging scale. You stride past in cobalt and olive and stop at the stall, paper bag in hand.</p>
+        <span class="fluoro" style="font-size:11px; padding:8px 13px; margin-top:18px;">Fresh today.</span>
+        <div class="row"><button class="btn ink" type="button" data-tpl="market">Walk in this city <span class="arr">→</span></button></div>
+      </div>
+    </div>
+    <div class="p-foot"><span>Made to order · Checked by a person</span><span>Citywalk Studio</span></div>
+  </article>
+
+  <div class="p-head reveal">
+    <div class="strip in"><span><span class="chip crimson">Sec 03</span>The spec sheet</span><span class="r">One price · Everything in</span></div>
+    <h2 aria-label="What you get"><span aria-hidden="true"><span class="h-serif">What you</span> <span class="tiles head"><span class="word"><i class="tl r">G</i><i class="tl w">E</i><i class="tl k">T</i></span></span></span></h2>
+  </div>
+  <div class="gets">
+    <div class="gcard a reveal">
+      <div class="tag"><span>Spec sheet</span><b>No. 01</b></div>
+      <div class="gicon"><svg viewBox="0 0 24 24" fill="none" stroke="#26211a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7" width="19" height="13" rx="2.5"/><path d="M3 7l2.2-4h13.6L21 7M7.5 3.4L5.6 7M13 3.4L11.1 7M18.5 3.4L16.6 7"/></svg></div>
+      <div class="t">Your film</div>
+      <div class="d">A 10-second vertical MP4 (1080×1920), ready to post. Two walks — toward the camera, then the side stride — with the sticker city, polaroid detail card and letter-tile title of the template you picked.</div>
+      <div class="spec">
+        <div class="srow"><span>Format</span><span>MP4</span></div>
+        <div class="srow"><span>Frame</span><span>1080 × 1920</span></div>
+        <div class="srow"><span>Length</span><span>10 seconds</span></div>
+        <div class="srow"><span>Sound</span><span>Pop groove</span></div>
+      </div>
+    </div>
+    <div class="gcard b hl reveal">
+      <div class="tag"><span>The cast</span><b>No. 02</b></div>
+      <div class="gicon"><svg viewBox="0 0 24 24" fill="none" stroke="#26211a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7.5" r="3.5"/><path d="M4.5 21c.8-4 3.8-6 7.5-6s6.7 2 7.5 6"/></svg></div>
+      <div class="t">You, cut from your photo</div>
+      <div class="d">One master cut-out is taken from your picture and animated pose by pose — same face, same outfit in every frame.</div>
+    </div>
+    <div class="gcard c reveal">
+      <div class="tag"><span>The sets</span><b>No. 03</b></div>
+      <div class="gicon"><svg viewBox="0 0 24 24" fill="none" stroke="#26211a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 21V9.5L12 3.5l8.5 6V21M9 21v-6h6v6"/></svg></div>
+      <div class="t">Six paper looks</div>
+      <div class="d">Fashion, Tokyo, a Shanghai café, the Off Duty magazine page, a London duo crossing and a Hong Kong market — each hand-built from real street photography as flat paper stickers with a fine white edge.</div>
+    </div>
+    <div class="gcard d reveal">
+      <div class="tag"><span>The delivery</span><b>No. 04</b></div>
+      <div class="gicon"><svg viewBox="0 0 24 24" fill="none" stroke="#26211a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2.5L4.5 13.5H11L9.8 21.5l8.5-11H12L13 2.5z"/></svg></div>
+      <div class="t">Within 48 hours</div>
+      <div class="d">Pay once, send your photo, and the finished film lands in your inbox within 48 hours — usually much sooner. Every film is made to order and checked frame by frame by a person before it ships.</div>
+    </div>
+  </div>
+
+  <div class="p-head reveal" id="how">
+    <div class="strip in"><span><span class="chip green">Sec 04</span>The process</span><span class="r">About three minutes</span></div>
+  </div>
+  <div class="zebra reveal"><span class="fluoro">How it works</span></div>
+  <div class="steps">
+    <div class="step reveal"><div class="n">1</div><div><div class="t">Buy your license on Gumroad</div><div class="d">$12.99, once — no subscription. Gumroad emails you a license key.</div></div></div>
+    <div class="step reveal"><div class="n">2</div><div><div class="t">Send one photo</div><div class="d">Back here, paste the key, pick your city and upload one clear full-body photo.</div></div></div>
+    <div class="step reveal"><div class="n">3</div><div><div class="t">We cut, pose and shoot</div><div class="d">Your cut-out is posed frame by frame through the walk, then the city, polaroid card, titles and music are assembled around you.</div></div></div>
+    <div class="step reveal"><div class="n">4</div><div><div class="t">Your film arrives by email</div><div class="d">Within 48 hours you get the finished MP4, checked by a person. Post it anywhere.</div></div></div>
+  </div>
+  <p class="p-sub reveal" style="color:var(--ink70); font-size:15.5px; line-height:1.6; max-width:36rem; margin:14px 0 0;">Four steps, three minutes of your time. What goes wrong with photos — and how we handle yours — is below.</p>
+
+  <div class="p-head reveal">
+    <div class="strip in"><span><span class="chip pink">Sec 05</span>Before you send</span><span class="r">Read this first</span></div>
+    <h2 aria-label="Photo tips & privacy"><span aria-hidden="true"><span class="h-serif">Photo tips &amp;</span> <span class="tiles head"><span class="word"><i class="tl k">P</i><i class="tl w">R</i><i class="tl r">I</i><i class="tl b">V</i><i class="tl y">A</i><i class="tl k">C</i><i class="tl r">Y</i></span></span></span></h2>
+  </div>
+  <div class="tips">
+    <div class="tipcard rot-l reveal">
+      <span class="tape tl"></span>
+      <h3><span class="chip crimson">Photo tips</span></h3>
+      <ul>
+        <li>One clear, full-body photo — head to shoes in frame, facing the camera.</li>
+        <li>Daylight or bright indoor light. Avoid heavy filters and motion blur.</li>
+        <li>Your outfit is kept exactly as photographed — wear the look you want to walk in.</li>
+        <li>JPG or PNG, up to 10 MB. One person per photo.</li>
+      </ul>
+    </div>
+    <div class="tipcard rot-r reveal">
+      <span class="tape tr"></span>
+      <h3><span class="chip ink">Your photo &amp; privacy</span></h3>
+      <ul>
+        <li>Your photo is used only to make your film — never sold, shared or used to train models.</li>
+        <li>We delete your photo and cut-outs 30 days after delivery.</li>
+        <li>Only upload a photo of yourself, or one you have permission to use.</li>
+        <li>Questions any time: binbin7418@gmail.com.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="p-head reveal" id="order">
+    <div class="strip in"><span><span class="chip crimson">Sec 06</span>The order desk</span><span class="r">Gumroad checkout · $12.99</span></div>
+    <h2 aria-label="Order your film"><span aria-hidden="true"><span class="tiles head"><span class="word"><i class="tl k">O</i><i class="tl r">R</i><i class="tl w">D</i><i class="tl b">E</i><i class="tl y">R</i></span></span> <span class="h-serif">your film</span></span></h2>
+    <p class="p-sub">Two steps: buy the license, then send your photo. The form unlocks the moment your key checks out.</p>
+  </div>
+
+  <form id="orderForm" novalidate>
+    <div class="poster reg-market reveal" style="margin-top:30px;">
+      <div class="awning"></div>
+      <div class="strip in"><span>Citywalk — Order form</span><span class="r">Step 1 of 2 · Then your photo</span></div>
+      <div class="opanel">
+        <h3>Your license key</h3>
+        <p class="fine">One key makes one film, in the city you pick below. Buy it on Gumroad first — the key arrives by email in about a minute.</p>
+        <label class="olabel" for="licenseKey">License key (from your Gumroad receipt)</label>
+        <input type="text" id="licenseKey" placeholder="XXXXXXXX-XXXXXXXX-XXXXXXXX-XXXXXXXX" autocomplete="off" spellcheck="false">
+        <div class="row"><a class="btn ink" id="buyBtn" href="#" target="_blank" rel="noopener">Buy on Gumroad — $12.99 <span class="arr">→</span></a></div>
+        <p class="fine">Secure checkout on Gumroad. The key works once, for one film — buying a second key makes a second film.</p>
+      </div>
+      <div class="opanel">
+        <h3>Your film</h3>
+        <div class="fgrid">
+          <div><label class="olabel" for="buyerName">Your name</label><input type="text" id="buyerName" autocomplete="name" placeholder="Alex Rivera"></div>
+          <div><label class="olabel" for="buyerEmail">Email for delivery</label><input type="email" id="buyerEmail" autocomplete="email" placeholder="you@example.com"></div>
+        </div>
+        <label class="olabel">Pick your city</label>
+        <div class="vgrid" id="tplGrid" role="radiogroup" aria-label="Template">
+          <div class="vcard sel" data-tpl="fashion" role="radio" aria-checked="true" tabindex="0" style="--acc:#bc2333;">
+            <img class="thumb" src="/walk/media/fashion-citywalk-poster.jpg" alt="Fashion Citywalk poster">
+            <div><div class="t">01 Fashion Citywalk</div><div class="p">$12.99 · 10 SEC</div><div class="d">The house style — corner building, plane tree, crimson stride.</div></div>
+          </div>
+          
+          
+          <div class="vcard" data-tpl="tokyo" role="radio" aria-checked="false" tabindex="0" style="--acc:#f2a7c3;">
+            <img class="thumb" src="/walk/media/tokyo-citywalk-poster.jpg" alt="Tokyo Citywalk poster">
+            <div><div class="t">02 Tokyo Citywalk</div><div class="p">$12.99 · 10 SEC</div><div class="d">The scramble crossing under pastel signboards.</div></div>
+          </div>
+          <div class="vcard" data-tpl="cafe" role="radio" aria-checked="false" tabindex="0" style="--acc:#2e5d43;">
+            <img class="thumb" src="/walk/media/cafe-citywalk-poster.jpg" alt="Shanghai Citywalk Café poster">
+            <div><div class="t">03 Shanghai Citywalk</div><div class="p">$12.99 · 10 SEC</div><div class="d">A café-front stroll in Shanghai — awning, tree, coffee stop.</div></div>
+          </div>
+          <div class="vcard" data-tpl="collage" role="radio" aria-checked="false" tabindex="0" style="--acc:#b3442c;">
+            <img class="thumb" src="/walk/media/offduty-collage-poster.jpg" alt="Off Duty Collage poster">
+            <div><div class="t">04 Off Duty Collage</div><div class="p">$12.99 · 10 SEC</div><div class="d">A magazine page — big portrait, detail polaroids, a looping mini-walk.</div></div>
+          </div>
+          <div class="vcard" data-tpl="duo" role="radio" aria-checked="false" tabindex="0" style="--acc:#f7e600;">
+            <img class="thumb" src="/walk/media/london-crossing-duo-poster.jpg" alt="London Citywalk Duo poster">
+            <div><div class="t">05 London Citywalk Duo</div><div class="p">$12.99 · 10 SEC</div><div class="d">Two scales of you on one crossing — the cab drives through.</div></div>
+          </div>
+          <div class="vcard" data-tpl="market" role="radio" aria-checked="false" tabindex="0" style="--acc:#c8352c;">
+            <img class="thumb" src="/walk/media/hongkong-market-poster.jpg" alt="Hong Kong Citywalk Market poster">
+            <div><div class="t">06 Hong Kong Citywalk</div><div class="p">$12.99 · 10 SEC</div><div class="d">A fruit-stall stroll — the market is bigger than you.</div></div>
+          </div>
+        </div>
+        <label class="olabel">Your photo — JPG or PNG, up to 10 MB</label>
+        <label class="up" id="upBox1">
+          <span class="hint"><b>Tap to choose your photo</b><br>One clear full-body photo, head to shoes.</span>
+          <input type="file" id="photoFile1" accept="image/jpeg,image/png" hidden>
+        </label>
+        <label class="olabel" for="note">Anything we should know? (optional)</label>
+        <input type="text" id="note" placeholder="e.g. it's a gift for my sister">
+        <div class="row"><button class="btn solid" id="sendBtn" type="submit">Send my order <span class="arr">→</span></button></div>
+        <div class="status" id="orderStatus"></div>
+        <div id="orderResult"></div>
+      </div>
+    </div>
+  </form>
+
+  <div class="p-head reveal" id="status">
+    <div class="strip in"><span><span class="chip ink">Sec 07</span>Tracking</span><span class="r">Your order ID is the key</span></div>
+    <h2 aria-label="Check an order"><span aria-hidden="true"><span class="h-serif">Check an</span> <span class="tiles head"><span class="word"><i class="tl r">O</i><i class="tl k">R</i><i class="tl y">D</i><i class="tl w">E</i><i class="tl b">R</i></span></span></span></h2>
+    <p class="p-sub">You received an order ID when you sent your photo. Paste it here any time.</p>
+  </div>
+  <div class="poster reg-ink reveal" style="margin-top:26px;">
+    <span class="pin"></span>
+    <div class="opanel">
+      <label class="olabel" for="statusId">Order ID</label>
+      <input type="text" id="statusId" placeholder="e.g. CW-2026-XXXXXX" autocomplete="off" spellcheck="false">
+      <div class="row"><button class="btn ink" id="statusBtn" type="button">Check status <span class="arr">→</span></button></div>
+      <div class="status" id="statusMsg"></div>
+      <div id="statusCard"></div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="foot-in">
+    <div><h3>Citywalk</h3><p>Personalized fashion paper-cutout films, made to order from your photo.</p></div>
+    <div><h3>The product</h3><p>One 10-second vertical MP4 — six looks, from Fashion to the Hong Kong market — delivered within 48 hours.</p></div>
+    <div><h3>Fair terms</h3><p>If we can't make your photo walk — too dark, cropped, unusable — we refund you in full. No questions, no forms.</p></div>
+    <div><h3>Contact</h3><p>binbin7418@gmail.com — a person replies within one business day.</p></div>
+  </div>
+</footer>
+<script>
+/* ---------- config (buy URL comes from the server, never hardcoded) ---------- */
+let buyUrl = "";
+fetch("/walk/api/config").then(r => r.json()).then(cfg => {
+  buyUrl = cfg.buy_url || "";
+  const b = document.getElementById("buyBtn");
+  if (buyUrl && buyUrl !== "PENDING") b.href = buyUrl;
+  else b.addEventListener("click", e => { e.preventDefault(); alert("Checkout opens at launch — the Gumroad link lands here."); });
+}).catch(() => {});
+
+/* ---------- template picker ---------- */
+let template = "fashion";
+const tplCards = document.querySelectorAll("#tplGrid .vcard");
+function setTemplate(t) {
+  template = t;
+  tplCards.forEach(c => {
+    const on = c.dataset.tpl === t;
+    c.classList.toggle("sel", on);
+    c.setAttribute("aria-checked", on);
+  });
+}
+tplCards.forEach(c => {
+  c.addEventListener("click", () => setTemplate(c.dataset.tpl));
+  c.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setTemplate(c.dataset.tpl); }
+  });
+});
+document.querySelectorAll("[data-tpl].btn, .tcard [data-tpl]").forEach(b => {
+  b.addEventListener("click", () => {
+    setTemplate(b.dataset.tpl);
+    document.getElementById("order").scrollIntoView({behavior: "smooth"});
+  });
+});
+
+/* ---------- upload ---------- */
+let photoFile = null;
+const upBox = document.getElementById("upBox1"), upInput = document.getElementById("photoFile1");
+upInput.addEventListener("change", () => {
+  const f = upInput.files[0];
+  if (!f) return;
+  if (!/image\/(jpeg|png)/.test(f.type)) { setOrderStatus("That file isn't a JPG or PNG — please pick a photo."); upInput.value = ""; return; }
+  if (f.size > 10 * 1024 * 1024) { setOrderStatus("That photo is over 10 MB — a smaller copy will cut just as well."); upInput.value = ""; return; }
+  photoFile = f;
+  const url = URL.createObjectURL(f);
+  upBox.querySelectorAll("img").forEach(i => i.remove());
+  const img = document.createElement("img"); img.src = url; img.alt = "Your chosen photo";
+  upBox.appendChild(img);
+  upBox.querySelector(".hint").innerHTML = "<b>Photo ready</b> — tap again to change it";
+});
+function setOrderStatus(t) { document.getElementById("orderStatus").textContent = t; }
+
+/* ---------- order form ---------- */
+let currentOrderId = null;
+document.getElementById("orderForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const key = document.getElementById("licenseKey").value.trim();
+  const name = document.getElementById("buyerName").value.trim();
+  const email = document.getElementById("buyerEmail").value.trim();
+  const note = document.getElementById("note").value.trim();
+  document.getElementById("orderResult").innerHTML = "";
+  if (!key) { setOrderStatus("Add your license key first — it's in your Gumroad receipt email. No key yet? Use the black button above."); document.getElementById("licenseKey").focus(); return; }
+  if (!email || !email.includes("@")) { setOrderStatus("We need a valid email — that's where the finished film lands."); return; }
+  if (!photoFile) { setOrderStatus("Choose your photo — one clear picture is all we need."); return; }
+
+  const btn = document.getElementById("sendBtn");
+  btn.disabled = true;
+  setOrderStatus("Sending your order…");
+  try {
+    const fd = new FormData();
+    fd.append("template", template);
+    fd.append("name", name);
+    fd.append("email", email); fd.append("note", note);
+    fd.append("photo1", photoFile);
+    const r = await fetch("/walk/api/orders", {method: "POST", body: fd});
+    const data = await r.json();
+    if (!r.ok) throw new Error(data.error || "order failed");
+    currentOrderId = data.id;
+    document.getElementById("statusId").value = currentOrderId;
+    setOrderStatus("Order saved. Checking your license key…");
+    await activate(key);
+  } catch (err) {
+    setOrderStatus("Something went wrong: " + err.message + ". Nothing was charged by us — please try again.");
+  }
+  btn.disabled = false;
+});
+
+async function activate(key) {
+  const box = document.getElementById("orderResult");
+  try {
+    const r = await fetch("/walk/api/orders/" + currentOrderId + "/activate", {
+      method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({license_key: key})
+    });
+    const data = await r.json();
+    if (data.activated) {
+      setOrderStatus("");
+      box.innerHTML = '<div class="okbox"><div class="t">Paid — your film is in production</div>' +
+        '<p>Order <span class="mono">#' + currentOrderId + '</span>. We\'re building your paper city now. ' +
+        'The MP4 will land in your inbox within 48 hours — and you can watch the progress any time in the “Check an order” box below.</p></div>';
+    } else {
+      setOrderStatus("");
+      box.innerHTML = '<div class="warnbox"><div class="t">Your order is saved — but that key didn\'t check out</div>' +
+        '<p>Order <span class="mono">#' + currentOrderId + '</span> is safe with us. The key returned: ' + (data.error || "invalid") +
+        '. Double-check it against your Gumroad receipt (watch for O vs 0), fix it in the key box at the top of the form, then press:</p>' +
+        '<div class="row"><button class="btn solid" type="button" id="retryKey">Verify my key</button></div></div>';
+      document.getElementById("retryKey").addEventListener("click", () => {
+        activate(document.getElementById("licenseKey").value.trim());
+      });
+    }
+  } catch (e) {
+    setOrderStatus("Your order is saved, but the key check hit a network hiccup — use the “Check an order” box below later, or reload and re-enter your key.");
+  }
+}
+
+/* ---------- order status ---------- */
+const STATUS_COPY = {
+  received: "Order received. Production starts the moment the license key checks out — if you have a key, it belongs in the order form above.",
+  paid: "Paid — in production. Your city walk is being cut and animated now; delivery lands by email within 48 hours of payment.",
+  delivered: "Delivered — your film is ready. The same file was also sent to your email."
+};
+async function checkStatus() {
+  const id = document.getElementById("statusId").value.trim();
+  const msg = document.getElementById("statusMsg"), card = document.getElementById("statusCard");
+  card.innerHTML = "";
+  if (!id) { msg.textContent = "Paste your order ID first."; return; }
+  msg.textContent = "Looking it up…";
+  try {
+    const r = await fetch("/walk/api/orders/" + encodeURIComponent(id));
+    const data = await r.json();
+    if (!r.ok) { msg.textContent = "We can't find that order ID — check it and try again."; return; }
+    msg.textContent = "";
+    let html = '<div class="okbox" style="background:var(--paper); border-color:var(--line);">' +
+      '<span class="spill ' + data.status + '"><span class="dot"></span>' + data.status_label + '</span>' +
+      '<p style="margin-top:10px;">' + (STATUS_COPY[data.status] || "") + '</p>' +
+      '<p class="mono" style="margin-top:6px;">Order #' + data.id + ' · ' + data.template_label + (data.name ? ' · for ' + data.name : '') + '</p>';
+    if (data.status === "delivered" && data.film_url) {
+      html += '<div class="row"><a class="btn solid" href="' + data.film_url + '">Download your film (MP4)</a></div>';
+    }
+    html += '</div>';
+    card.innerHTML = html;
+  } catch (e) {
+    msg.textContent = "Network hiccup — please try again.";
+  }
+}
+document.getElementById("statusBtn").addEventListener("click", checkStatus);
+const prefill = new URLSearchParams(location.search).get("order");
+if (prefill) { document.getElementById("statusId").value = prefill; checkStatus(); }
+
+/* ---------- reveal on scroll ---------- */
+const io = new IntersectionObserver(es => es.forEach(en => {
+  if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+}), {threshold: 0.05, rootMargin: "500px 0px"});
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+setTimeout(() => document.querySelectorAll(".reveal").forEach(el => el.classList.add("in")), 3000);
+</script>
+</body>
+</html>
