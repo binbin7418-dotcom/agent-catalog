@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "QRBatch — Batch QR Labels from CSV: Numbered, Print-Ready A4 Sheets at 300 DPI (Asset Tags & Inventory)",
+ "description": "I need QR codes for my asset tags, inventory labels and equipment stickers — how do I generate numbered, print-ready sheets in one batch? When every item needs its own code — labelled, in order, ready to print — online generators answer with a subscription, a per-code fee, or limits right where your print run starts.\nQRBatch turns a CSV into numbered, print-ready QR labels on your own computer — and gives you a manifest so you can verify the whole run line by line before a single sheet is printed.\nWHAT YOU GET FROM ONE CSV\n• One labelled PNG per row (the label printed right under the code)\n• A4 print sheets at 300 dpi, 12 codes per page, in a single PDF — straight to the printer\n• A manifest CSV mapping every file to its label and payload, so you can check the print run item by item\n• Error-correction level M — codes still scan with ~15% damage or dirt\nHONEST DETAILS\n• Duplicate payloads and empty rows are reported, not silently merged or dropped\n• No watermarks, no dynamic-link middleman, no expiry: these are plain QR codes of YOUR links, generated offline\nVERIFIED, NOT VIBES\nSeeded 5-row CSV with a duplicate and an empty row: 4 codes generated, both problems itemized in the report, print sheet and manifest produced.\n100% LOCAL — no upload, no account, no per-code credits. Make ten codes or ten thousand for one payment.\nWindows 10/11, nothing else to install. You provide a CSV with a link column (and optionally a label column).",
+ "sku": "skvqxl",
+ "category": "print-tools",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/qrbatch-bulk-qr-print-sheets"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11, nothing else to install"
+  }
+ ]
+}
