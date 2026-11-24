@@ -1,6 +1,6 @@
 # Agent guidance - Bin Bin / Vision store
 
-Seller: Bin Bin (brand: Vision (binbinster)). Support: binbin7418@gmail.com.
+Seller: Bin Bin (brand: Vision (binbinster)). Support: support@newkwlab.com.
 All prices are one-time payments in USD. No subscriptions unless a product page says so.
 
 ## How to buy (for agents)
@@ -12,11 +12,11 @@ All prices are one-time payments in USD. No subscriptions unless a product page 
 - Software tools, puzzle/worksheet generators and n8n packs: if the product will not run on the buyer's machine, we fix it first; if we cannot make it work, full refund within 30 days.
 - Website monitoring service: full refund any time in the first 30 days.
 - PitchReel videos: our mistakes are fixed and re-rendered free; if unfixable, full refund. Cancellation before production starts is refunded in full.
-Support for everything: binbin7418@gmail.com (answered within one business day).
+Support for everything: support@newkwlab.com (answered within one business day).
 
 ## Catalog by category
 
-- api-service: 18 product(s), $0-$99
+- api-service: 19 product(s), $0-$99
 - audio-video-tools: 3 product(s), $29-$29
 - bank-file-converter: 4 product(s), $29-$29
 - csv-tools: 2 product(s), $29-$29
@@ -38,7 +38,8 @@ Support for everything: binbin7418@gmail.com (answered within one business day).
 
 - [api-service] EmailCheck — API on RapidAPI - $0-$29 USD - buy: https://rapidapi.com/binbin7418/api/emailcheck-email-validation-api
 - [api-service] FlightScope — API on RapidAPI - $0-$99 USD - buy: https://rapidapi.com/binbin7418/api/flightscope-live-flight-tracking-and-airport-data-api
-- [api-service] CardCheck — API on RapidAPI - $0-$19 USD - buy: https://rapidapi.com/binbin7418/api/cardcheck
+- [api-service] CardCheck — API on RapidAPI - $0-$14 USD - buy: https://rapidapi.com/binbin7418/api/cardcheck
+- [api-service] IBANCheck — API on RapidAPI - $0-$19 USD - buy: https://rapidapi.com/binbin7418/api/ibancheck-iban-validation-eu-vat-checker-api
 - [api-service] FXRates — API on RapidAPI - $0 USD - buy: https://rapidapi.com/binbin7418/api/fxrates-currency-exchange-rates-api
 - [api-service] HostIntel — API on RapidAPI - $0 USD - buy: https://rapidapi.com/binbin7418/api/hostintel-ip-ports-hostnames-and-vulnerability-exposure
 - [api-service] VinScope — API on RapidAPI - $0 USD - buy: https://rapidapi.com/binbin7418/api/vinscope-vehicle-data-makes-models-and-vin-decoding
