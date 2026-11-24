@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "LedgerLink — Bank CSV to QIF / OFX / QBO Converter with Re-Check",
+ "description": "My bank only gives me CSV — what can convert it into the file my accounting software actually wants? Your accounting software wants QIF, OFX or QBO. LedgerLink converts between them — and re-reads its own output to prove every transaction survived.\nThe problem\nBanks export CSV. Quicken wants QIF or QBO, other tools want OFX, and the formats are just different enough that hand-editing in a spreadsheet eats an afternoon and still drops rows. Online converters want you to upload your full transaction history to a stranger's server.\nWhat it does\n- Drop in any bank or card CSV — LedgerLink detects the delimiter and finds the date, amount, debit/credit, payee, memo, cheque-number and category columns by header synonyms\n- Handles the messy real-world cases: (4.50) bracket negatives, 1,234.56 thousands separators, comma decimals, split Debit/Credit columns, and a sign-flip switch for credit-card exports\n- Writes all three formats in one pass: QIF, OFX 1.02 (SGML), and QBO (with the Intuit bank id your software expects)\n- Re-check layer: each written file is parsed back independently — transaction count, net total, and (for OFX/QBO) FITID uniqueness must match the source, or the report says FAIL\n- Honest bookkeeping: exact duplicate rows are removed and listed, rows that can't be parsed are rejected with the reason, and ambiguous dates like 03/04/2026 are flagged instead of silently guessed\n- A conversion_report.md documents everything: rows in, converted, duplicates, rejects, totals per format, re-check verdict\n- Fully offline. Your transactions never leave your machine\nMeasured (seeded acceptance test, 15/15 checks passed)\n- 8-row seeded CSV with a planted duplicate, a broken date and an ambiguous date → 6 converted, 1 duplicate removed and reported, 1 rejected with reason, net total 2295.71 matched exactly on re-read in both QIF and OFX\n- Split Debit/Credit file: net 925.50 exact; sign-flip run: −925.50 exact\n- Same input converted twice → byte-identical QIF output (deterministic FITIDs)\nHonest limits\n- Date reading defaults to month-first (US style); a day-first toggle is included, and ambiguous dates are always flagged in the report either way\n- StatementSift (our PDF statement converter) is the sibling tool if your bank only gives you PDFs — LedgerLink is for CSV sources\n- OFX 2.x (XML) is not written; OFX 1.02 is what current Quicken/desktop tools import\nWhat's in the box\nWindows app (LedgerLink.exe), sample CSV, and the conversion report format shown above. No subscription, no account, no upload.\n$29 one-time.",
+ "sku": "aaqtbr",
+ "category": "bank-file-converter",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/ledgerlink-bank-csv-to-qif-ofx-qbo"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11 (64-bit). No other software needed."
+  }
+ ]
+}
