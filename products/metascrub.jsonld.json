@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "MetaScrub — Metadata Audit & Scrub: Find, Remove & Verify Hidden Data in Photos, Office & PDF Files",
+ "description": "That photo knows where I live — how do I find, remove and verify the hidden metadata in my photos, documents and PDF files? That document remembers who wrote it.\nBefore you send a file out, MetaScrub audits it for the data you cannot see: the GPS coordinates in a photo, the camera serial number, the thumbnail of the part you cropped away, the author and revision history in a Word file, the producer data in a PDF. Then it removes that data, writes a cleaned copy, and hands you a report that proves — per file — that the result is zero. Your originals are never touched.\nThe report is the product. Other metadata cleaners finish with a bare list of \"successful\" files and no detail about what was actually removed. MetaScrub gives you a per-file triple instead: Found — every hidden item named; Removed — what the scrub took out; Rechecked zero — the cleaned copy is audited again and must read 0 target items remaining. Photo pixels are hash-checked, document and PDF text are hash-checked, and every cleaned file is verified to still open.\nWhat it covers:\n- JPEG photos: GPS coordinates, camera Make/Model, serial numbers, software, artist, dates, embedded EXIF thumbnail. Scrubbing strips the whole EXIF block at byte level; pixels are never re-encoded.\n- Word / Excel / PowerPoint: author, last editor, revision number, company, custom properties, revision traces (rsid attributes). Scrubbing empties author/editor, resets revision, empties company, removes custom properties, strips rsid attributes; body text untouched.\n- PDF: Author, Creator, Producer, Title, Subject, Keywords, XMP metadata. Scrubbing empties info-dictionary fields and XMP metadata; page text untouched.\nMeasured in our seeded acceptance test (35/35 checks passed): a JPEG planted with GPS, a camera serial number and an embedded thumbnail went from 9 hidden items found to 0 remaining with pixels unchanged; a DOCX planted with author, company and revision traces went from 6 finding groups to 0 with body text unchanged; a PDF planted with Author, Producer and XMP metadata went from 7 items to 0 with page text unchanged. A PDF carrying a signature field was detected and skipped, not scrubbed, with the skip stated explicitly in the report. All 4 original seed files stayed byte-identical (SHA-256 verified).\n100% local — your files never leave your computer. Windows 10/11. No account, no subscription.\nHonest limits: v1 covers JPEG photos, Office files (docx/xlsx/pptx) and PDFs. PNG, HEIC, TIFF, RAW, video and audio metadata are not scrubbed in this version and are reported as unsupported, never force-converted. Digitally signed PDFs are detected by signature flags and/or a signature-field marker and skipped, never scrubbed, because changing the file would break the signature; detection is marker detection only, not a cryptographic validation. A scrubbed file is not certified or compliant with any law, standard or platform policy, and scrubbing does not remove tracked-change content itself — only the rsid revision-trace attributes. The report lists exactly what was found and removed; read it before sending anything sensitive.",
+ "sku": "mgfxrg",
+ "category": "photo-image-tools",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 19.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/metascrub-metadata-scrub-report"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11"
+  }
+ ]
+}
