@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "LogicGridPress — Logic Grid (Zebra) Puzzle Book Generator with Proven Unique Solutions, Print-Ready PDF (Local)",
+ "description": "How do I make logic grid puzzles with a proven unique solution, so my readers never reach a fork the clues cannot settle? They're right — and generators that print an answer grid without re-solving from the clues ship those forks every day.\nLogicGridPress makes the proof part of the build.\nHOW EVERY PUZZLE IS MADE\n• A solution grid is drawn at random (4 houses for classic books, 5 for expert)\n• True clues are added until a backtracking solver finds EXACTLY ONE solution\n• Then each clue is trial-removed — the book ships only clues that are all needed, no padding\n• Finally, every puzzle is re-solved FROM ITS CLUES ALONE by an independent solver pass. The unique answer must match the printed solution grid, and every clue must check out true. Fail, and the puzzle never enters the book.\nYou get a print-ready 8.5×11in PDF: puzzle pages with a clean solving grid and numbered clues in plain English (\"The coffee drinker is immediately to the left of the dog owner\"), then full solution tables. Same seed, same book — deterministic, so series production is repeatable.\nVERIFIED, NOT VIBES\nA 6-puzzle test book shipped with 10-12 minimized clues per puzzle, every one re-proven unique-from-clues; a 5-house expert puzzle verified the same way at 19 clues.\nThe established logic-grid generator on this platform sells at $37 with its ratings — and no uniqueness proof. LogicGridPress is $29 once, proof included, running 100% on your computer. Windows 10/11. A sample book is included so you can inspect the output before you build yours.\nHonest note: proving uniqueness takes a few seconds per puzzle. That's not a bug — that's the product.",
+ "sku": "uppxbq",
+ "category": "puzzle-book-generator",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/logicgridpress-logic-grid-puzzle-book-generator"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; no account, no upload, no per-book credits."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive; it generates print-ready PDF books locally"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11"
+  }
+ ]
+}
