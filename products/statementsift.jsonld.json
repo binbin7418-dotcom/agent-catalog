@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "StatementSift — Bank Statement PDF to CSV, Converted & Reconciled (Local, Private)",
+ "description": "My bank gives me a PDF statement — how do I turn it into a CSV my accounting software can use? Your accounting software wants a CSV. And the converters that do this either charge you $29 a month in the cloud — with your statement on someone else's server — or $49.99 for a desktop tool that converts without ever checking its own work.\nStatementSift converts a text-based bank statement PDF into a clean CSV on your own computer, then does what the other converters don't: it reconciles. Every running-balance step is walked and verified, and the closing balance is checked against opening + the sum of all amounts.\nWHAT IT CORRECTS ON ITS OWN\n• Amounts with thousands commas (2,500.00 → 2500.00) and DD/MM/YYYY dates — normalized\n• Exact-duplicate transaction lines printed twice — removed, and logged\nWHAT IT REPORTS — BUT NEVER SILENTLY \"REPAIRS\"\n• Running-balance breaks: the exact line, the balance the chain requires, the balance the statement prints, and the difference\n• A closing balance that does not reconcile with the opening balance plus the transactions\nA balance break means one side is wrong — deciding which is a conversation with your bank, not a guess by software. Then it RE-CHECKS the cleaned CSV by re-parsing and re-verifying it independently.\nVERIFIED, NOT VIBES\nOn a seeded test statement (6 transaction lines, 4 planted defects): 1 exact duplicate removed, 4 corrections logged, and 1 balance break caught red-handed — the statement printed 12,700.50 where the chain requires 12,695.50, a +5.00 difference that also made the closing balance fail reconciliation. The re-check confirmed 0 duplicates remained and the single break was carried honestly, not papered over.\n100% LOCAL & PRIVATE — no upload, no account, no subscription. A bank statement is the most sensitive document you own; it never leaves your computer.\nWindows 10/11, no other software needed. You get transactions.csv (with per-row flags) and the reconciliation report.\nScope: text-based statement PDFs (the kind you download from your bank) whose transaction lines end in \"<amount> <balance>\". Scanned or photographed statements need OCR and are out of scope for this build — StatementSift will tell you so instead of guessing.",
+ "sku": "zwrxjl",
+ "category": "bank-file-converter",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/statementsift-bank-statement-pdf-to-csv"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11, no other software needed"
+  }
+ ]
+}
