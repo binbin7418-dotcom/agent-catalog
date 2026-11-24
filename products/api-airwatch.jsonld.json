@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "AirWatch — API on RapidAPI",
+ "description": "Air quality answers your users can act on: AirWatch returns the current air quality index with a plain-language severity level, multi-day forecasts and pollen data for any location.\n\nWhat you get:\n- Current AQI as a number plus a severity level in words, so widgets and alerts need no interpretation tables\n- Pollutant-level detail behind the index, for health and outdoor-activity products\n- Multi-day air quality forecasts in one response, for planning views and proactive notifications\n- Pollen data alongside air quality, for allergy-aware apps and seasonal content\n\nKey endpoints:\n- GET /current — current air quality for a location\n- GET /forecast — multi-day air quality forecast in one call\n- GET /pollen — current pollen levels for a location\n\nBatch / built for workflows:\nAirWatch is forecast-shaped: one /forecast call returns the days ahead as a set, which suits scheduled notification jobs (\"tomorrow's air will be poor\"), travel and relocation content, and location dashboards that refresh on a timer. Data comes from the Open-Meteo air quality service (CAMS), and every response pairs raw values with the derived severity judgement.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+ "sku": "api-airwatch",
+ "category": "api-service",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 0.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://rapidapi.com/binbin7418/api/airwatch-air-quality-index-pollen-and-forecasts"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant API access after subscribing on RapidAPI; no file delivery."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "JSON responses over HTTPS (REST)."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "A RapidAPI account and API key; any HTTPS client."
+  }
+ ]
+}
