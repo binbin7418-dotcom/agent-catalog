@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "AudiobookSpecFix — Audiobook ACX Spec Check, Fix & Re-Check (Local, Private)",
+ "description": "My audiobook got rejected by ACX — how can I check every chapter against the ACX spec and fix it before I resubmit?\nAudiobookSpecFix measures every chapter against the full ACX technical spec, fixes what a level/format pass can fix, then RE-MEASURES every output and hands you a fails-first report. Not a claim — a measurement. And it runs entirely on your computer: an unpublished manuscript is exactly the audio that should never be uploaded to a stranger's server.\nWHAT IT CHECKS (every chapter, every run)\n• Overall RMS — must land in −23 to −18 dB (full PCM decode, not a metadata guess)\n• True peak — ≤ −3 dB\n• Noise floor — the quietest 500 ms of the file must be ≤ −60 dB RMS\n• Format — MP3 at 192 kbps constant bitrate (verified from the actual frame headers, so VBR can't hide)\n• Sample rate 44.1 kHz · file length ≤ 120 minutes\n• Head room tone 0.5–1 s · tail room tone 1–5 s\n• One channel layout for the whole book (all mono or all stereo)\nSpec as published in the ACX audio submission requirements, checked 2026-10-26.\nWHAT IT FIXES\n• Levels: gain / limiting into the RMS window, peaks held under the ceiling\n• The odd stereo chapter in a mono book (or the reverse) — unified to the book's layout\n• Room tone: missing head tone added, over-long tails trimmed — using the chapter's OWN room tone, carved from its longest quiet stretch\n• Format: 128k VBR, 48 kHz, studio WAV — one final encode to 192 kbps CBR MP3 at 44.1 kHz\n• Originals are never modified — fixed chapters + acx_report.md go to a separate folder\nWHAT IT HONESTLY WON'T DO\n• Pauses over 5 seconds are flagged with timestamps, never auto-cut — a dramatic pause might be the best beat in the chapter, and that's your call, not the tool's\n• A noise floor recorded too hot (hiss printed into the take) cannot be fixed by levels: the chapter is reported UNFIXABLE with the maths shown, and no fake \"fixed\" file is produced. That one needs a re-record\n• Passing these machine checks does not guarantee passing ACX's human QC — pronunciation, performance and extraneous sounds are not measured, and this page won't pretend otherwise\nVERIFIED, NOT VIBES\nSeeded acceptance test: 6 synthesised chapters with planted defects — RMS −30.3 dB; a −0.8 dBTP peak spike; a 48 kHz VBR encode carrying a 6.0 s interior pause; 0.00 s head tone with an 8.00 s tail; a stereo chapter in a mono book; a −49.8 dB noise floor designed to be unfixable. Result: 102 of 102 checks passed. Chapters 1–5 fixed and re-measured green on every check (RMS to −20.8 / −22.3 dB, peak spike to −3.9 dBTP, head tone 0.00 → 0.75 s, tail 8.00 → 2.50 s, VBR re-encoded to 192 kbps CBR with the 6 s pause flagged and kept — 25.2 s in, 25.2 s out). Chapter 6 reported UNFIXABLE, no output file. Zero new defects introduced; originals' SHA-256 hashes unchanged.\n100% LOCAL & PRIVATE — no upload, no account, no subscription, no per-finished-hour metering. One purchase covers every book you ever submit.\nWindows 10/11, nothing else to install. You get the fixed chapters + a plain-English before/after report (acx_report.md).\nAudiobookSpecFix is an independent tool built for ACX submission. ACX, Audible and Amazon are trademarks of Amazon.com, Inc. or its affiliates; this tool is not affiliated with or endorsed by them.",
+ "sku": "ardloc",
+ "category": "audio-video-tools",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/audiobookspecfix-audiobook-checker"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11, nothing else to install"
+  }
+ ]
+}
