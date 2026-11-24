@@ -1,0 +1,45 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "EmailCheck — API on RapidAPI",
+ "description": "Clean email lists before they cost you bounces: EmailCheck returns a deliverability verdict for every address — single or in batches of up to 100 — so signup flows, CRM imports and outbound campaigns only keep addresses that are safe to mail.\n\nWhat you get:\n- A clear verdict per address (deliverable / risky / undeliverable) backed by a quality score, not just a true/false flag\n- The full signal set behind the verdict: syntax, MX and domain checks, catch-all risk signal, and domain age from registration records\n- Typo detection with a correction suggestion (e.g. gamil.com → gmail.com), so fixable addresses are recovered instead of dropped\n- Batch results in the same per-address format, ready to feed back into your list-cleaning pipeline\n\nKey endpoints:\n- GET /validate — validate a single email address\n- POST /validate — validate a single email address (JSON body)\n- POST /validate/batch — validate up to 100 addresses in one call\n\nBatch / built for workflows:\nList cleaning is the primary use case, not an afterthought: /validate/batch accepts up to 100 addresses per request and returns one structured result per address, so scheduled hygiene jobs, import pipelines and pre-send checks can run unattended. Single-address validation uses the same response format, so your parsing code is identical either way.\n\nPlans: Free includes 100 validations per month. PRO is $9/month for 10,000 requests. ULTRA is $29/month for higher-volume workloads.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+ "sku": "api-emailcheck",
+ "category": "api-service",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "AggregateOffer",
+  "lowPrice": 0.0,
+  "highPrice": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://rapidapi.com/binbin7418/api/emailcheck-email-validation-api",
+  "offerCount": 3
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant API access after subscribing on RapidAPI; no file delivery."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "JSON responses over HTTPS (REST)."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "A RapidAPI account and API key; any HTTPS client."
+  }
+ ]
+}
