@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "PrintReady — KDP Print Preflight Checker: Fonts, DPI & Margins Checked Before Amazon Rejects Your Book",
+ "description": "How do I check my book's margins, fonts and image DPI before KDP review bounces it? It bounces it for a margin, a font, an image at 33 DPI — one slow upload-review-fix cycle at a time.\nPrintReady checks your interior PDF the way the review does, repairs the structural defects, then RE-CHECKS the repaired file so you know before you upload.\nWHAT IT CHECKS, PAGE BY PAGE\n• One consistent trim size across the whole book\n• Text running inside the 0.25in minimum margin\n• Fonts that aren't embedded (standard Base-14 flagged separately — usually accepted)\n• Every image's effective DPI at its placed size (300 target; under 200 flagged)\n• Blank pages, rotated pages, CropBox/MediaBox mismatches\nWHAT IT FIXES ON ITS OWN\n• Page rotation baked into the content\n• CropBox unified to MediaBox\nThen the re-check shows the repaired file's true state — nothing is hidden, including consequences of the fixes themselves.\nWHAT IT REPORTS — BUT NEVER FAKES\nA 100-pixel image can't be \"repaired\" into a 300 DPI print image. You get the page, the placed size and the actual DPI, so you can swap in the real original.\nVERIFIED, NOT VIBES\nSeeded 5-page 6×9 interior (margin violator, 33-DPI image, rotated page, CropBox mismatch, blank page): 2 structural repairs applied; re-check confirmed all 3 blocking errors, per page, with 0 invented fixes.\n100% LOCAL & PRIVATE — no upload of your unpublished book, no per-file preflight fees, no subscription.\nOUR GUARANTEE\nIf KDP rejects your interior for a problem PrintReady checks and cleared, send us the rejection notice and we refund you in full.\nWindows 10/11, nothing else to install.\nScope: common KDP-style interior rules. Your printer's house rules win where they differ.",
+ "sku": "aonlcb",
+ "category": "pdf-document-tools",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/printready-kdp-pdf-precheck"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11, nothing else to install"
+  }
+ ]
+}
