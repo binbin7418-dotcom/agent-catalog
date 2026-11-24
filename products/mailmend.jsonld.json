@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "MailMend — MBOX Duplicate Remover & Repair, Re-Checked (Local, Private)",
+ "description": "How do I remove the duplicate messages that creep back into my MBOX archive every time I export, migrate or re-import my mail? And hiding in some archives is a nastier problem — messages silently split in half by an unescaped \"From \" line in the body, so pieces of your mail don't open anywhere.\nMailMend cleans an .mbox archive (Thunderbird, Apple Mail, Google Takeout, any mbox export) on your own computer: duplicates removed, split messages rejoined, then the cleaned file is RE-PARSED to prove the result.\nHOW DUPLICATES ARE CAUGHT — TWO WAYS\n• By Message-ID, normalized — a copy whose ID differs only in letter case or spacing is still caught\n• By content key (sender + subject + date + body) for messages that have no Message-ID — so a re-exported copy that only differs in its Received headers is caught too\nWHAT IT REPAIRS\n• Messages split by a fake envelope line in the body: the header-less fragment is rejoined to its parent message and the line is escaped — no content lost\nWHAT IT NEVER DOES\n• It never modifies your original file, never fabricates a Message-ID, and never guesses: kept messages are byte-preserved, attachments untouched\nVERIFIED, NOT VIBES\nOn a seeded 8-message test archive with 4 planted defects (a byte-identical duplicate, a case-shifted Message-ID duplicate, a no-ID duplicate hiding behind a different Received header, and one split message): 3 duplicates removed, 1 message rejoined, conservation exact — 8 in = 5 kept + 3 removed — and the re-check of the cleaned file found 0 duplicates and 0 fragments.\n100% LOCAL & PRIVATE — no upload, no account, no subscription. Your mail archive is the most private file you own; it never leaves your computer.\nWindows 10/11, no other software needed. You get the cleaned .mbox and the dedupe & repair report.\nScope: duplicates are exact copies or Message-ID/content-key matches. Near-duplicates — the same mail forwarded with edits, quoted replies — are different messages and are kept.",
+ "sku": "rhrzwe",
+ "category": "data-cleaning",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/mailmend-mbox-duplicate-remover"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11, no other software needed"
+  }
+ ]
+}
