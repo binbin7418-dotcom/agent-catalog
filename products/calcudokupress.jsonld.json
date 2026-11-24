@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "CalcudokuPress — Calcudoku (Mathdoku) Puzzle Book Generator with Proven Unique Solutions, 4x4-6x6, Print-Ready PDF (Local)",
+ "description": "How do I make a Calcudoku book where every cage target is actually reachable and every puzzle has exactly one solution? Both come from the same shortcut — drawing cages first and hoping the arithmetic works out.\nCalcudokuPress builds in the order that can't lie:\n- A complete Latin square is generated first.\n- Cages are partitioned over it, and every cage's operation and target are computed FROM the true values — targets are reachable by construction, never wished into existence.\n- Then an independent solver counts the solutions. Not one? The partition is thrown away and redrawn. A puzzle reaches your book only when the count is exactly ONE and the found solution is the printed one.\nThree sizes — 4x4 (Easy), 5x5 (Medium), 6x6 (Hard) — with addition and multiplication cages throughout, plus subtraction and exact-division cages on Medium and Hard. One puzzle per page with heavy cage borders and clear cage labels, full solutions at the back, print-ready 8.5x11in PDF. Pick a seed and the same book rebuilds identically. And it's fast: the 6-puzzle acceptance book (all three sizes) generated and fully verified in about half a second.\nVERIFIED, NOT VIBES\nThe acceptance book was re-checked by an independent solver that rebuilds constraints from the printed cage data alone and searches cage-by-cage: 6/6 puzzles have exactly one solution equal to the printed grid, cages partition the grid contiguously, and every target is arithmetically true of its solution.\nMathdoku book software launches at $67 and up; calcudoku rides inside paid bundles with no uniqueness proof at all. CalcudokuPress is $29 once, proof included, 100% on your computer. Windows 10/11. A sample book is included so you can inspect the output first.",
+ "sku": "vindg",
+ "category": "puzzle-book-generator",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/calcudokupress-calcudoku-puzzle-book-generator"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; no account, no upload, no per-book credits."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive; it generates print-ready PDF books locally"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11"
+  }
+ ]
+}
