@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "FeedFix — Google Shopping Feed Audit, Fix & Re-Check (Local, Private)",
+ "description": "How do I audit my Google Shopping feed (.csv / .tsv), repair the formatting errors automatically, and re-audit the repaired file so I can prove what was fixed and see exactly what still needs my decision?\nWHAT IT FIXES ON ITS OWN\n• Availability values mapped to the required enums (\"In Stock\" → in_stock)\n• Price formats normalized ($19.99 → 19.99 USD)\n• http:// links upgraded to https://\n• Relative image URLs made absolute\n• HTML stripped from descriptions\n• Missing condition filled with the platform default\nWHAT IT REPORTS — BUT NEVER SILENTLY CHANGES\n• GTINs failing the check-digit test (a typo'd barcode can't be \"repaired\" without inventing data)\n• Duplicate ids, sale_price ≥ price, missing required attributes\n• Promotional / ALL-CAPS titles, missing identifiers, preorder without a date\nEvery fix is logged old → new with the reason. The re-check verdict tells you plainly: PASS, or NOT READY with the blocking errors listed.\nVERIFIED, NOT VIBES\nOn a seeded 12-product test feed with 21 planted problems: 10 auto-repaired, re-check confirmed the 11 human-decision items, 0 new issues introduced.\n100% LOCAL & PRIVATE — no upload, no account, no subscription. Your feed (your whole catalogue and pricing) never leaves your computer.\nWindows 10/11, no other software needed. You get the repaired feed file + a plain-English fix report.\nScope: file-level data-spec errors. Account-level issues (suspensions, misrepresentation) can't be read from a feed file — anyone who promises otherwise is guessing.",
+ "sku": "hxppiv",
+ "category": "product-feed-tools",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/feedfix-google-shopping-feed-repair"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11, no other software needed"
+  }
+ ]
+}
