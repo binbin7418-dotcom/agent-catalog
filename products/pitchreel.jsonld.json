@@ -1,0 +1,45 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "PitchReel — Resume Video Introduction (Explainer & Presenter, Short / Standard / Full)",
+ "description": "Can I turn my resume into a 60-second vertical video introduction, cut only from my own resume?\nHow it works:\n1. Upload your resume on our site.\n2. We draft a narration script from it — every figure quoted word-for-word from your resume. Nothing is invented.\n3. You review and edit every line, then lock the script. Only then do you pay.\n4. We produce your film: one sentence per screen, your numbers as animated highlights, pro voiceover, delivered as a 1080x1920 MP4.\nThis product is the Standard Explainer cut (~60 seconds, no photo). Pay here with your PitchReel order reference so we can match your payment to your order.",
+ "sku": "bdrouvd",
+ "category": "video-service",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "AggregateOffer",
+  "lowPrice": 19.0,
+  "highPrice": 89.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/pitchreel-explainer-standard",
+  "offerCount": 8
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If we make a mistake (a misread line, a wrong number, a wrong cut, or a broken file), we fix it and re-render free of charge. If we cannot fix it, we refund in full. Orders cancelled before production starts are refunded in full via Gumroad. Email support@newkwlab.com."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Service delivery, not a file download. You review and lock your script on the PitchReel site before paying; the finished film is produced after payment and delivered as an MP4 via your PitchReel result page and email."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Delivered video: 1080x1920 MP4 (vertical)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "A current resume (for the script) and, for the Presenter/Photo version, one clear photo of yourself. Payment is matched to your order via your PitchReel order reference."
+  }
+ ]
+}
