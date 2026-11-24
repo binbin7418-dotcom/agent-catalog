@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "HostIntel — API on RapidAPI",
+ "description": "Know what a host exposes before you trust it: HostIntel takes an IP address and returns a security profile — open ports, hostnames and known vulnerabilities — in a single structured response.\n\nWhat you get:\n- Open ports and the services observed on the host, from the Shodan InternetDB dataset\n- Hostnames and tags associated with the IP, for asset inventory and triage\n- Known vulnerability identifiers (CVEs) reported for the host's exposed services\n- A single-call profile format designed for screening: vendor IPs, customer servers, webhook sources, sign-in origins\n\nKey endpoints:\n- GET /lookup — full host intelligence profile for an IP address\n- GET /ports — open ports observed for an IP address\n\nBatch / built for workflows:\nHostIntel is a screening step inside larger workflows: run it at vendor onboarding, when a new server or endpoint appears in your logs, or as a periodic re-check of infrastructure you depend on. Each lookup is one self-contained call with one structured profile out, so it drops cleanly into automation platforms (n8n, Make, Zapier) and internal scripts without custom parsing per data source.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+ "sku": "api-hostintel",
+ "category": "api-service",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 0.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://rapidapi.com/binbin7418/api/hostintel-ip-ports-hostnames-and-vulnerability-exposure"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant API access after subscribing on RapidAPI; no file delivery."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "JSON responses over HTTPS (REST)."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "A RapidAPI account and API key; any HTTPS client."
+  }
+ ]
+}
