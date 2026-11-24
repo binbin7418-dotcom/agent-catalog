@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "ContactFix — vCard (VCF) Duplicate Remover & Merge Tool (Repair + Re-Check Report)",
+ "description": "Every phone switch and import leaves my address book worse — how do I merge my duplicate contacts without losing the piece of information stranded in each copy? And somewhere in the file is a name that reads as garbled characters, a souvenir from a vCard 2.1 export.\nOther vendors sell you four separate tools for this — a splitter, a merger, an exporter, a duplicate remover — and none of them will tell you what the merge actually did to your fields. ContactFix is the whole job in one $29 tool, and it shows its work.\nWHAT IT DOES\n• Finds duplicates across mixed vCard 2.1 / 3.0 / 4.0 files — by phone number with the country code unified (+86 138…, tel:+86138… and a bare 138… are recognised as the same number), and by email + name\n• Merges each duplicate group field-by-field: every distinct phone, email, address and note survives; conflicting single fields keep one value in the card and write the other verbatim into the merge log\n• Repairs damaged entries: quoted-printable / base64 mojibake decoded (UTF-8, GBK and other declared charsets), missing names rebuilt from the structured name or email, tel: URIs normalised, everything re-emitted as clean vCard 3.0 that every contacts app imports\nTHE SAFETY PROMISE — READ THIS BEFORE YOU COMPARE\n• Your original file is NEVER overwritten. ContactFix always writes a new \".cleaned.vcf\" file, plus the report. (In our own acceptance test the original's SHA-256 hash is identical before and after.)\n• Same email does NOT mean same person. Two contacts sharing an email address but carrying different names are not merged — they are listed in a \"Needs your review\" section, with the reason, for you to decide.\n• Every merge group explains itself: why it matched, which value was kept for every field, and what the other values were.\nTHE RE-CHECK REPORT (OUR SIGNATURE)\nAfter fixing, ContactFix re-parses its own output and re-scans it, and the report states in plain language: contacts in → contacts out (with a conservation check that the arithmetic holds), duplicate groups remaining (target: zero), the field-union check result, repairs applied one by one, and the review list. You don't take our word for any of it — the numbers are in the file you receive.\nVERIFIED, NOT VIBES\nSeeded acceptance test with known ground truth: a 9-contact file mixing vCard 2.1, 3.0 and 4.0 — one person in 3 cards with his company, title, note and photo spread across the three, two different people sharing one email, two quoted-printable Chinese names (UTF-8 and GBK), one card with no name field. Result: 9 in → 7 out, 8 repairs applied, exactly 1 group merged with every planted field present in the merged card (photo bytes identical), the shared-email pair held back for review, re-check 0 duplicate groups, 0 fields lost, 0 new errors — 36/36 acceptance checks passed. A 500-contact file with 40 planted duplicate pairs: all 40 groups found, 500 → 460 out, fixed and re-checked in 0.28 seconds on the test machine.\n100% LOCAL & PRIVATE — no upload, no account, no subscription. Your contacts are the most private data you own; they never leave your computer. Competing vCard utilities charge $29–49 per separate tool; ContactFix is the whole toolbox for $29 once.\nWindows 10/11, no other software needed. Works with .vcf exports from iPhone/iCloud, Android, Google Contacts and Outlook.\nHonest limits: matching is deterministic rules, not fuzzy AI. The same person entered twice with no shared phone, no shared email and no identical display name will not be merged (a same-name pair may still appear in the review list). Two different people who share a phone line — a family landline stored on both cards — will be grouped by that shared phone; the merge log prints the exact reason for every group, so read it before importing, and remember your original file is untouched if you change your mind. Output is vCard 3.0; exotic parameter encodings are carried through verbatim rather than interpreted.",
+ "sku": "vztwsu",
+ "category": "data-cleaning",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/contactfix-vcard-duplicate-merge"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11, no other software needed"
+  }
+ ]
+}
