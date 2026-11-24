@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "FXRates — API on RapidAPI",
+ "description": "Get exchange rates your product can quote immediately: FXRates returns current and historical reference rates for major world currencies — one pair, or the full rate table in a single call.\n\nWhat you get:\n- The complete latest rate table against your chosen base currency in one response — no per-pair call fan-out\n- Direct conversion results for any amount and pair, ready to display or store\n- Historical rates for a specific date, for invoicing, reconciliation and back-filling reports\n- A symbols endpoint listing every supported currency, so your UI and validation stay in sync with the API\n\nKey endpoints:\n- GET /latest — latest rates for all supported currencies against a base\n- GET /convert — convert an amount between two currencies\n- GET /historical — rates for a specific past date\n- GET /symbols — list of supported currency codes\n\nBatch / built for workflows:\nFXRates is list-shaped by design: /latest returns the full currency table at once, which makes it a natural fit for scheduled rate snapshots, price-list localization jobs and finance dashboards that refresh on a timer. Rates are European Central Bank reference rates (via Frankfurter), updated on business days — the right source for accounting and display use cases.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+ "sku": "api-fxrates",
+ "category": "api-service",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 0.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://rapidapi.com/binbin7418/api/fxrates-currency-exchange-rates-api"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant API access after subscribing on RapidAPI; no file delivery."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "JSON responses over HTTPS (REST)."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "A RapidAPI account and API key; any HTTPS client."
+  }
+ ]
+}
