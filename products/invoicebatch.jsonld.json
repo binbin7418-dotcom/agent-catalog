@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "InvoiceBatch — Batch Invoice PDFs from a Spreadsheet, Totals Reconciled (Local, Private)",
+ "description": "All my invoice data is already in a spreadsheet — what turns it into finished invoice PDFs in one batch? What you don't have is a free afternoon to turn 200 rows into 200 correct invoices — or to find out which totals in that sheet are quietly wrong.\nInvoiceBatch takes one spreadsheet of invoice lines (.csv / .xlsx, one row per line item), generates one print-ready PDF per invoice plus a combined file, and reconciles every cent: each line amount, subtotal, tax and total is recomputed from the lines with exact decimal arithmetic before anything is rendered.\nWHAT IT CORRECTS ON ITS OWN\n• Stated totals that disagree with their own lines — the recomputed value is used and the correction is logged (old → new, with the reason)\n• Dates written as 5 Mar 2026 or 05/03/2026 — normalized to ISO format\nWHAT IT REPORTS — BUT NEVER SILENTLY CHANGES\n• The same invoice number used for two different clients\n• Invoices with no client name\n• Negative-quantity lines\n• Gaps in your invoice number sequence\nThen it RE-CHECKS: every total is recomputed a second time, independently, and compared against what went into the PDFs — to the cent.\nVERIFIED, NOT VIBES\nOn a seeded 9-line test sheet (6 invoices, 5 planted defects): 3 corrections applied and logged — including a stated total of 330.00 that recomputed to 385.00 — 4 items flagged for a human decision (3 of them blocking), and the independent re-check matched all 6 invoice totals with 0 mismatches. Grand total across the batch: 1,467.00, to the cent.\n100% LOCAL & PRIVATE — no upload, no account, no subscription. Your client list and pricing never leave your computer.\nWindows 10/11, no other software needed. You get the invoice PDFs (one per invoice + one combined file) and the reconciliation report.\nScope: InvoiceBatch recomputes arithmetic and checks numbering. It does not judge whether your prices, tax rates or client details are the right ones — and it does not send, collect or chase payments.",
+ "sku": "bkatcb",
+ "category": "pdf-document-tools",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/invoicebatch-batch-invoice-pdf-generator"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11, no other software needed"
+  }
+ ]
+}
