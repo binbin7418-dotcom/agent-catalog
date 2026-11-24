@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "FutoshikiPress — Futoshiki (Inequality) Puzzle Book Generator with Proven Unique Solutions, 5x5-7x7, Print-Ready PDF (Local)",
+ "description": "How do I generate a Futoshiki book where neither the givens nor the inequality signs lie, so every puzzle really is forced by its clues? Deal random numbers, sprinkle some signs, print the grid you started from as the \"solution\": nobody checks whether the clues actually force it. Your readers will, usually in a review.\nFutoshikiPress builds puzzles the provable way:\n- A complete Latin square is generated first, and every true inequality sign is derived from it.\n- Then givens AND signs are dug away one at a time, in random order. After every removal, an independent solver — constraint propagation plus backtracking, written separately from the generator — re-counts the solutions. The removal is kept only if exactly ONE solution remains.\n- Digging stops at your difficulty targets (Easy keeps ~45% of cells and ~70% of signs; Hard digs to ~20% and ~40%) or at the uniqueness floor. The actual given and sign counts are printed on every puzzle page — never hidden, never rounded.\n- Before the book is written, every puzzle is re-counted one last time from its printed clues alone. Exactly one solution, matching the printed answers, or it doesn't ship.\nThree grid sizes — 5x5, 6x6, 7x7 — one puzzle per page, full solutions at the back, print-ready 8.5x11in PDF. Pick a seed and the same book rebuilds identically. Fast, too: the 6-puzzle acceptance book (all three sizes) generated and fully verified in about a second.\nVERIFIED, NOT VIBES\nThe acceptance book was re-checked by a second, deliberately naive backtracking solver that shares no code with the engine: 6/6 puzzles have exactly one solution, equal to the printed grid, and every printed sign is true of its solution.\nFutoshiki rides inside $30-class multi-genre bundles with no uniqueness proof at all. FutoshikiPress is $29 once, proof included, 100% on your computer. Windows 10/11. A sample book is included so you can inspect the output first.",
+ "sku": "bqvst",
+ "category": "puzzle-book-generator",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/futoshikipress-futoshiki-puzzle-book-generator"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; no account, no upload, no per-book credits."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive; it generates print-ready PDF books locally"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11"
+  }
+ ]
+}
