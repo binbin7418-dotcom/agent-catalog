@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "MosaicColorPress — Photo to Color-by-Number Book Generator: Whole Books Locally, Every Page Recounted Cell by Cell (No Per-Page Credits)",
+ "description": "How do I turn my photos into a 40-page color-by-number book without paying per-page credits to somebody's cloud — and without my photos living on their server?\nMosaicColorPress is the whole-book, on-your-machine version:\n- Drop in your photos; get one print-ready PDF: for every photo, a numbered mosaic coloring page AND a color-key page with named swatches (\"1. Sky Blue #78BEEB — 212 cells\") and a filled reference image showing the finished page.\n- Numbers are assigned by frequency (most-used color = 1), grid height follows each photo's aspect ratio, and you control grid width (16-80 cells) and palette size (4-24 colors).\n- THE RECOUNT: before the book is written, every page is re-quantized from the source photo and compared cell by cell with the page about to print. Palette counts must sum to the full grid; the key must cover exactly the numbers used; the grids must be identical. A page that fails is never printed — one wrong number is a ruined page and a refunded book, and this is how you never ship one.\n- No credits, no uploads, no subscription. Deterministic: same photo, same settings, same page — re-issue a book a year later and it matches.\nBuilt for KDP coloring-book publishers, Etsy printable sellers, and anyone doing custom color-by-number work for clients.\nVERIFIED, NOT VIBES\nAcceptance run: 2-photo book, 1,452 and 1,936 cells — both pages recounted clean, per-color totals independently re-derived, and one deliberately flipped cell caught by the recount (exactly the kind of error that ships silently in credit-based tools).\nCredit packs for this conversion sell at $39 for 500 pages and $129 for 2,000 — before you've sold a single book. MosaicColorPress is $29 once, unlimited pages, 100% on your computer. Windows 10/11. A sample photo and its converted book are included so you can inspect the output first.",
+ "sku": "hlgftl",
+ "category": "print-book-generator",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/mosaiccolorpress-color-by-number-book-generator"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; no account, no upload, no per-book credits."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive; it generates print-ready PDF books locally"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11"
+  }
+ ]
+}
