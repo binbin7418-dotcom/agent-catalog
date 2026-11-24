@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "SheetFix — Excel Audit, Fix & Re-Check (Local, Private)",
+ "description": "My spreadsheet is wrong somewhere — how do I find out where? SheetFix finds out where — fixes what is safely fixable — then proves it by re-auditing the repaired file.\nWhat you get (pick a workbook, click one button):\n1. A repaired copy of your workbook (_fixed.xlsx)\n2. A fix log — every change listed as old value -> new value, with the reason\n3. A re-check report — the audit run again on the fixed file, with anything left over explained in plain English\nWhat it fixes automatically (mechanical, evidence-backed):\n- Numbers stored as text that silently break your totals\n- Lookup keys padded with stray spaces\n- Formulas that drifted from the pattern used by the rest of the row/column (a classic source of wrong totals)\n- SUM ranges that stop one row short and miss a value\nWhat it reports but never touches: broken references, hardcoded \"plug\" numbers inside formula blocks, duplicate keys, totals that don't reconcile for business reasons. Those need your judgment — SheetFix tells you exactly where they are and what to check.\nPrivate by design: everything runs 100% on your computer. No upload, no cloud, no account. Built for financial models, budgets and client workbooks that can't leave your machine.\nProof, not promises: the audit engine inside is deterministic (no AI guessing) and was benchmarked on 2,700+ real-world workbooks. Every fix SheetFix makes is verified by re-running the full audit on the repaired file — if a fix doesn't hold up, it shows in the report.\nRequirements: Windows 10/11 64-bit. Works on .xlsx and .xlsm files. No Python or Excel installation needed — unzip, double-click SheetFix.exe, pick your file.\nFAQ:\n- Does it upload my file anywhere? No. There is no server. The app works fully offline.\n- Will it change my numbers without telling me? No. Every change is in the fix log, and your original file is never modified — you get a separate _fixed copy.\n- What if it can't fix something? It lands in the re-check report with the cell address and a plain-English explanation of what to check.\n- Mac version? Not yet — Windows first.\nHonest limits: SheetFix repairs file-level, mechanical defects. It does not judge whether your model's assumptions are right, and it does not guarantee an error-free workbook — the re-check report shows exactly what remains.",
+ "sku": "dpornd",
+ "category": "spreadsheet-repair",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/sheetfix-excel-audit"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11 64-bit"
+  }
+ ]
+}
