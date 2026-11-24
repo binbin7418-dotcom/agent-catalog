@@ -1,0 +1,45 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "IBANCheck — API on RapidAPI",
+ "description": "Validate IBANs before a payment bounces: IBANCheck checks an IBAN's format locally — per-country length and BBAN structure plus the ISO 13616 mod-97 checksum — and reports each check separately, one at a time or in batches of up to 100. For UK IBANs it also extracts the sort code. Validation is format-level only: it does not check whether the account exists (only the account-holding bank knows that).\n\nWhat you get:\n- A valid / invalid verdict per IBAN with the individual checks shown (length, structure, mod-97)\n- Named error codes per bad entry (e.g. MISSING_VALUE), so pipelines can react per row\n- UK sort code extracted from GB IBANs\n- Batch results in the same per-item format, ready to feed supplier-onboarding and payout pipelines\n\nKey endpoints:\n- GET /iban?value=... — validate one IBAN (the parameter name iban is also accepted as an alias)\n- POST /validate/batch — validate up to 100 IBANs in one call (JSON field name: ibans); 101 or more returns BATCH_TOO_LARGE\n\nBatch / built for workflows:\nSupplier-onboarding and payout pipelines screen IBANs before money moves: the batch endpoint takes up to 100 IBANs per call and returns one structured result per item, with bad rows carrying their own named errors instead of failing the batch. The checks are computed locally (ISO 13616 mod-97) with no upstream dependency, so results are deterministic.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+ "sku": "api-ibancheck",
+ "category": "api-service",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "AggregateOffer",
+  "lowPrice": 0.0,
+  "highPrice": 19.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://rapidapi.com/binbin7418/api/ibancheck-iban-validation-eu-vat-checker-api",
+  "offerCount": 3
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant API access after subscribing on RapidAPI; no file delivery."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "JSON responses over HTTPS (REST)."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "A RapidAPI account and API key; any HTTPS client."
+  }
+ ]
+}
