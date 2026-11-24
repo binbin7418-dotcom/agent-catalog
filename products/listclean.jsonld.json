@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "ListClean Local — Email List Cleaning, No Upload (Private)",
+ "description": "Is there an email list cleaner that doesn't charge me per address — and doesn't keep a copy of my subscriber list?\nListClean Local does the offline 90% of list hygiene on your own machine, then RE-VALIDATES the cleaned file and shows its work.\nWHAT IT DOES\n• Finds the email column in your CSV (or reads a plain .txt list)\n• Normalizes whitespace/case, drops empty rows, removes duplicates (counted)\n• Rejects invalid addresses WITH the reason — no @, bad dots, missing TLD\n• Splits out known disposable/throwaway domains (mailinator & friends)\n• Flags role accounts (info@, support@…) — kept, but you should know who they are\n• Suggests likely domain typos (gmial.com → gmail.com?) — suggestions only; it never \"corrects\" an address into a different person\n• Spots probable duplicates via +tags and Gmail dots — reported, never silently merged\nTHE HONEST PART\nWhether a mailbox truly exists can't be known offline, and this tool won't sell you a fake \"deliverability score\". What it guarantees is a syntactically clean, de-duplicated, fully-audited list — verified by a re-check pass on the output file itself.\nVERIFIED, NOT VIBES\nSeeded 12-row list: 7 clean out, 1 duplicate removed, 2 invalid rejected with reasons, 1 disposable split out, 1 role account + 1 typo suggestion reported. Re-check: PASS.\n100% LOCAL & PRIVATE — no upload, no per-email credits, no subscription, no copy of your list on anyone's server. One payment, run it on every list you ever clean.\nWindows 10/11, no other software needed.",
+ "sku": "vhlsed",
+ "category": "data-cleaning",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/listclean-local-email-list-cleaner"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11, no other software needed"
+  }
+ ]
+}
