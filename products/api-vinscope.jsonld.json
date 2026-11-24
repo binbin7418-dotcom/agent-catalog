@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "VinScope — API on RapidAPI",
+ "description": "Turn a VIN into a complete vehicle profile: VinScope decodes any 17-character VIN into manufacturer, model, year, body, engine and plant details — one request in, a structured vehicle record out.\n\nWhat you get:\n- A decoded vehicle profile from the NHTSA vPIC database: make, model, model year, body class, vehicle type and manufacturing plant\n- Engine and drivetrain attributes as reported by the manufacturer filing, in named fields rather than raw codes\n- Lookup endpoints for makes and models, so forms and filters can be built from the same data source\n- Clean handling of partial data: attributes the source does not carry are returned as empty, never filled with guesses\n\nKey endpoints:\n- GET /decode — decode a VIN into a full vehicle profile\n- GET /makes — list manufacturers\n- GET /models — list models for a manufacturer\n\nBatch / built for workflows:\nVinScope fits anywhere a vehicle enters a system: used-car listings, fleet and insurance intake, parts compatibility checks, marketplace moderation. The makes/models lists let you pre-validate user input before decoding, and the single-profile response drops directly into listing templates and appraisal workflows without further lookups.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+ "sku": "api-vinscope",
+ "category": "api-service",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 0.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://rapidapi.com/binbin7418/api/vinscope-vehicle-data-makes-models-and-vin-decoding"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant API access after subscribing on RapidAPI; no file delivery."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "JSON responses over HTTPS (REST)."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "A RapidAPI account and API key; any HTTPS client."
+  }
+ ]
+}
