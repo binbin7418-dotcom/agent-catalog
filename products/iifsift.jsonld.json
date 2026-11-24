@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "IifSift — QuickBooks IIF to CSV Splitter & Import Auditor: Unbalanced Splits, Undefined Accounts, Missing ENDTRNS — Found Before QuickBooks Swallows Them (Local)",
+ "description": "How do I check my QuickBooks IIF file for errors before Desktop imports it blind and dirties my books? An unbalanced transaction goes into the register wrong. A block missing its ENDTRNS truncates silently. An account name that doesn't exist gets created — or the import dies with an error that tells you nothing. By the time you notice, the books are already dirty.\nIifSift reads the file the way an auditor would, BEFORE anything is imported:\n- SPLIT IT: transactions.csv (one row per TRNS, with a BALANCE_CHECK column), splits.csv (every SPL with its parent TRNSID), and one clean CSV per list — accounts, customers, vendors, items.\n- AUDIT IT: every transaction whose splits don't net to exactly 0.00, printed with the off-by amount. Every missing ENDTRNS. Every ACCNT or NAME referenced but never defined in the file. Every duplicate TRNSID. Every unknown record type — each with its line number in your file.\n- FIX THE MECHANICAL DIRT: $1,234.56 and (1,200.00) amounts, MM/DD/YY dates, stray whitespace — normalized in the CSVs and in a fixed.iif that keeps your structure and decides nothing for you. Judgment calls are reported, never silently rewritten.\n- PROVE IT: before finishing, IifSift re-reads its own outputs and reconciles row counts and per-account totals against the source parse, to the cent. A mismatch fails the run loudly.\nPerfect for bookkeepers cleaning up client exports, migrations off old QuickBooks versions, and anyone who has ever stared at a register wondering which import did that.\nVERIFIED, NOT VIBES\nSeeded test file with exactly four planted defects (unbalanced by 10.00, missing ENDTRNS, undefined account, duplicate TRNSID) plus two mechanical ones: the audit found exactly those four, fixed exactly those two, and the clean sample file ships back with zero issues.\nConverter and importer tools in this ecosystem sell for $100-$199 one-time. IifSift is $29 once, runs 100% on your computer — your books never leave your machine. Windows 10/11. A sample IIF and its full output set are included.",
+ "sku": "hcqxlj",
+ "category": "bank-file-converter",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/iifsift-quickbooks-iif-to-csv-auditor"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11"
+  }
+ ]
+}
