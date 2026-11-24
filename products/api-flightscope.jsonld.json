@@ -1,0 +1,45 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "FlightScope — API on RapidAPI",
+ "description": "See where a flight actually is right now: FlightScope returns a live position profile for flights currently in the air — plus batch lookups and a searchable global airport database — from community ADS-B data (adsb.lol) and the OurAirports dataset. Coverage follows the community ADS-B receiver network — flights outside receiver coverage, or not broadcasting ADS-B, will not appear.\n\nWhat you get:\n- A live flight profile by flight number: position, altitude, ground speed, heading, vertical rate, aircraft registration and type, with the data age stated in every response\n- Batch lookup: check up to 100 flight numbers in one call, with a summary of how many are live, not live or invalid\n- A full airport profile by IATA or ICAO code — name, city, country, coordinates, elevation and reference links — plus free-text airport search\n- Area lookup: every aircraft currently broadcasting within a radius of a point, for maps and situational displays\n\nKey endpoints:\n- GET /flight — live profile for one flight number (IATA or ICAO format)\n- POST /flights/batch — live profiles for up to 100 flight numbers in one call\n- GET /airport/{code} — airport profile by IATA or ICAO code\n- GET /airports/search — search airports by name, city or code\n- GET /flights/near — aircraft currently live near a location\n- GET /aircraft/{icao24} — live profile for one aircraft by ICAO24 address\n\nBatch / built for workflows:\nFlightScope is honest about its source: it reports what aircraft are broadcasting now (including a derived ground/airborne phase), not airline schedule data — it does not publish planned times, delays, terminals or gates. For tracking boards, logistics visibility and aviation apps, the batch endpoint counts as a single API call per request, which keeps polling workflows economical.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+ "sku": "api-flightscope",
+ "category": "api-service",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "AggregateOffer",
+  "lowPrice": 0.0,
+  "highPrice": 99.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://rapidapi.com/binbin7418/api/flightscope-live-flight-tracking-and-airport-data-api",
+  "offerCount": 4
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant API access after subscribing on RapidAPI; no file delivery."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "JSON responses over HTTPS (REST)."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "A RapidAPI account and API key; any HTTPS client."
+  }
+ ]
+}
