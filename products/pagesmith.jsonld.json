@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "PageSmith PDF — Batch Split, Merge, Rotate, Extract & Watermark, With Re-Check Report (Local, Private)",
+ "description": "How do I split a 200-page scan pack into per-client PDF files without opening each file and clicking through it? Merging twelve statements into one. Stamping DRAFT on every page before it leaves the office. Interactive PDF tools make you open one file and click through it — and online tools make you upload legal and financial documents to someone else's server, by subscription.\nPageSmith runs the page operations on whole batches, by rule, on your own computer — then RE-OPENS every output and verifies it, in writing.\nWHAT IT RUNS IN ONE BATCH\n• Split — by page ranges (1-3, 4-6, 7-10) or every N pages\n• Merge — any number of PDFs, in the order you list them\n• Rotate — all pages or a selection, 90 / 180 / 270 degrees\n• Extract pages — pull pages (2, 4-5) into a new file\n• Text watermark — adjustable opacity; center (diagonal), top or bottom\nTHE RE-CHECK REPORT (THE PART OTHER TOOLS SKIP)\nAfter writing, every output file is re-opened and force-parsed page by page. The report confirms: the file opens, the page count matches, page conservation adds up — split parts sum back to the source, a merge equals the sum of its inputs — rotated pages really carry the new rotation, and the watermark text is really present on every page. Inputs that can't be opened (corrupt, encrypted) are listed as problems and skipped — never silently dropped, never \"repaired\" by guessing.\nVERIFIED, NOT VIBES\nSeeded acceptance suite (a 10-page document plus a 4-page document with a blank page and a pre-rotated page): one batch of 6 operations produced 10 outputs, 10 verified — split 3/3/4 and 4/4/2 with conservation back to 10, merge 10 + 4 = 14 with page order intact, rotate +90° landing exactly (90° on top of the pre-rotated page = 180°), extract returning exactly pages 2, 4, 5, watermark confirmed on all 10 pages. The re-check caught a deliberately truncated output, a fake PDF, and a page-count mismatch. 20 of 20 acceptance checks pass.\n100% LOCAL & PRIVATE — no upload, no account, no subscription. The contracts, statements and case files stay on your machine.\nWindows 10/11, no other software needed. Desktop app plus a scriptable job-file/CLI mode for repeat batches.\nScope, honestly: page operations only. PageSmith does not edit PDF content, OCR, fill forms, or repair broken PDF structure — a file that can't be opened is reported as failed, not forced.",
+ "sku": "glfdcm",
+ "category": "pdf-document-tools",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/pagesmith-pdf-batch-tools"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11, no other software needed"
+  }
+ ]
+}
