@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "RedactReady — True PDF Redaction with a Two-Channel Leak Re-Check",
+ "description": "I drew black boxes over text in my PDF, but the text is still in the file — how do I redact it for real, so nothing leaks? RedactReady removes the content itself, in batch, then searches every output twice and only passes files with zero leaks.\nThe problem\nLaw firms, clinics, agencies and sellers redact PDFs every week: names, case numbers, emails, IDs. The most common failure in the wild is a black rectangle drawn over live text — anyone can copy-paste the \"redacted\" secret back out, and it happens in real court filings and FOIA releases every year. Free tools do exactly that, and nothing checks the result.\nWhat it does\n- Batch: drop in PDFs or a folder; list the terms to remove (names, case numbers, IDs — one per line)\n- Optional pattern redaction: email addresses and US SSN-shaped numbers\n- Real redaction: matched text is deleted from the PDF content stream and the area painted black (PyMuPDF redaction annotations + apply) — not covered, removed\n- Two-channel leak re-check on every output: (1) the extracted-text layer is searched for every term; (2) the raw content-stream bytes of every page are searched, plain and hex-encoded — because text can hide where extractors don't look\n- A file only PASSes with zero hits in both channels\n- Scan honesty: if a page has no text layer (a scanned image), the file is flagged SCAN-DETECTED and never passed silently — you get told it needs OCR, not a false sense of security\n- Originals never modified; outputs and a full report go to a new folder\nMeasured (seeded acceptance test, 9/9 checks passed)\n- Seeded document with a name (×2), a case ID, an email and an SSN-shaped number: all term and pattern matches redacted, leak re-check 0 hits in both channels, public control text untouched\n- A control PDF with text merely covered by a drawn black rectangle was correctly caught by the checker — proving the re-check detects fake redaction\n- Image-only PDF correctly flagged SCAN-DETECTED instead of passed\nHonest limits\n- Text-based PDFs only; scanned/image pages are flagged, not processed (OCR first, then redact)\n- A term rendered as vector outlines or baked into an image is out of reach of any text redactor — the scan flag and the report exist so you never assume coverage you don't have\n- Redaction is permanent in the outputs — that's the point; keep your originals (the tool never touches them)\nWhat's in the box\nWindows app (RedactReady.exe), sample document, and the redaction report format shown above. No subscription, no upload — sensitive documents never leave your machine, which is rather the point.\n$29 one-time.",
+ "sku": "lgkcot",
+ "category": "pdf-document-tools",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/redactready-pdf-redaction-leak-check"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11 (64-bit). No other software needed."
+  }
+ ]
+}
