@@ -23,7 +23,7 @@
   "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
   "merchantReturnDays": 30,
   "refundType": "https://schema.org/FullRefund",
-  "description": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+  "description": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
  },
  "additionalProperty": [
   {
