@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "CrosswordPress — Crossword Puzzle Book Generator for KDP: Your Words, Verified Grids, Print-Ready PDF (Local)",
+ "description": "How do I make sure the grids in my crossword book are actually right before I print it? A crossing that disagrees by one letter, a word in the grid that never appears in the clues, numbering with a gap — that's your 1-star review, printed a hundred times.\nCrosswordPress builds crossword books from YOUR word list — a simple CSV of word,clue pairs in whatever niche you publish in — and then proves every grid before the book exists.\nHOW IT WORKS\n• Deterministic placement: words are laid only where crossings match letter-for-letter and no illegal adjacencies form, over multiple seeded attempts, keeping the fullest, tightest layout\n• Standard numbering and Across/Down clue lists generated from the final grid\n• Print-ready 8.5×11in PDF: title page, puzzle pages, then a full solutions section\nTHE VERIFICATION LAYER (the part other generators skip)\nAfter layout, the finished grid is re-scanned from scratch, independently of the code that built it: every horizontal and vertical run must be exactly one of your placed words, every word's letters must match the grid, numbering must be gapless, and the clue lists must cover every word exactly once. A grid that fails is never written into a book. Words that don't legally fit are reported (placed vs offered), never forced in by breaking a crossing.\nVERIFIED, NOT VIBES\nFrom a 24-word test list, a 6-puzzle book placed 13-14 of 14 offered words per puzzle — 81 words placed — with every grid passing the independent re-scan, at exactly 612×792pt per page. Same seed, same book: generation is deterministic, so your series workflow is repeatable.\nStandalone crossword generators launch at $47 one-time. CrosswordPress is $29, once, and runs 100% on your computer — your word lists never leave your machine. Windows 10/11. A sample word list and sample book are included.",
+ "sku": "bwwub",
+ "category": "puzzle-book-generator",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/crosswordpress-crossword-puzzle-book-generator"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; no account, no upload, no per-book credits."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive; it generates print-ready PDF books locally"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11"
+  }
+ ]
+}
