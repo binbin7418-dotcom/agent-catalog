@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "QifSift — QIF/QBO/QFX/OFX to CSV Converter with Duplicate Flags & Balance Re-Check (Local, Private)",
+ "description": "My bank gives me QIF — how do I convert it to CSV without just trusting that the numbers survived the trip? Your bookkeeping tool wants CSV. Your credit union only offers QBO, and the converter you found sells each format as a separate $39.99 product — then leaves you to trust that the numbers survived the trip.\nQifSift converts all four bank download formats — QIF, QBO, QFX and OFX — into one clean CSV on your own computer, and then RE-PARSES the file it wrote to prove the conversion: row count and net total must match the source exactly.\nWHAT IT NORMALIZES\n• Dates to ISO format — including Quicken's apostrophe years (03/16'26 becomes 2026-03-16) and OFX timezone suffixes\n• Amounts to plain numbers — thousands separators removed, exact decimal arithmetic, no float drift\nWHAT IT FLAGS INSTEAD OF HIDING\n• Suspected duplicates — repeated FITIDs and exact date+amount+payee repeats are listed in the report and KEPT in the CSV. Deleting money records is your decision, not a tool's.\n• Out-of-scope content — QIF investment sections are reported and skipped, never guessed at.\nVERIFIED, NOT VIBES\nOn seeded test files with planted defects: a QIF carrying an apostrophe-year date, a comma amount and an exact duplicate converted to 4 rows totalling 1083.56 (duplicate flagged, investment section warned and skipped); a QBO with a timezone date and a repeated FITID converted to 3 rows totalling 1199.06. Both re-checks: PASS.\n100% LOCAL & PRIVATE — no upload, no account, no subscription. Your bank statement is the last file that should travel.\nWindows 10/11, no other software needed. You get transactions.csv and the conversion report.",
+ "sku": "rlmbhz",
+ "category": "bank-file-converter",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/qifsift-bank-file-to-csv-converter"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11, no other software needed"
+  }
+ ]
+}
