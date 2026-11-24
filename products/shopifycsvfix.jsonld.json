@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "Shopify CSV Pre-Flight Checker — Fix Import Errors Before Shopify Rejects Your File",
+ "description": "Shopify rejected my product import and its error told me nothing useful — how do I find and fix what's wrong with my CSV? You fixed the file by guesswork, re-uploaded, and got rejected again — by the time you get the file into shape, you may as well have edited it by hand.\nShopifyCsvFix checks your product CSV the way the importer sees it, before you upload. Every problem comes back in plain language: what is wrong, and how to fix it. The mechanical errors are fixed for you, and the repaired file is re-checked, so you know before you upload — not after another failed import.\nWHAT IT FIXES ON ITS OWN\n- Column names Shopify silently ignores, renamed to the exact headers it expects (SKU → Variant SKU, Qty → Variant Inventory Qty, Price → Variant Price, Image URL → Image Src)\n- Prices with currency symbols and thousands separators → plain numbers\n- Float quantities (10.0) → integers\n- yes / TRUE / no → true / false\n- Messy tag spacing, and relative image URLs when your file's other images establish the domain\nWHAT IT REPORTS — BUT NEVER SILENTLY CHANGES\n- Duplicate variants (same handle + options): merging them is a business decision\n- Variant rows missing an option value\n- Prices that aren't numbers, and first rows without titles\nVERIFIED, NOT VIBES\nSeeded 5-row import file with 14 planted problems: 11 repaired (4 of them header renames the importer would have silently ignored), re-check confirmed the 3 real blocking errors, 0 new issues.\nONE-TIME $29, NOT ANOTHER SUBSCRIPTION\nThe big import tool in this category starts at $20/month — and its buyers complain about unexplained errors and a price that feels like a rip-off. This is a one-time $29 purchase, local and private: no upload, no store access, no subscription. Your full catalogue and pricing never leave your computer.\nWindows 10/11, no other software needed. You get the repaired CSV + a plain-English fix report.\nScope: the CSV file itself. It can't see your store's existing products or settings — and it won't pretend to.",
+ "sku": "ffuokq",
+ "category": "csv-tools",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/shopifycsvfix-product-csv-repair"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11, no other software needed"
+  }
+ ]
+}
