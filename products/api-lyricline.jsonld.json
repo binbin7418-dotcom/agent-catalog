@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "LyricLine — API on RapidAPI",
+ "description": "Full lyrics with the track context attached: LyricLine returns complete song lyrics together with track and artist details in one response, and a suggestion endpoint that helps users find the right song before they query.\n\nWhat you get:\n- Full song lyrics for a track, returned as display-ready text\n- Track details (title, artist, album context) in the same response — no second lookup to label what you display\n- Artist information for building artist pages and related-content links\n- A suggest endpoint that resolves partial or misspelled titles into candidate tracks, so a \"not found\" becomes a choice instead of a dead end\n\nKey endpoints:\n- GET /lyrics — full lyrics for a song\n- GET /track — track details\n- GET /artist — artist information\n- GET /suggest — candidate tracks for a partial or uncertain query\n\nBatch / built for workflows:\nLyricLine is designed for music content flows: search-suggest first, then one call per song returns lyrics plus the metadata set needed to render a complete page. Responses are edge-cached, so repeat lookups of popular tracks stay fast, and the suggest fallback keeps catalogue-import and playlist-enrichment jobs moving when a title does not match exactly.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+ "sku": "api-lyricline",
+ "category": "api-service",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 0.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://rapidapi.com/binbin7418/api/lyricline-song-lyrics-tracks-and-artist-search"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant API access after subscribing on RapidAPI; no file delivery."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "JSON responses over HTTPS (REST)."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "A RapidAPI account and API key; any HTTPS client."
+  }
+ ]
+}
