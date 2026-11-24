@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "StampBatch — Batch Photo Watermark & Re-Check (Text & Logo, Local, Private)",
+ "description": "My photos keep getting reposted without my name on them, usually the week I finally start selling — how do I watermark them in batch?\nStampBatch watermarks a whole folder of photos in one run — your text or your logo — then RE-OPENS every output and pixel-compares it against the original, so you can prove each mark landed and nothing else about the photo changed.\nWHAT IT DOES\n• Text watermarks (white or black) or your own logo image, transparency respected\n• Nine-grid positioning: any corner, edge-centre, or dead centre\n• Opacity and relative-size controls — the mark scales correctly from a thumbnail to a 3000px master\n• Tiled mode: repeat the mark across the whole frame for proof/preview images\n• Platform presets for Etsy and Instagram that pre-tune mark size and margin (presets advise size and margin only — they never alter your photo)\n• A re-check report (stamp_report.md) with every batch: per-photo size match + watermark verification\n• Originals are never modified — output goes to a separate folder\nWHAT IT NEVER DOES\nStampBatch only watermarks. It does not resize, crop, rename or convert your photos, so it can't silently degrade or re-frame them — output dimensions are always identical to the input, and the re-check proves it.\nVERIFIED, NOT VIBES\nSeeded acceptance test: 4 photos (1200×800, 800×1200, 3000×2000, 200×150; JPG + PNG) plus a seed logo, three batches (text corner mark with the Etsy preset, logo mark, tiled text mark). 24 of 24 checks passed — every output re-opened at exactly its original size; watermark-area pixels changed 4.7% (text) / 40.6% (logo) / 7.4% (tiled); opposite corners 0.0% changed; originals' SHA-256 hashes unchanged after all runs.\n100% LOCAL & PRIVATE — no upload, no account, no subscription. Your photos never leave your computer.\nWindows 10/11, no other software needed. Supports JPG, PNG, WebP, BMP, TIFF. You get the watermarked copies + a plain-English batch report.\nHonest limit: a watermark is a deterrent — it raises the cost of stealing your images. It cannot make theft impossible, and anyone who promises otherwise is guessing.",
+ "sku": "lfzlwj",
+ "category": "photo-image-tools",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/stampbatch-batch-photo-watermark"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11, no other software needed"
+  }
+ ]
+}
