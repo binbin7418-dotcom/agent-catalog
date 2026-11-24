@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "DateShift — Photo Date Fixer: Repair Wrong EXIF Dates, File Dates & Dual-Camera Sync",
+ "description": "My camera clock was wrong, so now every photo says it happened at the wrong time — how do I repair the dates?\nYou changed the battery and forgot to reset the clock. You flew across time zones and the camera never got the memo. Or you shot a wedding with two cameras, and now the two sets of photos refuse to sit in the right order.\nDateShift diagnoses every photo's three dates — EXIF time, file time, and the date hiding in the file name — repairs them with one relative offset, and hands you back verified copies plus a report that proves what changed. Your originals are never touched.\nDate Maths: other tools make you set every photo to one fixed time, which destroys the order of a whole shoot. DateShift works the way the problem actually happened: your clock was off by an amount, so every photo is off by that same amount. Enter the offset once and every photo moves by exactly that much. The gaps between your photos — the story of the day — stay exactly as shot.\nDual-camera sync: pick one photo from each camera taken at the same moment, and DateShift computes the offset and applies it to the whole second-camera folder. In our seeded test, camera B ran 83 seconds slow; DateShift computed 83.000 seconds and aligned all 3 second-camera photos to camera A's times with 0.000 s error.\nCopies only, with proof: DateShift only ever writes copies to a new output folder. Every copy is re-read and the re-check report confirms EXIF and file time agree within 1 second — or flags the file instead of passing it. Pixel data is never touched: decoded-pixel hashes were unchanged on all 10 processed files in the seeded test, and all 12 original files stayed byte-identical (SHA-256 verified).\nWhat it handles: a full folder whose clock ran fast (in our test, 5 photos fast by 5 h 37 m, repaired to 0.000 s EXIF and file-time error on all 5, re-check 5/5 green); a photo with no EXIF but a dated filename, which gets its date from the filename and is labelled filename in the report; a scanned old photo with no date anywhere, whose file time is still shifted and labelled file_only — nothing is invented.\n100% local. No account, no subscription, no upload. Windows 10/11.\nHonest limits: JPEG and TIFF get full EXIF read and write. HEIC photos get diagnosis plus file-time and filename handling only — HEIC EXIF writes are reported as unsupported, never claimed. RAW formats (CR2, NEF, ARW, DNG and others) are reported as unsupported and skipped, not silently processed.",
+ "sku": "bvejpl",
+ "category": "photo-image-tools",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 9.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/dateshift-photo-date-fixer"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11"
+  }
+ ]
+}
