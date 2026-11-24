@@ -1,0 +1,45 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "CardCheck — API on RapidAPI",
+ "description": "Catch mistyped card numbers before they fail at the gateway: CardCheck validates card numbers locally (Luhn checksum plus issuer rules) and identifies the card network — one at a time, or in batches of up to 100 — with a definitive verdict and the individual checks shown.\n\nWhat you get:\n- A valid / invalid verdict per number, computed locally — no card data leaves the validation logic\n- The individual checks behind the verdict (length, Luhn checksum, IIN/BIN range), so your UI can explain what is wrong\n- Card network identification (e.g. Visa, Mastercard, Amex) for form formatting, icon display and routing decisions\n- Batch results in the same per-number format, ready to feed screening and import pipelines\n- A networks reference endpoint listing the supported networks and their number patterns\n\nKey endpoints:\n- GET /validate — validate one card number and identify its network\n- POST /validate/batch — validate up to 100 card numbers in one call\n- GET /networks — supported card networks and their patterns\n\nBatch / built for workflows:\nCardCheck sits at the front of checkout and signup flows as a pre-validation gate — one fast local-computation call per number before anything reaches your payment gateway — and the batch endpoint extends the same checks to list screening, onboarding imports and data-quality jobs: up to 100 numbers per call, one structured result per number. It validates number structure only: it does not check funds, card status or fraud risk, and it is not a substitute for your payment processor's checks.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+ "sku": "api-cardcheck",
+ "category": "api-service",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "AggregateOffer",
+  "lowPrice": 0.0,
+  "highPrice": 14.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://rapidapi.com/binbin7418/api/cardcheck",
+  "offerCount": 3
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant API access after subscribing on RapidAPI; no file delivery."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "JSON responses over HTTPS (REST)."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "A RapidAPI account and API key; any HTTPS client."
+  }
+ ]
+}
