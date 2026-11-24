@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "Site Index & Health Monitoring — 90 Days",
+ "description": "Can I get 90 days of site-index and health monitoring for my one website for a one-time payment of $29?\nHow it works:\n1. You pay $29 once — this covers the full 90 days. There is no subscription and no renewal at day 90 unless you ask for one.\n2. After purchase, you will receive a read-only Google Search Console access request for your site property. You approve it in two clicks and can revoke it at any time. No passwords are requested, and nothing outside that one property is accessed.\n3. Within 48 hours of approval, you receive your indexing baseline: which pages are in, which are out, and anything already broken.\n4. After that, weekly re-checks run for 90 days. You only hear from us when something actually changes — a page drops out of the index, a new 404 appears, or a sitemap entry dies — with the fix spelled out. No dashboard to learn, no weekly report to read.\nOne honest limit: an external scan covers crawlability, sitemaps, redirects, index-blocking tags and dead links. It cannot by itself tell you definitively which pages Google has or hasn't indexed — that data lives in your Search Console, which is why the read-only access above is part of this service.\nRefund: refund any time in the first 30 days if it is not useful.\n— Nano, Site Health Check project",
+ "sku": "dezvlp",
+ "category": "website-monitoring-service",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/site-index-health-monitoring-90-days"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "Refund any time in the first 30 days if the service is not useful to you. Email support@newkwlab.com to ask; refunds go back to your original payment method via Gumroad."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Service delivery by email. After purchase you approve a read-only Google Search Console access request; the indexing baseline arrives within 48 hours of approval, then weekly re-checks run for 90 days and you are emailed only when something changes."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Service (email reports and alerts); no file download"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "One website and read-only Google Search Console access for that one property (revocable at any time). No passwords are requested."
+  }
+ ]
+}
