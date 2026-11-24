@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "SudokuPress — Sudoku Puzzle Book Generator with Proven Unique Solutions & Difficulty Bands, Print-Ready PDF (Local)",
+ "description": "How do I generate a Sudoku book with proven unique solutions and real difficulty bands, instead of random givens and an answer key built on hope? Hope is how a \"Hard\" puzzle ends up with fifty solutions and your book ends up with the reviews to prove it.\nSudokuPress builds puzzles the way newspaper syndicates do:\n• First, a complete valid grid is filled.\n• Then givens are DUG OUT in rotationally symmetric pairs — and after every single removal, an independent counter re-counts the solutions. The removal is kept only if the puzzle still has EXACTLY ONE.\n• Digging stops at your difficulty target (Easy 40 givens, Medium 34, Hard 28) or at the point where nothing more can be removed without breaking uniqueness. The actual given-count is printed on every puzzle page — never hidden, never rounded.\n• Before the book is written, every puzzle is re-counted one last time from its givens alone. Exactly one solution, matching the printed answers, or it doesn't ship.\nYou get a print-ready 8.5×11in PDF: clean bold-given puzzle pages labelled by difficulty, then full solution grids. Pick a seed and the same book rebuilds identically — series production without surprises. And it's fast: a 6-puzzle book generates and verifies in about a second; a 100-puzzle book is a coffee sip, not a coffee break.\nVERIFIED, NOT VIBES\nMixed test book: Easy 40 givens, Medium 33-34, Hard 27-29 — every puzzle re-proven unique-from-givens against its printed solution.\nDesktop Sudoku makers sell at $37 to $197 one-time. SudokuPress is $29 once, proof included, 100% on your computer. Windows 10/11. A sample book is included so you can inspect the output first.",
+ "sku": "yhbbnm",
+ "category": "puzzle-book-generator",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/sudokupress-sudoku-puzzle-book-generator"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; no account, no upload, no per-book credits."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive; it generates print-ready PDF books locally"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11"
+  }
+ ]
+}
