@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "DupeLens — Duplicate & Similar Photo Finder (Quarantine, Never Delete)",
+ "description": "The same photo lives in my library three, four, five times — how do I find the duplicates and similar shots without ever risking my only copy of a memory? Duplicate finders promise to clean this up, and then they scare you: inaccurate matches, false positives, and a \"Delete\" button one click from your only copy of a memory.\nDupeLens is built the opposite way: find everything, prove everything, delete nothing.\nWHAT IT FINDS\n• Exact duplicates — bit-for-bit identical files, matched by SHA-256\n• Near-duplicates — the same photo resized or re-compressed (the copies phones, messaging apps and exports create), matched by perceptual hashing\n• Adjustable sensitivity — threshold 0–32, default 6; every match in the report shows its measured distance, so you can judge it yourself\nTHE SAFETY PROMISE — READ THIS BEFORE YOU COMPARE\n• DupeLens NEVER deletes a photo. Extra copies are moved into a \"DupeLens-Quarantine\" folder on your own disk.\n• Every move is recorded in a restore manifest. One restore puts every file back in its original folder — and if a new file sits at an original path, the restored file is renamed instead of overwriting it.\n• Prefer to look first? Scan-only mode moves nothing and just writes the report.\nTHE RE-CHECK REPORT (OUR SIGNATURE)\nAfter quarantining, DupeLens re-scans your library and reports in plain language: how many photos were scanned, how many groups were found, what was kept and what was quarantined (from → to, per file), how much space was freed, how many duplicate groups remain (target: zero), and that every keeper is still exactly where it was.\nWHICH COPY IS KEPT — A RULE, NOT A GUESS\nHighest resolution wins; ties break by largest file, then earliest date. The keeper and the reason are printed in the report for every group.\nVERIFIED, NOT VIBES\nOn a seeded 7-photo test library with known ground truth (one photo in 4 copies — original, byte-identical, resized, re-compressed; one photo in 2 copies; one unique photo): both groups found, resized copy measured distance 0/64, re-compressed copy distance 2/64, unrelated photos distance 38, 0 false positives, post-quarantine re-scan 0 groups remaining, all 7 originals accounted for and byte-intact, restore verified — 27/27 acceptance checks passed. A 300-photo test library scanned in under a second on the test machine.\n100% LOCAL & PRIVATE — no upload, no account, no subscription. Your family photos never leave your computer. Competitors charge $20–50 per YEAR for this; DupeLens is $29 once.\nWindows 10/11, no other software needed. Works on JPG, PNG, WebP, BMP, GIF and TIFF photos.\nHonest limits: perceptual matching catches resizes and re-compression; heavy edits (strong crops, filters) can push a copy past the threshold and be missed — widen the threshold if you want a bigger net, and check the distances in the report. HEIC/RAW files are not decoded in this version. And keep the quarantine folder until you've reviewed the report — that's what it's for.",
+ "sku": "qwefq",
+ "category": "photo-image-tools",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/dupelens-duplicate-photo-finder"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11, no other software needed"
+  }
+ ]
+}
