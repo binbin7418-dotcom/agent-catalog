@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "SilenceCut — One-Click Silence Remover for Talking-Head Video (Local)",
+ "description": "My raw talking-head takes are 20–40% dead air — how do I cut all the silence automatically instead of scrubbing timelines by hand? Cutting it by hand is scrubbing timelines; the free tool that does it automatically speaks in thresholds, margins and command lines.\nSilenceCut is that engine with a face: pick the video, pick a cutting style, click once.\nPRESETS, IN PLAIN LANGUAGE\n• Talking head — standard (everyday YouTube & course videos)\n• Short-form — tight (Shorts / Reels / TikTok pacing)\n• Lecture / interview — gentle (keeps natural pauses, cuts only the dead air)\nPLUS WHAT THE RAW ENGINE DOESN'T GIVE YOU\n• Optional loudness normalization to −16 LUFS in the same pass\n• A re-check report measured on the OUTPUT file: duration before → after, seconds of dead air removed, silence remaining, loudness before → after\nTHE HONEST PART\nThis removes silences and gaps. It does not remove filler words (um, uh) — those are speech, not silence, and any tool claiming a threshold slider can hear words is overselling. If your problem is dead air between sentences, this is the fix.\nVERIFIED, NOT VIBES\nSeeded 9-second test take (3s speech-level tone, 3s silence, 3s tone): standard preset cut it to 6.5s — 2.5s of dead air gone, silence 3.0s → 0.4s, loudness normalized −11.8 → −15.9 LUFS. All measured on the output.\n100% LOCAL & PRIVATE — no uploads of unreleased videos, no per-minute fees, no subscription. Built on the open-source auto-editor engine (Unlicense) with pinned, bundled builds — nothing else to install.\nWindows 10/11. Works on mp4 / mov / mkv and anything ffmpeg reads.",
+ "sku": "eepvyz",
+ "category": "audio-video-tools",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/silencecut-talking-head-silence-remover"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11"
+  }
+ ]
+}
