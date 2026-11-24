@@ -4,7 +4,7 @@
  "seller": {
   "name": "Bin Bin",
   "brand": "Vision (binbinster)",
-  "support_email": "binbin7418@gmail.com",
+  "support_email": "support@newkwlab.com",
   "support_email_source": "PitchReel SUPPORT.md (~/workspace/video-mcp/web/SUPPORT.md): 'The one public support address', shown in every PitchReel page footer",
   "store_gumroad": "https://binbinster.gumroad.com/",
   "store_payhip": "https://payhip.com/visionwell"
@@ -80,12 +80,12 @@
     ],
     "return_policy": {
      "merchant_return_days": 30,
-     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "rapidapi": "https://rapidapi.com/binbin7418/api/emailcheck-email-validation-api"
@@ -167,12 +167,12 @@
     ],
     "return_policy": {
      "merchant_return_days": 30,
-     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "rapidapi": "https://rapidapi.com/binbin7418/api/flightscope-live-flight-tracking-and-airport-data-api"
@@ -190,7 +190,7 @@
       "currency": "USD"
      },
      "max": {
-      "amount": 1900,
+      "amount": 1400,
       "currency": "USD"
      }
     },
@@ -219,10 +219,10 @@
      },
      {
       "id": "ultra",
-      "title": "ULTRA — $19/month",
+      "title": "ULTRA — $14/month",
       "description": "50,000 calls per month.",
       "price": {
-       "amount": 1900,
+       "amount": 1400,
        "currency": "USD"
       },
       "availability": "InStock",
@@ -244,17 +244,94 @@
     ],
     "return_policy": {
      "merchant_return_days": 30,
-     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "rapidapi": "https://rapidapi.com/binbin7418/api/cardcheck"
     },
     "landing_url": "https://rapidapi.com/binbin7418/api/cardcheck"
+   },
+   {
+    "id": "api-ibancheck",
+    "title": "IBANCheck — API on RapidAPI",
+    "description": "IBAN validation API: per-country length and BBAN structure checks plus ISO 13616 mod-97 checksum, with UK sort-code extraction, one at a time or in batches of up to 100. Format-level only; does not check account existence.",
+    "description_full": "Validate IBANs before a payment bounces: IBANCheck checks an IBAN's format locally — per-country length and BBAN structure plus the ISO 13616 mod-97 checksum — and reports each check separately, one at a time or in batches of up to 100. For UK IBANs it also extracts the sort code. Validation is format-level only: it does not check whether the account exists (only the account-holding bank knows that).\n\nWhat you get:\n- A valid / invalid verdict per IBAN with the individual checks shown (length, structure, mod-97)\n- Named error codes per bad entry (e.g. MISSING_VALUE), so pipelines can react per row\n- UK sort code extracted from GB IBANs\n- Batch results in the same per-item format, ready to feed supplier-onboarding and payout pipelines\n\nKey endpoints:\n- GET /iban?value=... — validate one IBAN (the parameter name iban is also accepted as an alias)\n- POST /validate/batch — validate up to 100 IBANs in one call (JSON field name: ibans); 101 or more returns BATCH_TOO_LARGE\n\nBatch / built for workflows:\nSupplier-onboarding and payout pipelines screen IBANs before money moves: the batch endpoint takes up to 100 IBANs per call and returns one structured result per item, with bad rows carrying their own named errors instead of failing the batch. The checks are computed locally (ISO 13616 mod-97) with no upstream dependency, so results are deterministic.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+    "price_range": {
+     "min": {
+      "amount": 0,
+      "currency": "USD"
+     },
+     "max": {
+      "amount": 1900,
+      "currency": "USD"
+     }
+    },
+    "variants": [
+     {
+      "id": "basic",
+      "title": "BASIC — free",
+      "description": "Free plan: 200 calls per month.",
+      "price": {
+       "amount": 0,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/ibancheck-iban-validation-eu-vat-checker-api"
+     },
+     {
+      "id": "pro",
+      "title": "PRO — $9/month",
+      "description": "10,000 calls per month.",
+      "price": {
+       "amount": 900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/ibancheck-iban-validation-eu-vat-checker-api"
+     },
+     {
+      "id": "ultra",
+      "title": "ULTRA — $19/month",
+      "description": "50,000 calls per month.",
+      "price": {
+       "amount": 1900,
+       "currency": "USD"
+      },
+      "availability": "InStock",
+      "buy_url": "https://rapidapi.com/binbin7418/api/ibancheck-iban-validation-eu-vat-checker-api"
+     }
+    ],
+    "availability": "InStock",
+    "category": "api-service",
+    "sku": "",
+    "image": "",
+    "delivery": "Instant API access after subscribing on RapidAPI; no file delivery.",
+    "file_format": "JSON responses over HTTPS (REST).",
+    "requirements": "A RapidAPI account and API key; any HTTPS client.",
+    "whats_inside": [
+     "Valid / invalid verdict with individual checks shown",
+     "Named per-item error codes",
+     "UK sort code extraction for GB IBANs",
+     "Batch endpoint: up to 100 IBANs per call"
+    ],
+    "return_policy": {
+     "merchant_return_days": 30,
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
+    },
+    "seller": {
+     "name": "Bin Bin",
+     "brand": "Vision (binbinster)",
+     "support_email": "support@newkwlab.com"
+    },
+    "buy_urls": {
+     "rapidapi": "https://rapidapi.com/binbin7418/api/ibancheck-iban-validation-eu-vat-checker-api"
+    },
+    "landing_url": "https://rapidapi.com/binbin7418/api/ibancheck-iban-validation-eu-vat-checker-api"
    },
    {
     "id": "api-fxrates",
@@ -299,12 +376,12 @@
     ],
     "return_policy": {
      "merchant_return_days": 30,
-     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "rapidapi": "https://rapidapi.com/binbin7418/api/fxrates-currency-exchange-rates-api"
@@ -353,12 +430,12 @@
     ],
     "return_policy": {
      "merchant_return_days": 30,
-     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "rapidapi": "https://rapidapi.com/binbin7418/api/hostintel-ip-ports-hostnames-and-vulnerability-exposure"
@@ -407,12 +484,12 @@
     ],
     "return_policy": {
      "merchant_return_days": 30,
-     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "rapidapi": "https://rapidapi.com/binbin7418/api/vinscope-vehicle-data-makes-models-and-vin-decoding"
@@ -461,12 +538,12 @@
     ],
     "return_policy": {
      "merchant_return_days": 30,
-     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "rapidapi": "https://rapidapi.com/binbin7418/api/phonecheck-phone-number-validation-api"
@@ -515,12 +592,12 @@
     ],
     "return_policy": {
      "merchant_return_days": 30,
-     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "rapidapi": "https://rapidapi.com/binbin7418/api/airwatch-air-quality-index-pollen-and-forecasts"
@@ -568,12 +645,12 @@
     ],
     "return_policy": {
      "merchant_return_days": 30,
-     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "rapidapi": "https://rapidapi.com/binbin7418/api/lyricline-song-lyrics-tracks-and-artist-search"
@@ -621,12 +698,12 @@
     ],
     "return_policy": {
      "merchant_return_days": 30,
-     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "rapidapi": "https://rapidapi.com/binbin7418/api/neosky-near-earth-asteroids-astronomy-picture-of-the-day"
@@ -683,12 +760,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/audiobookspecfix-audiobook-checker"
@@ -742,12 +819,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/audiofix-podcast-loudness"
@@ -799,12 +876,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/silencecut-talking-head-silence-remover"
@@ -853,12 +930,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/iifsift-quickbooks-iif-to-csv-auditor"
@@ -915,12 +992,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/ledgerlink-bank-csv-to-qif-ofx-qbo"
@@ -971,12 +1048,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/qifsift-bank-file-to-csv-converter"
@@ -1027,12 +1104,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/statementsift-bank-statement-pdf-to-csv"
@@ -1087,12 +1164,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/shopifycsvfix-product-csv-repair",
@@ -1146,12 +1223,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/woocsvfix-woocommerce-csv-preflight"
@@ -1200,12 +1277,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/contactfix-vcard-duplicate-merge",
@@ -1260,12 +1337,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/listclean-local-email-list-cleaner",
@@ -1317,12 +1394,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/mailmend-mbox-duplicate-remover"
@@ -1376,12 +1453,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/whatsapp-receptionist-auto-repair"
@@ -1435,12 +1512,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/whatsapp-receptionist-beauty-salon"
@@ -1494,12 +1571,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/whatsapp-receptionist-car-rental",
@@ -1554,12 +1631,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/whatsapp-receptionist-dental-clinic"
@@ -1613,12 +1690,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/whatsapp-receptionist-driving-school",
@@ -1673,12 +1750,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/whatsapp-receptionist-fitness-studio"
@@ -1732,12 +1809,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/whatsapp-receptionist-home-cleaning",
@@ -1792,12 +1869,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/whatsapp-receptionist-home-renovation",
@@ -1852,12 +1929,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/whatsapp-receptionist-law-firm",
@@ -1912,12 +1989,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/whatsapp-receptionist-moving-services",
@@ -1972,12 +2049,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/whatsapp-receptionist-pet-services"
@@ -2031,12 +2108,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/whatsapp-receptionist-photo-studio",
@@ -2091,12 +2168,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/whatsapp-receptionist-real-estate"
@@ -2150,12 +2227,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/whatsapp-receptionist-restaurant",
@@ -2210,12 +2287,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/whatsapp-receptionist-tutoring",
@@ -2270,12 +2347,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/whatsapp-receptionist-wedding-planning",
@@ -2333,12 +2410,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/deckshrink-slim-powerpoint-word-excel-files"
@@ -2395,12 +2472,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/formfillbatch-fill-pdf-forms-from-spreadsheet"
@@ -2453,12 +2530,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/invoicebatch-batch-invoice-pdf-generator"
@@ -2510,12 +2587,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/pagesmith-pdf-batch-tools"
@@ -2569,12 +2646,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/printready-kdp-pdf-precheck"
@@ -2631,12 +2708,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/redactready-pdf-redaction-leak-check"
@@ -2686,12 +2763,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/dateshift-photo-date-fixer"
@@ -2743,12 +2820,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/dupelens-duplicate-photo-finder"
@@ -2802,12 +2879,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/etsy-listing-photo-prep"
@@ -2856,12 +2933,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/metascrub-metadata-scrub-report"
@@ -2915,12 +2992,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/stampbatch-batch-photo-watermark"
@@ -2969,12 +3046,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/mosaiccolorpress-color-by-number-book-generator"
@@ -3031,12 +3108,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/stitchchart-photo-to-cross-stitch-pattern"
@@ -3089,12 +3166,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/qrbatch-bulk-qr-print-sheets"
@@ -3150,12 +3227,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/feedfix-google-shopping-feed-repair",
@@ -3205,12 +3282,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/calcudokupress-calcudoku-puzzle-book-generator"
@@ -3267,12 +3344,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/codewordforge-codeword-puzzle-book-generator"
@@ -3322,12 +3399,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/crosswordpress-crossword-puzzle-book-generator"
@@ -3376,12 +3453,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/futoshikipress-futoshiki-puzzle-book-generator"
@@ -3431,12 +3508,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/logicgridpress-logic-grid-puzzle-book-generator"
@@ -3488,12 +3565,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/puzzlepress-sudoku-book-interior-generator"
@@ -3542,12 +3619,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/sudokupress-sudoku-puzzle-book-generator"
@@ -3597,12 +3674,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/shopify-sku-ops-copilot"
@@ -3657,12 +3734,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/sheetfix-excel-audit",
@@ -3791,12 +3868,12 @@
     "return_policy": {
      "type": "fix_or_full_refund",
      "merchant_return_days": 30,
-     "text": "If we make a mistake (a misread line, a wrong number, a wrong cut, or a broken file), we fix it and re-render free of charge. If we cannot fix it, we refund in full. Orders cancelled before production starts are refunded in full via Gumroad. Email binbin7418@gmail.com."
+     "text": "If we make a mistake (a misread line, a wrong number, a wrong cut, or a broken file), we fix it and re-render free of charge. If we cannot fix it, we refund in full. Orders cancelled before production starts are refunded in full via Gumroad. Email support@newkwlab.com."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad_explainer": "https://binbinster.gumroad.com/l/pitchreel-explainer-standard",
@@ -3847,12 +3924,12 @@
     "return_policy": {
      "type": "anytime_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "Refund any time in the first 30 days if the service is not useful to you. Email binbin7418@gmail.com to ask; refunds go back to your original payment method via Gumroad."
+     "text": "Refund any time in the first 30 days if the service is not useful to you. Email support@newkwlab.com to ask; refunds go back to your original payment method via Gumroad."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/site-index-health-monitoring-90-days"
@@ -3902,12 +3979,12 @@
     "return_policy": {
      "type": "fix_first_full_refund_30d",
      "merchant_return_days": 30,
-     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email binbin7418@gmail.com with your order email and a screenshot of the error."
+     "text": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "gumroad": "https://binbinster.gumroad.com/l/mathsheetpress-math-worksheet-generator"
@@ -3979,12 +4056,12 @@
     ],
     "return_policy": {
      "merchant_return_days": 30,
-     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "rapidapi": "https://rapidapi.com/binbin7418/api/listcheck"
@@ -4056,12 +4133,12 @@
     ],
     "return_policy": {
      "merchant_return_days": 30,
-     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "rapidapi": "https://rapidapi.com/binbin7418/api/domaintrust-audit"
@@ -4133,12 +4210,12 @@
     ],
     "return_policy": {
      "merchant_return_days": 30,
-     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "rapidapi": "https://rapidapi.com/binbin7418/api/supplychain-scan"
@@ -4210,12 +4287,12 @@
     ],
     "return_policy": {
      "merchant_return_days": 30,
-     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "rapidapi": "https://rapidapi.com/binbin7418/api/seoscore"
@@ -4287,12 +4364,12 @@
     ],
     "return_policy": {
      "merchant_return_days": 30,
-     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "rapidapi": "https://rapidapi.com/binbin7418/api/scholarbrief"
@@ -4364,12 +4441,12 @@
     ],
     "return_policy": {
      "merchant_return_days": 30,
-     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "rapidapi": "https://rapidapi.com/binbin7418/api/fleetsheet"
@@ -4441,12 +4518,12 @@
     ],
     "return_policy": {
      "merchant_return_days": 30,
-     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "rapidapi": "https://rapidapi.com/binbin7418/api/compoundbrief"
@@ -4518,12 +4595,12 @@
     ],
     "return_policy": {
      "merchant_return_days": 30,
-     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact binbin7418@gmail.com and we fix it."
+     "text": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
     },
     "seller": {
      "name": "Bin Bin",
      "brand": "Vision (binbinster)",
-     "support_email": "binbin7418@gmail.com"
+     "support_email": "support@newkwlab.com"
     },
     "buy_urls": {
      "rapidapi": "https://rapidapi.com/binbin7418/api/globalops-calendar"
