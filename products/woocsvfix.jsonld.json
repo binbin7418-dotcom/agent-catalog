@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "WooCsvFix — WooCommerce Product CSV Pre-Flight Checker & Fixer, Re-Checked (Local, Private)",
+ "description": "How do I check my WooCommerce product CSV before importing, so a bad file doesn't silently skip rows or overwrite my products? It silently skips rows, imports prices as nothing, orphans variations — and when two rows share a SKU, it doesn't create your new product at all: it overwrites the old one. You find out from your storefront, or from a customer.\nWooCsvFix is the pre-flight check you run BEFORE importing. Format errors are fixed automatically; anything that needs a human decision is listed as a blocking issue with its line number; and the fixed file is re-parsed to prove no fixable problem remains.\nFIXED AUTOMATICALLY\n• Prices with currency symbols or thousands commas ($1,299.00 → 1299.00)\n• Mixed-case product types, Published / In-stock values written as yes/no/draft, stray whitespace\nFLAGGED AS BLOCKING — NEVER SILENTLY \"FIXED\"\n• Duplicate SKUs (the importer would UPDATE your existing product)\n• Variations whose parent SKU is missing from the file\n• Sale price higher than the regular price\n• Image paths that aren't URLs, empty product names, non-numeric stock\nVERIFIED, NOT VIBES\nOn a seeded 9-product CSV with 10 planted defects: exactly 5 automatic fixes and exactly 5 blocking issues, all 9 rows preserved in order, and the re-check of the fixed file found 0 remaining fixable problems.\n100% LOCAL — it reads the CSV, not your store. No WordPress login, no upload, no subscription. Import-plugin suites charge $59-$229 a year; this is $29 once.\nWindows 10/11, no other software needed. You get products_fixed.csv and the pre-flight report.",
+ "sku": "fxzueuc",
+ "category": "csv-tools",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/woocsvfix-woocommerce-csv-preflight"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11, no other software needed"
+  }
+ ]
+}
