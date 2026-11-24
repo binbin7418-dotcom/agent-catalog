@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "PhoneCheck — API on RapidAPI",
+ "description": "Verify phone numbers before they enter your system: PhoneCheck returns a validity verdict and line type for numbers worldwide — one at a time, or as a batch health report for a whole list.\n\nWhat you get:\n- A validity verdict per number, parsed and checked locally with the libphonenumber rule set — no third-party lookup latency\n- Country, line type (mobile / landline / VoIP and more) and both international and national formats, plus a ready-to-use tel: link\n- Batch health reports: send up to 100 numbers and get per-number results plus a summary of how clean the list is\n- Consistent single and batch response formats, so one parser serves both paths\n\nKey endpoints:\n- GET /validate — validate a single phone number\n- POST /validate — validate a single phone number (JSON body)\n- POST /validate/batch — validate up to 100 numbers in one call, with a list-level summary\n\nBatch / built for workflows:\nBuilt for list hygiene and onboarding pipelines: the batch endpoint is the same one used in production list-cleaning workflows — one call in, a structured health report out. Single-number checks fit form validation, OTP enrollment screening and CRM data entry, all with zero upstream dependency: parsing runs locally, so responses stay fast and predictable.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+ "sku": "api-phonecheck",
+ "category": "api-service",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 0.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://rapidapi.com/binbin7418/api/phonecheck-phone-number-validation-api"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant API access after subscribing on RapidAPI; no file delivery."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "JSON responses over HTTPS (REST)."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "A RapidAPI account and API key; any HTTPS client."
+  }
+ ]
+}
