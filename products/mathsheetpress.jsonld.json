@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "MathSheetPress — Math Worksheet Generator with Proven Answer Keys: 14 Topic Generators, Zero Duplicates, Print-Ready PDF (Local)",
+ "description": "How do I generate math worksheets whose answer key was produced independently of the questions, so I can actually trust it? Most generators print the key from the same code that wrote the problems — one bug, and both are wrong in matching ways, which is worse than no key at all.\nMathSheetPress builds every problem twice, two different ways:\n- CONSTRUCTION: the generator picks the answer first, then builds the question around it.\n- INDEPENDENT RE-SOLVE: before anything is printed, an expression evaluator re-reads each arithmetic problem from its printed text, equations are re-solved with exact Fraction algebra, and quadratics are re-factored by brute-force root search. The key is written from THIS solve.\n- THE GATE: if the two paths disagree, the problem is rejected and regenerated. It never reaches your students.\n- ZERO DUPLICATES across the whole book, guaranteed by construction, not by eyeballing.\n14 topic generators in three bands — Arithmetic (multiplication, division, fraction addition, percent-of, order of operations), Pre-Algebra (integer operations, one- and two-step equations, proportions, exponents) and Algebra (two-sided linear equations, slope, factoring quadratics, 2x2 systems) — or Mixed for review packs. Pick a seed and the same book rebuilds identically, so re-issues and key regeneration are always in sync.\nOutput is a print-ready 8.5x11in PDF: name/date worksheet pages with real work space, then a compact answer key. Built for teachers, homeschoolers, tutors and worksheet sellers who need volume without proofreading every line.\nVERIFIED, NOT VIBES\nAcceptance run: 48-problem mixed book — 48/48 answers re-derived by the independent verifier, expression problems re-evaluated a third way with zero disagreements, and one deliberately corrupted key entry caught by the gate (exactly 1 flagged).\nDesktop worksheet generators sell for $135 per subject and up. MathSheetPress is $29 once, proof included, 100% on your computer. Windows 10/11. A sample book is included.",
+ "sku": "gnbhkb",
+ "category": "worksheet-generator",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/mathsheetpress-math-worksheet-generator"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; no account, no upload, no per-book credits."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive; it generates print-ready PDF books locally"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11"
+  }
+ ]
+}
