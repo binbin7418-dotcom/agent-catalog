@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "WhatsApp Lead Receptionist for Law Firms (Client Intake) — Instant Reply, Lead Scoring & Hot-Lead Alerts (n8n workflow)",
+ "description": "New clients message our law firm on WhatsApp — how do we answer every enquiry in seconds, even after hours, and score the intakes worth taking?\nThis is a complete, ready-to-import n8n workflow built for small law firms and solo attorneys. A customer messages your WhatsApp Business number, and the workflow:\n1. Scores the lead — Hot / Warm / Cold — from what they actually wrote (price questions, urgency, the service they name, booking intent)\n2. Logs every lead to Google Sheets, so nothing gets lost\n3. Emails you instantly when a Hot lead lands\n4. Replies to the customer right away — and respects Meta's 24-hour rule, switching to an approved template when the free-form window has closed\nReal example, scored live by this exact workflow:\n\"Hello, I need to book a consultation with a lawyer about a contract dispute. How much is the consultation fee? It is urgent, the court deadline is today and I need advice now.\" → 100 (Hot) → you get an alert, the customer gets an answer.\nWHAT'S INSIDE\n- The importable n8n workflow (.json), pre-configured for your trade\n- Setup guide: live in about 20 minutes, 5 steps, no coding — one CONFIG block holds your business name, hours, timezone and booking link\n- Keyword packs in English and Chinese; add your own words in one line each\n- MIT license: use it for your own business or for client work\nVERIFIED, NOT VIBES\nThe scoring engine shipped in this file was extracted and run through an automated acceptance suite before this listing was written: 7 of 7 checks pass — a hot lead scored Hot with owner alert, a price question scored Warm (60), a bare \"hi\" kept Cold, delivery receipts ignored, and a malformed webhook safely dead-lettered instead of crashing. The full test log (TEST-RESULTS.txt) is inside the pack.\nYOU NEED\n- An n8n instance (self-hosted free tier is fine)\n- A WhatsApp Business number on Meta's Cloud API (free to register; you bring your own number)\n- A Google account for the Sheets log and email alerts\nHONEST LIMITS\nScoring is keyword-based — fast, free, predictable — not an AI guess. It is a receptionist, not a CRM. Template approval for after-hours replies is Meta's process; the guide walks you through it.\nSETUP SUPPORT INCLUDED\nIf you get stuck, email support is included: send the node name and a screenshot of the error and get a working answer.\nWant it fully done for you instead? The same system is available as a done-for-you build on Fiverr (seller: visionwei).",
+ "sku": "jbsgjc",
+ "category": "n8n-automation-pack",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 49.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/whatsapp-receptionist-law-firm"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive). You import the workflow into your own n8n instance and follow the included 5-step SETUP guide."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "ZIP archive containing the n8n workflow JSON, SETUP.md setup guide, TEST-RESULTS.txt and license file"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "An n8n instance (self-hosted or n8n Cloud), a WhatsApp Business number connected to the Meta WhatsApp Cloud API, and a Google account (lead log goes to Google Sheets). Email support is included for setup questions."
+  }
+ ]
+}
