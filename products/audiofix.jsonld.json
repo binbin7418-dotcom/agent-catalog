@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "AudioFix — Podcast Loudness Fix & Re-Check (Local, Private)",
+ "description": "Why does my podcast sound too quiet on Spotify and too loud on Apple — and how do I fix its loudness to match each platform?\nAudioFix measures your episode with the same loudnorm analysis the platforms use, normalizes it to the target, then RE-MEASURES the finished file and shows you the before/after numbers with a plain PASS / NOT READY verdict.\nPRESETS\n• Podcast — −16 LUFS, true peak ≤ −1 dB\n• Streaming / YouTube — −14 LUFS, true peak ≤ −1 dB\n• Audiobook (ACX-style) — −20 LUFS, true peak ≤ −3 dB\nWHAT IT DOES\n• Two-pass loudnorm normalization based on your file's actual measurements\n• Optional trim of leading/trailing silence\n• Re-check on the output: loudness within ±0.5 LUFS and peak under the ceiling, or it tells you exactly which failed\n• Flags recorded clipping honestly — no tool can un-clip audio, and this one won't pretend\nVERIFIED, NOT VIBES\nSeeded test recording at −29.9 LUFS with 4 s of edge silence: trimmed to length and normalized to −15.9 LUFS against the −16 target, verified by re-measuring the output. Verdict: PASS.\n100% LOCAL & PRIVATE — no upload, no per-hour credits, no subscription. Your unreleased episodes never leave your computer. (Upload-based loudness services charge by the hour of audio; this is one payment, forever.)\nWindows 10/11, ffmpeg bundled — nothing else to install. Works on mp3 / wav / m4a / mp4 and anything else ffmpeg reads.\nScope: overall loudness, true peak, edge silence. It doesn't remove background noise or echo — those are recording problems.",
+ "sku": "bltqzs",
+ "category": "audio-video-tools",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 29.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://binbinster.gumroad.com/l/audiofix-podcast-loudness"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "If the product will not run on your machine, contact us first and we will fix it with you. If we cannot make it work, we refund you in full within 30 days of purchase. Email support@newkwlab.com with your order email and a screenshot of the error."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant download after checkout (ZIP archive with the Windows app). Runs locally on your PC; your files never leave your machine."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "Windows desktop app in a ZIP archive (runs locally, offline)"
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "Windows 10/11, ffmpeg bundled — nothing else to install"
+  }
+ ]
+}
