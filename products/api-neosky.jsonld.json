@@ -1,0 +1,43 @@
+{
+ "@context": "https://schema.org",
+ "@type": "Product",
+ "name": "NeoSky — API on RapidAPI",
+ "description": "NASA space data in ready-to-render responses: NeoSky serves the Astronomy Picture of the Day and near-Earth object data — browsable lists and date-range feeds — for science apps, widgets and content products.\n\nWhat you get:\n- The Astronomy Picture of the Day with its title, explanation and media URLs, formatted for direct display\n- Near-Earth object browsing: paged lists of asteroids tracked by NASA, with size, velocity and approach data\n- A date-range NEO feed for building calendars, alerts and \"what is passing Earth this week\" features\n- Honest error behaviour: if NASA's upstream feed has no valid entry for a date, the API returns a clear error instead of placeholder content\n\nKey endpoints:\n- GET /apod — Astronomy Picture of the Day (today or a specific date)\n- GET /neo/browse — browse near-Earth objects as a paged list\n- GET /neo/feed — near-Earth objects approaching within a date range\n\nBatch / built for workflows:\nThe NEO endpoints are list-shaped by design: /neo/browse pages through the full catalogue and /neo/feed returns a whole date window in one call, so scheduled content jobs, daily widgets and alert pipelines can pull a complete set per run. Please note that APOD availability depends on NASA's upstream service; when that feed is unavailable, /apod responds with an explicit error rather than substitute data.\n\nAccess: subscribe on RapidAPI (free tier available); calls are made over HTTPS with your RapidAPI key.",
+ "sku": "api-neosky",
+ "category": "api-service",
+ "brand": {
+  "@type": "Brand",
+  "name": "Vision (binbinster)"
+ },
+ "offers": {
+  "@type": "Offer",
+  "price": 0.0,
+  "priceCurrency": "USD",
+  "availability": "https://schema.org/InStock",
+  "url": "https://rapidapi.com/binbin7418/api/neosky-near-earth-asteroids-astronomy-picture-of-the-day"
+ },
+ "hasMerchantReturnPolicy": {
+  "@type": "MerchantReturnPolicy",
+  "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+  "merchantReturnDays": 30,
+  "refundType": "https://schema.org/FullRefund",
+  "description": "API subscriptions are billed by RapidAPI. Cancel anytime from your RapidAPI dashboard and the subscription stops at the next renewal; there is no file delivery. If the API is down or returns wrong data, contact support@newkwlab.com and we fix it."
+ },
+ "additionalProperty": [
+  {
+   "@type": "PropertyValue",
+   "name": "delivery",
+   "value": "Instant API access after subscribing on RapidAPI; no file delivery."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "file_format",
+   "value": "JSON responses over HTTPS (REST)."
+  },
+  {
+   "@type": "PropertyValue",
+   "name": "requirements",
+   "value": "A RapidAPI account and API key; any HTTPS client."
+  }
+ ]
+}
